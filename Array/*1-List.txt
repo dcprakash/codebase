@@ -1,0 +1,9 @@
+4-max-sum-without-adjacents
+    https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/
+    
+4-subarray-with-given-sum https://www.geeksforgeeks.org/find-subarray-with-given-sum/ 
+    efficient method
+    
+equilibrium-index-of-an-array https://www.geeksforgeeks.org/equilibrium-index-of-an-array/
+    efficient method
+    
