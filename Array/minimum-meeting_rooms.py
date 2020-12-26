@@ -1,4 +1,6 @@
-# Python3 implementation of the approach 
+# https://www.geeksforgeeks.org/minimum-halls-required-for-class-scheduling/
+
+
 MAX = 25
 
 # Function to return the minimum 
