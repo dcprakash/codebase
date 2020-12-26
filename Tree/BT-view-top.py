@@ -35,6 +35,4 @@ root.left = Node(2)
 root.right = Node(3)
 root.left.left = Node(4)
 root.left.right = Node(5)
-res = []
-print("DFS traversal of binary tree is -")
 print(topview(root))
