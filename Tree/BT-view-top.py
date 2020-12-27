@@ -27,7 +27,6 @@ def topview(root):
             queue.append((node.left, col-1))
             queue.append((node.right, col+1))
     return ([columntable[x] for x in sorted(columntable.keys())])
-    
 
 
 root = Node(1)

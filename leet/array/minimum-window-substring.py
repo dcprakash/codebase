@@ -1,5 +1,6 @@
 """
 https://leetcode.com/problems/minimum-window-substring/solution/
+0. create dict_t of all unique chars in t; len of this is required number of chars
 1. left and right pointer pointing to 0
 2. keep moving right pointer until window has all elements
 3. increment left pointer, check if windows has all elements, if so capture min window
@@ -41,6 +42,7 @@ def minWindow(s, t):
 
         # Add one character from the right to the window
         character = s[r]
+        # if char not in dictionary, then get will insert this key with given value
         window_counts[character] = window_counts.get(character, 0) + 1
 
         # If the frequency of the current character added equals to the desired count in t then increment the formed count by 1.
