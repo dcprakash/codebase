@@ -19,9 +19,21 @@ def maxSubArraySum(a,size):
 			
 	return max_so_far 
 	
+
+def maxSubArraySumGreedy(a, size):
+	max_sum = cur_sum = a[0]
+	for i in range(1, n):
+		cur_sum=max(a[i], cur_sum+a[i])
+		max_sum=max(cur_sum, max_sum)
+	return max_sum
 	
-a=[-2,-3,4,-1,-2,1,5,-3]
-n=8
-result=maxSubArraySum(a,n)
-print(result)
+	
+# a=[-2,1,-3,4,-1,2,1,-5,4]
+# a=[-2147483647]
+a=[-1]
+n=len(a)
+# print(maxSubArraySum(a,n))
+print(maxSubArraySumGreedy(a,n))
+
+
 	

@@ -24,7 +24,7 @@ def longestpalindrome(s):
         res+=s[i]
     return res
 
-s = "abbbb"
+s = "ac"
 print(longestpalindrome(s))
 
 

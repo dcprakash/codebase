@@ -1,3 +1,7 @@
+# https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/
+# https://leetcode.com/problems/coin-change/solution/
+# https://www.youtube.com/watch?v=jgiZlGzXMBw&feature=emb_logo&ab_channel=BackToBackSWE
+
 # A Naive recursive python program to find minimum of coins 
 # to make a given change V 
 
