@@ -1,44 +1,27 @@
-# https://leetcode.com/explore/interview/card/google/59/array-and-strings/3060/
 
 
-def compareString(S, T):
-    stemp=[]
-    ttemp=[]
-    i=0
-    while i<len(S):
-        if S[i]!="#":
-            stemp.append(S[i])
-            i+=1
-        else:
-            if stemp:   stemp.pop(-1)
-            i+=1
-    i=0
-    while i<len(T):
-        if T[i]!="#":
-            ttemp.append(T[i])
-            i+=1
-        else:
-            if ttemp:   ttemp.pop(-1)
-            i+=1
-    return True if stemp==ttemp else False
+def mincostToHireWorkers(quality, wage, K):
+    from fractions import Fraction
+    ans = float('inf')
+
+    N = len(quality)
+    for captain in xrange(N):
+        # Must pay at least wage[captain] / quality[captain] per qual
+        factor = Fraction(wage[captain], quality[captain])
+        prices = []
+        for worker in xrange(N):
+            price = factor * quality[worker]
+            if price < wage[worker]: continue
+            prices.append(price)
+
+        if len(prices) < K: continue
+        prices.sort()
+        ans = min(ans, sum(prices[:K]))
+
+    return float(ans)
 
 
-def build(string):
-    res=[]
-    i=0
-    while i<len(string):
-        if string[i]!="#":
-            res.append(string[i])
-            i+=1
-        else:
-            if res:   res.pop(-1)
-            i+=1
-    return "".join(res)
-    
-
-S = "ab##"
-T = "c#d#"
-# print(compareString(S, T))
-print(build(S)==build(T))
-
-    
+quality = [10,20,5]
+wage = [70,50,30]
+K = 2
+print(mincostToHireWorkers(quality, wage, K))

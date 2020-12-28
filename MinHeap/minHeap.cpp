@@ -1,4 +1,6 @@
 // A C++ program to demonstrate common Binary Heap Operations
+//  A Binary Heap is either Min Heap or Max Heap
+
 #include<iostream>
 #include<climits>
 using namespace std;
