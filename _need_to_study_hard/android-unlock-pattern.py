@@ -1,3 +1,6 @@
+# https://leetcode.com/problems/android-unlock-patterns/solution/
+# https://www.geeksforgeeks.org/number-of-ways-to-make-mobile-lock-pattern/
+
 # Python3 program to find number of ways 
 # to lock the mobile pattern 
 

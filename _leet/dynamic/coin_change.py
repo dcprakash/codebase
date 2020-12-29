@@ -32,5 +32,5 @@ def minCoins(coins, n, amount):
 # Driver program to test above function 
 coins = [1,2,5] 
 n = len(coins) 
-amount = 11
+amount = 3
 print("Minimum coins required is",minCoins(coins, n, amount)) 

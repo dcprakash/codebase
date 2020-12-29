@@ -21,7 +21,7 @@ def check(mid, array, n, K):
 		# mid increase count 
 		if (sum > mid): 
 			count += 1
-			sum = array[i] 
+			sum = array[i] #update sum to current element to adding can go on
 	count += 1
 
 	# Check condition 
@@ -58,6 +58,9 @@ def solve(array, n, K):
 if __name__ == '__main__': 
 	array = [1, 2, 3, 4] 
 	n = len(array) 
-	K = 3
+	K = 2
 	print(solve(array, n, K))
 
+# continuos sub array i.e., 1+2+3=6, 4
+# otherwise, 1+2=3, 4+3=7
+# 6 is better choice

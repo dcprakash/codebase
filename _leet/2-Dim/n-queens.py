@@ -1,3 +1,6 @@
+# https://leetcode.com/problems/n-queens/solution/
+# https://www.youtube.com/watch?v=xouin83ebxE&ab_channel=TusharRoy-CodingMadeSimple
+
 class Solution:
     def solveNQueens(self, n):
         def could_place(row, col):
