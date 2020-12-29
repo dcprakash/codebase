@@ -1,3 +1,9 @@
+
+'''
+https://leetcode.com/explore/interview/card/google/62/recursion-4/462/
+https://leetcode.com/problems/word-search-ii/solution/
+'''
+
 class Solution:
     def findWords(self, board, words) :
         WORD_KEY = '$'
