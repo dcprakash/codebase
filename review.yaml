@@ -1,0 +1,12 @@
+leet:
+    array:
+        minimum-cost-to-hire-work
+        missing_ranges
+        valid-palindrome    #usage of lambda, filter and map
+        hard:
+            minimum-window-substring
+    conversions:
+        integer-to-english-words
+        multiply-strings
+        roman-to-integer
+        

@@ -1,35 +1,29 @@
-from collections import defaultdict
+# https://leetcode.com/problems/minimum-cost-to-hire-k-workers/solution/
 
 
 class Solution(object):
-    def removeStones(self, stones):
-        graph = defaultdict(list)
-        for i, x in enumerate(stones):
-            for j in xrange(i):
-                y = stones[j]
-                if x[0]==y[0] or x[1]==y[1]:
-                    graph[i].append(j)
-                    graph[j].append(i)
+    def mincostToHireWorkers(self, quality, wage, K):
+        from fractions import Fraction
+        ans = float('inf')
 
-        N = len(stones)
-        ans = 0
+        N = len(quality)
+        for captain in xrange(N):
+            # Must pay at least wage[captain] / quality[captain] per qual
+            factor = Fraction(wage[captain], quality[captain])
+            prices = []
+            for worker in xrange(N):
+                price = factor * quality[worker]
+                if price < wage[worker]: continue
+                prices.append(price)
 
-        seen = [False] * N
-        for i in xrange(N):
-            if not seen[i]:
-                stack = [i]
-                seen[i] = True
-                while stack:
-                    ans += 1
-                    node = stack.pop()
-                    for nei in graph[node]:
-                        if not seen[nei]:
-                            stack.append(nei)
-                            seen[nei] = True
-                ans -= 1
-        return ans
+            if len(prices) < K: continue
+            prices.sort()
+            ans = min(ans, sum(prices[:K]))
 
+        return float(ans)
 
 s=Solution()
-stones = [[0,0],[0,2],[1,1],[2,0],[2,2]]
-print(s.removeStones(stones))
+quality = [10,20,5]
+wage = [70,50,30]
+K = 2
+print(s.mincostToHireWorkers(quality, wage, K))

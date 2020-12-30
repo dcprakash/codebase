@@ -72,6 +72,7 @@ def minWindow(s, t):
     
 # S = "ABAACBAB" 
 S = "ABDCE"
-T = "ABC"
+T = "ABC"   # create counter of this, len of this
+            # window counts to keep all unique chars in current window
+            # formed to tell how many are formed so far, if equal to len of T, we good.
 print(minWindow(S,T))
-
