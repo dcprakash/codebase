@@ -14,6 +14,8 @@ class Solution(object):
                     graph[i].append(j)
                     graph[j].append(i)
 
+        # print(graph)
+        # {0: [1, 3], 1: [0, 4], 3: [0, 4], 4: [1, 3]}
         N = len(stones)
         ans = 0
 
@@ -36,3 +38,18 @@ class Solution(object):
 s=Solution()
 stones = [[0,0],[0,2],[1,1],[2,0],[2,2]]
 print(s.removeStones(stones))
+
+'''
+   0     1     2     3     4
+[[0,0],[0,2],[1,1],[2,0],[2,2]]
+{0: [1, 3], 1: [0, 4], 3: [0, 4], 4: [1, 3]}
+
+   0 1 2
+0  1 0 1
+1  0 1 0
+2  1 0 1
+
+seen = [False, False, False, False, False] 
+seen is used to mark where stone is removed
+
+'''

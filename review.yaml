@@ -1,4 +1,6 @@
 leet:
+    2-Dim:
+        RemoveStones
     array:
         minimum-cost-to-hire-work
         missing_ranges
