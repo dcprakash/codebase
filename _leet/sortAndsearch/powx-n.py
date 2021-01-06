@@ -15,8 +15,8 @@ def power(x,n):
     return ans
 
 
-x = 2
-n = 10
+x = 4.0
+n = -2
 print(power(x,n))
 
         

@@ -1,5 +1,5 @@
 """
-Your module description
+https://leetcode.com/problems/merge-intervals
 """
 
 
@@ -19,7 +19,7 @@ def mergeIntervals(intervals, n):
     
     return merged   
 
-intervals = [[1,4],[4,5]]
+intervals = [[2,6],[1,3],[8,10],[15,18]]
 
 print(mergeIntervals(intervals,len(intervals)))
 

@@ -1,4 +1,5 @@
 '''
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
 1. Use brute force method to check if each substring is unique
 2. for each substring check if all are unique
 3. keep score of max unique substring in ans
