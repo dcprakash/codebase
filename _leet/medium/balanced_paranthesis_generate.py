@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/generate-parentheses/solution/
+
 class Solution(object):
     def generateParenthesis(self, N):
         ans = []
@@ -15,3 +17,34 @@ class Solution(object):
 
 s=Solution()
 print(s.generateParenthesis(3))
+
+
+'''
+l=1	(
+
+l=2	(
+
+l=3	(
+	s=(((
+	l=3
+
+	r=1	)
+	r=2	)
+	r=3	)
+		s=((()))
+		l=r=3
+	ans.append(s)
+	return
+
+	l=2, r=1
+		(()
+
+		l=3, r=1
+			(()(
+
+		l=3, r=2
+			(()()
+
+		l=3, r=3
+			(()())
+'''

@@ -1,6 +1,9 @@
 leet:
     2-Dim:
         RemoveStones
+        Robot-room-cleaner
+        hard:
+            n-queens
     array:
         minimum-cost-to-hire-work
         missing_ranges
@@ -11,4 +14,10 @@ leet:
         integer-to-english-words
         multiply-strings
         roman-to-integer
+    recursion:
+        regular-expression-matching
+    sortAndsearch:
+    medium:
+        hard:
+            decode-ways
         

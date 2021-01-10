@@ -4,6 +4,28 @@ https://leetcode.com/explore/interview/card/facebook/53/recursion-3/3029/
 
 # Python program to print all 
 # Strobogrammatic number of length n 
+'''
+n=1
+	["1", "0", "8"]
+n=2
+	middle=""
+	8+middle+8=88
+	['88', '11', '96', '69']
+n=3
+	middle=[1,0,8]
+	for item in middle:
+		8+item+8=818
+	['818', '111', '916', '619', '808', '101', '906', '609', '888', '181', '986', '689']
+n=4
+	middle=['00', '88', '11', '96', '69']
+	for item in middle:
+		8+item=8=8008,8888,8118,, etc
+	['8008', '1001', '9006', '6009', '8888', '1881', '9886', '6889', '8118', 
+	'1111', '9116', '6119', '8968', '1961', '9966', '6969', '8698', '1691', '9696', '6699']
+	
+
+
+'''
 
 # strobogrammatic function 
 def strobogrammatic_num(n): 

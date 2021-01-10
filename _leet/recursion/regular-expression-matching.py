@@ -16,7 +16,7 @@ def match(text, pattern):
 
 def isMatch(text, pattern):
     if not pattern:
-        print(not text)
+        # print(not text)
         return not text
 
     first_match = bool(text) and pattern[0] in {text[0], '.'}
@@ -30,5 +30,5 @@ def isMatch(text, pattern):
 
 text = "aa"
 pattern = "a*"
-print(match(text,pattern))
+# print(match(text,pattern))
 print(isMatch(text, pattern))

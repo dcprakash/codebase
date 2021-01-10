@@ -1,3 +1,4 @@
+# check if string is balanced
 
 
 def bracketBalanced(expr):
@@ -30,5 +31,5 @@ def bracketBalanced(expr):
         return True
                 
 
-expr="(a)()"
+expr="(a))"
 print(bracketBalanced(expr))

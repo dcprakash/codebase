@@ -1,5 +1,6 @@
 # Program to count islands in boolean 2D matrix
 # https://www.geeksforgeeks.org/find-number-of-islands/
+# https://leetcode.com/problems/number-of-provinces/solution/
 class Graph:
     def __init__(self, row, col, g):
         self.ROW = row
@@ -26,18 +27,20 @@ class Graph:
         # These arrays are used to get row and
         # column numbers of 8 neighbours
         # of a given cell
-        rowNbr = [-1, -1, -1, 0, 0, 1, 1, 1];
-        colNbr = [-1, 0, 1, -1, 1, -1, 0, 1];
+        # rowNbr = [-1, -1, -1, 0, 0, 1, 1, 1]
+        # colNbr = [-1, 0, 1, -1, 1, -1, 0, 1]
         # -1,-1   -1,0    -1,1
         # 0,-1    ****    0,1
         # 1,-1    1,0     1,1
+        rowNbr = [-1,1,0,0]
+        colNbr = [0,0,-1,1]
         
         # Mark this cell as visited
         visited[i][j] = True
         # print("Checking for i {}, j {} : {}".format(i, j, visited[i][j]))
         # Recur for all connected neighbours
         # check if neighbours has 1, then call DFS on them
-        for k in range(8):
+        for k in range(4):
             if self.isSafe(i + rowNbr[k], j + colNbr[k], visited):
                 self.DFS(i + rowNbr[k], j + colNbr[k], visited)
 
@@ -68,11 +71,10 @@ class Graph:
         return count
 
 
-graph = [[1, 1, 0, 0, 0],
-         [0, 1, 0, 0, 1],
-         [1, 0, 0, 1, 1],
-         [0, 0, 0, 0, 0],
-         [1, 0, 1, 0, 1]]
+graph =[[1,0,0,1],
+        [0,1,1,0],
+        [0,1,1,1],
+        [1,0,1,1]]
          
 
 row = len(graph)
@@ -82,3 +84,45 @@ g = Graph(row, col, graph)
 
 print "Number of islands is:"
 print g.countIslands()
+
+
+
+
+
+
+
+
+'''
+class Solution:
+    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+        row = len(isConnected)
+        col = len(isConnected[0])
+        
+        
+        def isSafe(i,j,visited):
+            return (i>=0 and i<row and j>=0 and j<col and 
+                    not visited[i][j] and isConnected[i][j])
+        
+        
+        def DFS(i,j,visited):
+            rowNbr = [-1,1,0,0]
+            colNbr = [0,0,-1,1]
+            visited[i][j]=True
+            for k in range(4):
+                if isSafe(i+rowNbr[k], j+colNbr[k], visited):
+                    DFS(i+rowNbr[k], j+colNbr[k], visited)
+        
+        
+        def countIslands():
+            visited=[[False for j in range(col)] for i in range(row)]
+            count=0
+            for i in range(row):
+                for j in range(col):
+                    if visited[i][j]==False and isConnected[i][j]==1:
+                        DFS(i,j,visited)
+                        count+=1
+            return count
+        
+        return countIslands()
+        
+'''
