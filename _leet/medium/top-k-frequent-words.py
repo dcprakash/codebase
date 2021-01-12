@@ -1,5 +1,7 @@
-# top k frequent numbers
+# top k frequent words
 # https://leetcode.com/problems/top-k-frequent-words/
+# frequency
+
 
 def topKFrequent(words, k):
     d={}
@@ -17,19 +19,18 @@ def topKFrequent(words, k):
     return res
     
     
-def topKFrequentEfficient(nums, k):
+def topKFrequentEfficient(words, k):
     from collections import Counter
-    count=Counter(nums)
-    # candidates=count.keys()
-    candidates=list(count.keys())
-    candidates.sort(key=lambda w: (-count[w]))
+    count=Counter(words)
+    candidates=count.keys()
+    candidates.sort(key=lambda w: (-count[w], w))
     return candidates[:k]
     
 # Counter({'the': 4, 'is': 3, 'sunny': 2, 'day': 1})
-nums = [1,4,4,5,5,5]
-k = 2
-# print(topKFrequent(nums, k))
-print(topKFrequentEfficient(nums, k))
+inputs = ["the", "day", "is", "sunny", "rome", "the", "the", "the", "sunny", "is", "is", "rome"]
+k=4
+print(topKFrequent(inputs, k))
+print(topKFrequentEfficient(inputs, k))
 
 
     

@@ -9,6 +9,8 @@ class Solution(object):
                 return
             if left < N:
                 backtrack(S+'(', left+1, right)
+            # for balanved tree, right always less than left
+            # i.e., close bracket should be less than open, to move fwd.
             if right < left:
                 backtrack(S+')', left, right+1)
 
