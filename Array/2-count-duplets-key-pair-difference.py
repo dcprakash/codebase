@@ -1,4 +1,5 @@
-
+# https://leetcode.com/problems/k-diff-pairs-in-an-array/solution/
+# count duplet key pair differences, K diff pairs in array
 
 def findPairs(nums, k, n):
     l=0

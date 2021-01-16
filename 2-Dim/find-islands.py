@@ -68,11 +68,16 @@ class Graph:
         return count
 
 
-graph = [[1, 1, 0, 0, 0],
-         [0, 1, 0, 0, 1],
-         [1, 0, 0, 1, 1],
-         [0, 0, 0, 0, 0],
-         [1, 0, 1, 0, 1]]
+# graph = [[1, 1, 0, 0, 0],
+#          [0, 1, 0, 0, 1],
+#          [1, 0, 0, 1, 1],
+#          [0, 0, 0, 0, 0],
+#          [1, 0, 1, 0, 1]]
+
+graph=[[1,1,0,0,0],
+        [1,1,0,0,0],
+        [0,0,0,1,1],
+        [0,0,0,1,1]]
          
 
 row = len(graph)
@@ -80,5 +85,5 @@ col = len(graph[0])
 
 g = Graph(row, col, graph)
 
-print "Number of islands is:"
-print g.countIslands()
+print("Number of islands is:")
+print(g.countIslands())
