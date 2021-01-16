@@ -14,13 +14,12 @@ class Node:
 
 
 def levelOrder(root):
-    ret=[]
     result=deque()
     
     if root is None:
         return []
     
-    queue=deque([root, None])
+    queue=deque([root])
     while len(queue) > 0:
         node = queue.popleft()
         if node:
@@ -37,6 +36,5 @@ root.left = Node(9)
 root.right = Node(20)
 root.right.left = Node(15)
 root.right.right = Node(7)
-res = []
 print("DFS traversal of binary tree is -")
 print(levelOrder(root))
