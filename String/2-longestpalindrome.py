@@ -1,4 +1,7 @@
-
+'''
+https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
+https://leetcode.com/problems/palindromic-substrings/solution/
+'''
 
 def longestpalindrome(s):
     n=len(s)
@@ -24,7 +27,7 @@ def longestpalindrome(s):
         res+=s[i]
     return res
 
-s = "ac"
+s = "Geek"
 print(longestpalindrome(s))
 
 
