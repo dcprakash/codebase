@@ -20,5 +20,5 @@ def countSubstrings(s,n):
     return ans
 
 
-s="Geek"
+s="aab"
 print(countSubstrings(s,len(s)))

@@ -25,7 +25,7 @@ class Graph:
 
         # These arrays are used to get row and
         # column numbers of 8 neighbours
-        # of a given cell
+        # of a given cell directions / path
         rowNbr = [-1, -1, -1, 0, 0, 1, 1, 1];
         colNbr = [-1, 0, 1, -1, 1, -1, 0, 1];
         # -1,-1   -1,0    -1,1

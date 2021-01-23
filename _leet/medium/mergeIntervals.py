@@ -1,11 +1,12 @@
 """
 https://leetcode.com/problems/merge-intervals
+merge intervals of list
 """
 
 
 def mergeIntervals(intervals, n):
     intervals.sort(key=lambda x: x[0])
-    # print(intervals)
+    # print(intervals)  # [[1, 3], [2, 6], [8, 10], [15, 18]]
     
     merged=[]
     for item in intervals:
