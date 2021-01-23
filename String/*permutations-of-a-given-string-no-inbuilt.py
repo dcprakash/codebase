@@ -34,5 +34,5 @@ def permute_util(str, count, result, level):
 
 if __name__ == '__main__':
     # input = ['B', 'C', 'A', 'A']
-    input = ['A','B','C']
+    input = [1,2,3]
     permute(input)

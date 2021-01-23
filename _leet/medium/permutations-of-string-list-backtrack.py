@@ -1,4 +1,6 @@
 '''
+https://leetcode.com/problems/permutations/submissions/
+
 permutation of 3 chars is 3*2*1=6
 
 			123

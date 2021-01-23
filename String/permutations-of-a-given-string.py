@@ -20,7 +20,7 @@ def permute(a, l, r):
 
 # Driver program to test the above function 
 res=[]
-string = "ABC"
+string = "123"
 n = len(string) 
 a = list(string) 
 permute(a, 0, n-1) 

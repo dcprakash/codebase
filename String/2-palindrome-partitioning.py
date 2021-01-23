@@ -1,7 +1,7 @@
 '''
 https://leetcode.com/problems/palindrome-partitioning/solution/
 
-# palindrome partition
+# palindrome partition backtracking
 Iteratively generate all possible substrings beginning at start index. The end index increments from start till the end of the string.
     Example, abba can be partitioned as ["a","ab","abb","abba"]
 For each of the substring generated, check if it is a palindrome.
