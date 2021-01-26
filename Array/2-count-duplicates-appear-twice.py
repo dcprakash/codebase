@@ -11,6 +11,9 @@ def findDuplicate(nums):
 
 def findDuplicateEff(nums):
     nums.sort()
+    # this can also return 2 but it has appearer more than twice
+    # [1,2,2,2,3,4,4,5]
+    # 4 is correct answer
     for i in range(1, len(nums)):
         if nums[i] == nums[i-1]:
             return nums[i]

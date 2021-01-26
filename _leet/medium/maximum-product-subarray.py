@@ -1,3 +1,8 @@
+# find the contiguous subarray with max product within an array
+# https://leetcode.com/problems/maximum-product-subarray/
+
+
+
 class Solution:
     def maxProduct(self, nums):
         if len(nums) == 0:
