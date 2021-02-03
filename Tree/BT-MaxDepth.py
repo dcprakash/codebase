@@ -1,3 +1,28 @@
+class Node: 
+	
+	# Contructor to create a new node 
+	def __init__(self, data): 
+		self.data = data 
+		self.left = None
+		self.right = None
+
+def maxdepth(root):
+        return 1 + max(maxdepth(root.left), maxdepth(root.right)) if root else 0
+
+# Driver program to test above function
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.left.right = Node(5)
+root.left.left.left = Node(6)
+
+print(maxdepth(root))
+
+
+
+
+
 """
 https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
@@ -20,9 +45,11 @@ class Solution:
         return 1 + max(leftD, rightD)
         
 """
+
+
 """
 Your module description
-"""
+
 
 # Recursive Python program for level 
 # order traversal of Binary Tree
@@ -47,14 +74,8 @@ def maxdepth(root):
 	rd=maxdepth(root.right) if root.right else -math.inf
 	return max(ld,rd)+1
         
-        
 
-# Driver program to test above function
-root = Node(1)
-root.left = Node(2)
-root.right = Node(3)
-root.left.left = Node(4)
-root.left.right = Node(5)
-root.left.left.left = Node(6)
 
-print(maxdepth(root))
+"""
+
+

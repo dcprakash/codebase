@@ -1,6 +1,7 @@
 '''
 https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
 https://leetcode.com/problems/palindromic-substrings/solution/
+palindrome substrings
 '''
 
 
@@ -20,5 +21,5 @@ def countSubstrings(s,n):
     return ans
 
 
-s="aab"
+s="aaa"
 print(countSubstrings(s,len(s)))

@@ -1,5 +1,5 @@
 """
-Your module description
+https://www.geeksforgeeks.org/connect-nodes-at-same-level/
 """
 
 # Recursive Python program for level 
@@ -13,6 +13,7 @@ class Node:
 		self.data = key 
 		self.left = None
 		self.right = None
+		self.nextright = None
 
 			
 def LevelOrder(root):
@@ -21,13 +22,20 @@ def LevelOrder(root):
     res=[]
     q=[]
     q.append(root)
+    temp=Node(None)
     while q:
-        tq=q.pop(0)
-        res.append(tq.data)
-        if tq.left:
-            q.append(tq.left)
-        if tq.right:
-            q.append(tq.right)
+        n=len(q)
+        for i in range(n):
+            prv=temp
+            tq=q.pop(0)
+            if i>0:
+                prv.nextright=temp
+            res.append(tq.data)
+            if tq.left:
+                q.append(tq.left)
+            if tq.right:
+                q.append(tq.right)
+        temp.nextright=None
     return res
         
         
@@ -41,3 +49,4 @@ root.right.right = Node(7)
 
 print("Level order traversal of binary tree is -")
 print(LevelOrder(root))
+print("Next right of {} is {}".format(root.left.data, root.left.nextright.data))

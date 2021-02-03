@@ -1,4 +1,12 @@
 # https://leetcode.com/problems/generate-parentheses/solution/
+# backtrack
+
+'''
+keep track of open and close ( )
+	add ( if there is char left place
+	add ) if there is openeing bracket
+'''
+
 
 class Solution(object):
     def generateParenthesis(self, N):

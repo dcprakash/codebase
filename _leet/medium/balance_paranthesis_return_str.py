@@ -18,8 +18,9 @@ with for loop, iterate over expression
 '''
 
 def bracketBalanced(s):
-    stack = []
+    stack = []  # if balance string stack is not empty, remove these index
     ix_to_rm=set()
+    res=[]
     
     for i, c in enumerate(s):
         if c not in ("(",")"):
@@ -33,7 +34,7 @@ def bracketBalanced(s):
             
     ix_to_rm=ix_to_rm.union(set(stack))
     
-    res=[]
+    
     for i, c in enumerate(s):
         if i not in ix_to_rm:
             res.append(c)

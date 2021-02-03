@@ -17,7 +17,7 @@ class Solution:
         """
 
         # Create the adjacency list representation of the graph
-        adj_list = defaultdict(list)
+        adj_list = defaultdict(list)    # {0: [1, 2], 1: [3], 2: [3]}
 
         # A pair [a, b] in the input represents edge from b --> a
         for dest, src in prerequisites:

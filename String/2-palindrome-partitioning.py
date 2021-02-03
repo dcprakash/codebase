@@ -30,10 +30,10 @@ class Solution(object):
                 # print(path)   # currentList
                 self.res.append(path)
                 
-            for l in range(n - start_ind):
+            for l in range(n - start_ind): #0,3; 0,2; 0,1
                 if isPalindrome(start_ind, start_ind + l):
-                    dfs(start_ind + l + 1, path + [s[start_ind:start_ind + l + 1]] )
-        
+                    dfs(start_ind + l + 1, path + [s[start_ind : start_ind + l + 1]] )
+                    # dfs(0, []), dfs(1, [a]), dfs(2,[a,a]), dfs(3,[a,a,b])
         
         self.res = []
         dfs(0,[])
