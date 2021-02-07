@@ -31,7 +31,7 @@ def minSubArrayLenEfficient(s, nums):
     return res if res!=float('inf') else 0
         
 
-s = 11
-nums = [1,2,3,4,5]
+s = 5
+nums = [2,3,1,2,4,3]
 # print(minSubArrayLen(s, nums))
 print(minSubArrayLenEfficient(s, nums))

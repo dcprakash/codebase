@@ -9,7 +9,7 @@ class Solution:
         # declare lambda function; we call this for d=1 to threshold
         compute_sum = lambda x : sum([ceil(n / x) for n in nums])
         d = 1
-        while compute_sum(d) > threshold: # call above function
+        while compute_sum(d) > threshold:
             d += 1
         
         return d

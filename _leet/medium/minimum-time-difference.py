@@ -15,5 +15,5 @@ def findMinDifference(timePoints):
         	m = timePoints[i] - timePoints[i-1]
     return min(m, 1440 - timePoints[-1] + timePoints[0])
     
-timePoints = ["23:59","00:00"]	# (23*60)+59=1439, 0
+timePoints = ["23:59","02:00","01:30"]	# (23*60)+59=1439 #[90, 120, 1439]
 print(findMinDifference(timePoints))

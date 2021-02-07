@@ -82,8 +82,8 @@ col = len(graph[0])
 
 g = Graph(row, col, graph)
 
-print "Number of islands is:"
-print g.countIslands()
+print("Number of islands is:")
+print(g.countIslands())
 
 
 

@@ -12,7 +12,8 @@ class Solution:
             return True
         else:
             return False
-        
+    
+    
     def printMat(matrix):
         print("[",end="")
         for r in range(0,len(matrix),1):
@@ -27,6 +28,7 @@ class Solution:
                 print("]]")
             else:
                 print("]")
+    
     
     def DFS(matrix, r, c, prev_val,ocean):
         #If not a valid cell
@@ -51,8 +53,7 @@ class Solution:
                 Solution.DFS(matrix,r+1,c,curr_val,ocean) #down
                 Solution.DFS(matrix,r-1,c,curr_val,ocean) #up
 
-        
-    
+
     def pacificAtlantic(self, matrix):
         pacific = [[0 for x in range(len(matrix[0]))] for y in range(len(matrix))]
         atlantic = [[0 for x in range(len(matrix[0]))] for y in range(len(matrix))]
@@ -85,6 +86,7 @@ class Solution:
         
         
         Solution.printMat(pacific)
+        print("---------")
         Solution.printMat(atlantic)
         listOfCoords = []
         

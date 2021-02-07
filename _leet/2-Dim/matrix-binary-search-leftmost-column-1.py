@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/leftmost-column-with-at-least-a-one/solution/
 # A row-sorted binary matrix as input is given, we can also use binary search
-
+# binary search in matrix
 
 def leftMostColumnWithOne(binaryMatrix):
     rows = len(binaryMatrix)

@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/course-schedule-ii/solution/
 # Dijkstra, Topological sort, courses, prerequisites, schedule, dependency, adjacency list
-
+# dfs depth first search
 
 from collections import defaultdict
 class Solution:

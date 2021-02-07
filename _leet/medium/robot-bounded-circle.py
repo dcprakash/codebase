@@ -22,8 +22,15 @@ def isRobotBounded(instructions):
             else:    x-=1  # d==W
     
     return (x==0 and y==0) or d!=N
+    # Finally, if you get your final position at (0,0) or 
+    # if you are not facing north direction, that means you will be in circle.
 
+# robot returns to start positions
+instructions="GGLLGG"
 
-instructions="GL"
-# instructions="GGLLGG" # robot does NOT face north, return False
+# #robot faces north
+# instructions = "GL"
+
+# #robot moves north indefinitely
+# instructions = "GG"
 print(isRobotBounded(instructions))

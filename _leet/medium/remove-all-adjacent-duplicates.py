@@ -13,23 +13,25 @@ def removeDuplicates(s):
     return "".join(t)
             
 
+'''
+one stack for holding unique elements let's say (stack)
+another stack (let say counter_stack) for storing current count from the stack.peek( )
+Loop through each item in s and adjust/remove top elements of both stacks.
+build a return string using both of the stacks.
+'''
 def removeDuplicatesKchar(s,k):
-    stack=[]
-    n=len(s)
-    for i in range(n):
-        if i==0 or s[i]!=s[i-1]:
-            stack.append(1)
-        else:
-            top_count=stack[-1]+1
-            if top_count==k:
-                s=s[i-k::k+1]+s[k+2::]
-                # s=s[0::4]+s[5::]
-            else:
-                stack[-1]=top_count
-    return "".join(stack)
-    #. 012345
-    # s="abbbef"
-    # print(s[0::4]+s[5::]) i=3
+    stack = []
+    counter_stack = []
+    for val in s:
+        if not stack or stack[-1]!=val:
+            stack.append(val)
+            counter_stack.append(1)
+        elif stack[-1]==val:
+            counter_stack[-1]+=1
+        if counter_stack[-1]==k:
+            counter_stack.pop()
+            stack.pop()
+    return ''.join([stack[i]*counter_stack[i] for i in range(len(stack))])
 
 
 s="abbc"

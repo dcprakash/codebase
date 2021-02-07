@@ -9,7 +9,7 @@ def bracketBalanced(s):
             stack.append(s[c])
         else:
             if stack and s[c]==')':
-                cur=stack.pop()
+                stack.pop()
                 max_p+=1
     return max_p*2
                 

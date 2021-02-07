@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/search-a-2d-matrix-ii/submissions/
+# binart search in matrix
 
 def searchMatrix(matrix,target):
     rows = len(matrix)

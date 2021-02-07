@@ -44,5 +44,5 @@ def numSquaresEfficient(n):
     
             
 n=5
-# print(numSquares(n))
-print(numSquaresEfficient(n))
+print(numSquares(n))
+# print(numSquaresEfficient(n))

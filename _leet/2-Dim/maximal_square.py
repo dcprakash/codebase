@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=6X7Ha2PrDmM&feature=emb_logo&ab_channel=NeetCode
 
 # dynamic programing
 # memoization
+
+largest square, not rectangle
 '''
 
 

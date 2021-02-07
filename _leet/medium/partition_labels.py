@@ -16,7 +16,7 @@ Then, let anchor and j be the start and end of the current partition.
 def partitionLabels(S):
     # overwrite index (i) of char (c) into dict (last), where key is char (c)
     last = {c: i for i, c in enumerate(S)}
-    j = anchor = 0
+    j = anchor = 0  #start and end of current partition
     ans = []
     for i, c in enumerate(S):
         j = max(j, last[c])
@@ -29,3 +29,5 @@ def partitionLabels(S):
 #    0123456789 
 s = "ababcbacadefegdehijhklij"
 print(partitionLabels(s))
+
+# {'a': 8, 'b': 5, 'c': 7, 'd': 14, 'e': 15, 'f': 11, 'g': 13, 'h': 19, 'i': 22, 'j': 23, 'k': 20, 'l': 21}

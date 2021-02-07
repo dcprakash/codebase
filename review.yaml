@@ -1,9 +1,11 @@
 leet:
     2-Dim:
+        maximal_square
         RemoveStones
         Robot-room-cleaner
         hard:
             n-queens
+            snakes-and-ladders
     array:
         minimum-cost-to-hire-work
         missing_ranges
@@ -18,6 +20,14 @@ leet:
         regular-expression-matching
     sortAndsearch:
     medium:
+        balanced_paranthesis_generate_backtrack
+        maximum-points-you-can-obtain-from-cards
+        minimum-size-subarray-sum
+        perfect_square_sums
+        reorganize-string-alternatively
         hard:
+            clone-graph
             decode-ways
+            longestIncreasingSubsequence
+            permutations-of-string-list-backtrack
         

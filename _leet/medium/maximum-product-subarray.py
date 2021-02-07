@@ -1,6 +1,10 @@
 # find the contiguous subarray with max product within an array
 # https://leetcode.com/problems/maximum-product-subarray/
-
+'''
+max_so_far: picked if value is steadily increasing
+min_so_far: picked if current value is negative
+return result
+'''
 
 
 class Solution:
@@ -40,7 +44,8 @@ class Solution:
         return result
 
 
-nums=[2,3,-2,4]
+# nums=[2,3,-2,4]
+nums=[2,-5,3,1,-4,0,-10,2,8]
         
 s=Solution()
 # print(s.maxProduct(nums))

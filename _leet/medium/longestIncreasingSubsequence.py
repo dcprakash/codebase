@@ -31,4 +31,15 @@ def longestIncreasingSubsequenceCorrect(nums):
 nums = [2,1,3,4]
 # print(longestIncreasingSubsequence(nums))
 print(longestIncreasingSubsequenceCorrect(nums))
+
+
+'''
+For each value we have 2 choice, include or not
+keep iterating for taken, until we find decreasing value
+don't include decreasing value:
+    if we dont include, get values for "not taken"
+return max(taken, nottaken)
+
+
+'''
     
