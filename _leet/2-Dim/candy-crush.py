@@ -4,10 +4,17 @@
 https://leetcode.com/problems/candy-crush/solution/
 
 crush:
+    mark candies that need to be crushed first
+    123
+    145
+    111
+    and we crush the vertical row of 1s early, we may not see there was also a horizontal row.
+
     mark board's entry - to show its crushed
         board[i][j] = -Math.abs(board[i][j]))
     if we find contiguous segments of 3 or more in column or row, flag them
     crush the candy, mark them 0
+
 gravity step: all candys should go down
     read and write head; iterate in reverse order through columns
         when read sees candy, write will write it down and move one place
@@ -42,7 +49,7 @@ class Solution(object):
             for wr in range(wr, -1, -1):
                 board[wr][c] = 0
         return self.candyCrush(board) if todo else board
-'''        
+       
 board =[
     [110,5,112,113,114],
     [210,211,5,213,214],
@@ -57,7 +64,7 @@ board =[
 s=Solution()
 print(s.candyCrush(board))
 
-
+''' 
  [
 0    [110,   5,      112,    113,    114], 
 1    [210,   211,    5,      213,    214], 
@@ -76,7 +83,7 @@ print(s.candyCrush(board))
     9,1     8,1     7,1     6,1     wont decrease wr; so wr=3 instead of -1
     3,1     2,1     1,1     0,1     becomes 0
     which looks like below
-    0    [110,   5,      112,    113,    114], 
+     [110,   5,      112,    113,    114], 
 1    [210,   0,    5,      213,    214], 
 2    [310,   0,    3,      313,     314], 
 3    [410,   0,    412,     5,     414], 

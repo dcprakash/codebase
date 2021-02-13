@@ -2,7 +2,7 @@
 https://leetcode.com/problems/minimum-path-sum/solution/
 
 minimum path sum in matrix
-
+maximum path sum in matrix
 '''
 # https://leetcode.com/problems/minimum-path-sum/
 import sys

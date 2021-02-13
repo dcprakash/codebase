@@ -18,6 +18,6 @@ def findPairs(nums, k, n):
     return count
         
 
-nums = [1,2,4,4,3,3,0,9,2,3]  # 1,1,3,4,5
+nums = [3,1,4,1,5]  # 1,1,3,4,5
 k = 3
 print(findPairs(sorted(nums), k, len(nums)-1))

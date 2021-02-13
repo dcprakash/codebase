@@ -1,13 +1,17 @@
 # https://leetcode.com/problems/task-scheduler/solution/
-# idle time between tasks
+# idle i.e., cool down period time between two SAME tasks
+# Number of busy slots is defined by the number of tasks to execute: len(tasks)
+# idle slots = frequency of most frequent task: idle_time <= (f_max - 1) * n.
+# f_max=5 bcz of A
+# idle_time=5-1*2=8
 
 
 class Solution(object):
     def leastInterval(self, tasks, n):
         frequencies = 26*[0]
         for t in tasks:
-            frequencies[ord(t)-ord('A')]+=1
-        frequencies.sort()
+            frequencies[ord(t)-ord('A')]+=1 #ord() returns integer representing Unicode character.
+        frequencies.sort()  # [0,.., 0, 1, 2, 5]
         # print(frequencies)
         
         f_max=frequencies.pop()
@@ -20,8 +24,7 @@ class Solution(object):
         return len(tasks) + idle_time
 
 
-# tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"]
-tasks = ["A","A","A","B","B","B"]
+tasks = ["A","B","A","A","B","C","A","A"]
 n = 2
 s=Solution()
 print(s.leastInterval(tasks, n))

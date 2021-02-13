@@ -19,4 +19,4 @@ def find_max_sum(arr):
 
 # Driver program to test above function 
 arr = [3, 2, 7, 10] 
-print find_max_sum(arr) 
+print(find_max_sum(arr))

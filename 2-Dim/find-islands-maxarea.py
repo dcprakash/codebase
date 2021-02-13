@@ -15,6 +15,8 @@ class Solution(object):
                     area(r, c-1) + area(r, c+1))
         
         # call area for each element in grid
+        # for each call, you'll have count of connected 1's
+        # return max of these counts
         return max(area(r, c)
                    for r in range(len(grid))
                    for c in range(len(grid[0])))

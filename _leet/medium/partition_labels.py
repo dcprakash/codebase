@@ -9,7 +9,6 @@ For "abccaddbeffe", the minimum first partition is "abccaddb"
 We need an array last[char] -> index of S where char occurs last. 
 Then, let anchor and j be the start and end of the current partition.
 
-
 '''
 
 

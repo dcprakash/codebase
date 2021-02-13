@@ -4,6 +4,17 @@
 from collections import Counter
 
 
+def subArrayDivEfficient(A,n,K):
+	curr_sum=count=0
+	for i in range(n):
+		curr_sum=A[i]
+		if curr_sum%K==0:	count+=1
+		for j in range(i+1,n):
+			curr_sum+=A[j]
+			if curr_sum%K==0:	count+=1
+	return count
+
+
 def subarraysDivByK(A, K):
     P = [0]
     for x in A:
@@ -16,3 +27,4 @@ def subarraysDivByK(A, K):
 A = [4,5,0,-2,-3,1]
 K = 5
 print(subarraysDivByK(A,K))
+print(subArrayDivEfficient(A,len(A),K))

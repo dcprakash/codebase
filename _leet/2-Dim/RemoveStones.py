@@ -8,7 +8,7 @@ class Solution(object):
     def removeStones(self, stones):
         graph = defaultdict(list)
         for i, x in enumerate(stones):
-            for j in xrange(i):
+            for j in range(i):
                 y = stones[j]
                 if x[0]==y[0] or x[1]==y[1]:
                     graph[i].append(j)
@@ -20,7 +20,7 @@ class Solution(object):
         ans = 0
 
         seen = [False] * N
-        for i in xrange(N):
+        for i in range(N):
             if not seen[i]:
                 stack = [i]
                 seen[i] = True
@@ -49,7 +49,16 @@ print(s.removeStones(stones))
 1  0 1 0
 2  1 0 1
 
+create defaultdict list of all nodes that has stones
 seen = [False, False, False, False, False] 
 seen is used to mark where stone is removed
+use DFS to remove stones
+
+Output: 3
+Explanation: One way to make 3 moves is as follows:
+1. Remove stone [2,2] because it shares the same row as [2,0].
+2. Remove stone [2,0] because it shares the same column as [0,0].
+3. Remove stone [0,2] because it shares the same row as [0,0].
+Stones [0,0] and [1,1] cannot be removed since they do not share a row/column with another stone still on the plane.
 
 '''

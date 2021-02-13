@@ -10,9 +10,9 @@
   low=0, high=n-1
   while(low<high){
   	mid=(l+h)/2;
-  	if x==a[mid]
+  	if mid==a[mid]
   		return mid;
-  	else if x<a[mid]
+  	else if mid<a[mid]
   		high = mid-1;
   	else
   		low = mid+1;

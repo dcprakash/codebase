@@ -69,7 +69,9 @@ class Solution:
                 if not new_cell in visited and robot.move():
                     backtrack(new_cell, new_d)
                     go_back()
+                
                 # turn the robot following chosen direction : clockwise
+                # robot.move() returned False
                 robot.turnRight()
     
         # going clockwise : 0: 'up', 1: 'right', 2: 'down', 3: 'left'
@@ -87,3 +89,26 @@ room = [
 ],
 row = 1,
 col = 3
+
+
+'''
+                            Algorithm
+
+Time to write down the algorithm for the backtrack function backtrack(cell = (0, 0), direction = 0).
+
+Mark the cell as visited and clean it up.
+
+Explore 4 directions : up, right, down, and left (the order is important since the idea is always to turn right) :
+
+Check the next cell in the chosen direction :
+
+If it's not visited yet and there is no obtacles :
+
+Move forward.
+
+Explore next cells backtrack(new_cell, new_direction).
+
+Backtrack, i.e. go back to the previous cell.
+
+Turn right because now there is an obstacle (or a virtual obstacle) just in front.
+'''

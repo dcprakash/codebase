@@ -3,12 +3,14 @@
 
 from collections import Counter
 
+# returns all duplicates
 def findDuplicate(nums):
     count=Counter(nums)
-    res=[k for k,v in count.items() if v==2]
-    return res[0] if res else []
+    res=[k for k,v in count.items() if v>1]
+    return res if res else []
 
 
+# returns first duplicate occurence
 def findDuplicateEff(nums):
     nums.sort()
     # this can also return 2 but it has appearer more than twice
@@ -19,5 +21,5 @@ def findDuplicateEff(nums):
             return nums[i]
             
 
-nums=[2,2,2,2,2]
+nums=[2,2,3,2,3]
 print(findDuplicate(nums))

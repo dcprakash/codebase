@@ -4,7 +4,7 @@ leet:
         RemoveStones
         Robot-room-cleaner
         hard:
-            n-queens
+            n-queens    ***
             snakes-and-ladders
     array:
         minimum-cost-to-hire-work
@@ -25,9 +25,17 @@ leet:
         minimum-size-subarray-sum
         perfect_square_sums
         reorganize-string-alternatively
+        task-scheduler
         hard:
             clone-graph
             decode-ways
             longestIncreasingSubsequence
             permutations-of-string-list-backtrack
-        
+Array:
+    3-a-product-array-puzzle        *
+    4-max-sum-without-adjacents     *
+    4-subarray-sum-minimum-size
+    4-subarray-with-given-sum
+    array-rotation-right            *
+    find-item-whose-elements-before-small-after-big
+    find-the-leaders-in-an-array

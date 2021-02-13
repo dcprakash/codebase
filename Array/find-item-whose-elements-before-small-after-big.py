@@ -37,6 +37,18 @@ if __name__ == "__main__":
 	n = len(arr) 
 	print("Index of the element is", findElement(arr, n))
 
+'''
+Easy approach
+for i in range(n):
+	for j in range(i,-1,-1):
+		a[i]>a[j]
+	for k in range(i+1,n)
+		a[i]<a[k]
+	if j==0 and k==n:
+		return i
+'''
+
+
 
 # small x great
 # smallest element after x, should be greater than x
@@ -46,4 +58,4 @@ if __name__ == "__main__":
 
 # -0 5  5  5  5  6  8   10 10
                           
-#               7   7     7   r=9 
+#                7  7   7   9 

@@ -9,12 +9,12 @@ def find3Numbers(A, n, X):
 			
 			while (l < r): 
 				if (A[i] + A[l] + A[r] >= X):
-					print("A[i]={}   A[l]={}.  A[r]={}".format(A[i],A[l],A[r]))
+					# print("A[i]={}   A[l]={}.  A[r]={}".format(A[i],A[l],A[r]))
 					r = r - 1
 				else:
 					print("A[i]={}   A[l]={}.  A[r]={}".format(A[i],A[l],A[r]))
 					result+=(r-l)
-					print(result)
+					# print(result)
 					l =l + 1
 	print(result)
 
