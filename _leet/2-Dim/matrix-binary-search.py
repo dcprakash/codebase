@@ -13,7 +13,7 @@ def searchMatrix(matrix,target):
             if matrix[row][mid]==target:
                 return True
             elif matrix[row][mid]<target:
-                lo+=1
+                lo+=1   #why not lo=mid+1?
             else:
                 hi-=1
     return False

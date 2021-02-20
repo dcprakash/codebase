@@ -8,12 +8,8 @@ def longestpalindrome(s):
     max_len=1
     start=0
     for i in range(1,n):
-        if n%2==0:
-            l=i-1
-            h=i
-        else:
-            l=i-1
-            h=i+1
+        l=i-1
+        h=i
             
         while l>=0 and h<n and s[l]==s[h]:
             if h-l+1>max_len:
@@ -27,7 +23,7 @@ def longestpalindrome(s):
         res+=s[i]
     return res
 
-s = "Geek"
+s = "Geeks"
 print(longestpalindrome(s))
 
 

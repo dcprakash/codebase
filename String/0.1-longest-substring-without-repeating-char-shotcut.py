@@ -1,14 +1,16 @@
 class Solution:
     def all_unique(self, str2):
-        # res=""
-        res=set()
-        for i in str2:
-            if i in res:
-                return False
-            else:
-                #res+=i
-                res.add(i)
-        return True
+        return len(set(str2))==len(str2)
+        
+        # # res=""
+        # res=set()
+        # for i in str2:
+        #     if i in res:
+        #         return False
+        #     else:
+        #         #res+=i
+        #         res.add(i)
+        # return True
     
 
     def lengthOfLongestSubstring(self, s):
@@ -21,7 +23,8 @@ class Solution:
                 if self.all_unique(s[i:j]):
                     ans=max(ans,j-i)
         return ans
-    
+
+
 s=Solution()
-string="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abc"
+string="geeksforgeeks"
 print(s.lengthOfLongestSubstring(string))

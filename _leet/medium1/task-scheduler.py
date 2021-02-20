@@ -3,8 +3,11 @@
 # Number of busy slots is defined by the number of tasks to execute: len(tasks)
 # idle slots = frequency of most frequent task: idle_time <= (f_max - 1) * n.
 # f_max=5 bcz of A
-# idle_time=5-1*2=8
-
+# idle_time=5-1*2=8 bcz     A--A--A--A--A
+# to schedule B -> 8-2=6    AB-AB-A--A--A
+# to schedule C -> 6-1=5    ABCAB-A--A--A   idle slots = 5
+# number of tasks = len(tasks)  = 8
+# 8+5=13
 
 class Solution(object):
     def leastInterval(self, tasks, n):
@@ -19,7 +22,7 @@ class Solution(object):
         
         while frequencies and idle_time>0:
             idle_time-=min(f_max-1, frequencies.pop())
-        idle_time=max(0,idle_time)
+        # idle_time=max(0,idle_time)
         
         return len(tasks) + idle_time
 

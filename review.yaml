@@ -20,11 +20,10 @@ leet:
         regular-expression-matching
     sortAndsearch:
     medium:
-        balanced_paranthesis_generate_backtrack
+        course-schedule
         maximum-points-you-can-obtain-from-cards
         minimum-size-subarray-sum
         perfect_square_sums
-        reorganize-string-alternatively
         task-scheduler
         hard:
             clone-graph
@@ -36,6 +35,18 @@ Array:
     4-max-sum-without-adjacents     *
     4-subarray-sum-minimum-size
     4-subarray-with-given-sum
-    array-rotation-right            *
-    find-item-whose-elements-before-small-after-big
+    array-rotation-right
+    equilibrium-index-of-an-array   efficient
+    find-item-whose-elements-before-small-after-big *
+    find-minimum-difference-pair
     find-the-leaders-in-an-array
+    rearrange-array-into-zig-zag-fashion
+    reorganize-string-alternatively
+    reverse-an-array-upto-a-given-position
+string:
+    0.1-longest-substring-without-repeating-characters  ***
+    0.1-smallest-distant-window                         ***
+    2-longestpalindrome-count-backtracking
+    2-longestpalindrome
+    2-palindrome-partitioning
+    

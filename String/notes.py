@@ -1,17 +1,16 @@
-# https://www.geeksforgeeks.org/array-rotation/
-
-def leftrotatearray(a,n,r):
-    while r:
-        for i in range(n-1):
-            temp=a[i]
-            a[i]=a[i+1]
-            a[i+1]=temp
-        r-=1
-    print(a)
+from math import ceil
 
 
-a = [1, 3, 4, 6]
-n=len(a)
-r=1
-print(a)
-leftrotatearray(a,n,r)
+class Solution:
+    def smallestDivisor(self, nums, threshold):
+        compute = lambda x: sum([ceil(n/x) for n in nums])
+        d=1
+        while compute(d)>threshold:
+        	d+=1
+        return d
+
+
+nums = [1,2,5,9]
+threshold = 6
+s=Solution()
+print(s.smallestDivisor(nums, threshold))

@@ -72,3 +72,13 @@ words = ["oath","pea","oad","rain"]
 
 s=Solution()
 print(s.findWords(board, words))
+
+
+'''
+{
+    'o': {'a': {'t': {'h': {'$': 'oath'}}, 
+    'd': {'$': 'oad'}}}, 
+    'p': {'e': {'a': {'$': 'pea'}}}, 
+    'r': {'a': {'i': {'n': {'$': 'rain'}}}}}
+
+'''

@@ -9,10 +9,18 @@
 
 # same as *smallest-distant-window
 
+'''
+traverse string and store its last occurrence in a hash table
+
+'''
 
 def findLongestSubstring(string): 
 
 	n = len(string) 
+	
+	# Hash Map to store last occurrence 
+	# of each already visited character. 
+	pos = {} 
 
 	# starting point of current substring. 
 	st = 0
@@ -25,9 +33,7 @@ def findLongestSubstring(string):
 	# length substring. 
 	start = 0
 
-	# Hash Map to store last occurrence 
-	# of each already visited character. 
-	pos = {} 
+	
 
 	# Last occurrence of first 
 	# character is index 0 
@@ -78,7 +84,7 @@ def findLongestSubstring(string):
 # Driver Code 
 if __name__ == "__main__": 
 
-	string = "GEERGE"
+	string = "EERGE"
 	print(findLongestSubstring(string)) 
 
 # This code is contributed by Rituraj Jain 

@@ -13,22 +13,6 @@ def subArraysum(a,n,s):
 				curr_sum+=a[j]
 
 
-def subArraysumEfficient1(a,n,s):
-	start=0
-	end=0
-	curr_sum=0
-	while end<n:
-		curr_sum+=a[end]
-		if curr_sum>s:
-			start+=1
-			end=start
-			curr_sum=0
-		elif curr_sum==s:
-			print("Sub array sum is b.w index {} and {}".format(start,end))
-		else:
-			end+=1
-	
-	
 def subArraysumEfficient(a,n,s):
 	start=0
 	end=0
@@ -41,9 +25,9 @@ def subArraysumEfficient(a,n,s):
 			curr_sum=0
 		elif curr_sum==s:
 			print("Sub array sum is b.w index {} and {}".format(start,end))
-			break
 		else:
 			end+=1
+
 
 if __name__=='__main__':
 	a = [1, 4, 20, 3, 10, 5]

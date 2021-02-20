@@ -3,7 +3,7 @@
 
 def smallWindowEff(mystr):
     mystr=mystr.strip()
-    a={}
+    a={}    # hashmap
     c=0
     n=len(mystr)
     for i in mystr:
@@ -42,5 +42,5 @@ def smallWindow(mystr):
 
 
 if __name__=='__main__':
-    smallWindowEff("aabcbcdbca")
-    smallWindow("aabcbcdbca")
+    smallWindowEff("aabcbcdbc")
+    smallWindow("aabcbcdbc")

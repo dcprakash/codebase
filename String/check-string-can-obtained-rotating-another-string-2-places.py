@@ -1,11 +1,13 @@
-# Python 3 program to check if a string  
-# is two time rotation of another string. 
+# program to check if a string is two time rotation of another string. 
 # https://www.geeksforgeeks.org/check-string-can-obtained-rotating-another-string-2-places/
 # string rotation
+# array rotation
 # Function to check if string2 is  
 # obtained by string 1 
 def isRotated(str1, str2): 
-  
+    print("str1 = {}".format(str1))
+    print("str2 = {}".format(str2))
+    
     if (len(str1) != len(str2)): 
         return False
   
@@ -35,5 +37,6 @@ def isRotated(str1, str2):
 if __name__ == "__main__": 
       
     str1 = "amazon"
-    str2 = "azonam"
+    # str2 = "azonam"
+    str2 = "onamaz"
 isRotated(str1, str2)

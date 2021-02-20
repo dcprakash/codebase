@@ -25,16 +25,16 @@ class Solution(object):
         
         
         def dfs(start_ind, path):
-            n=len(s)
             if start_ind >= n:
                 # print(path)   # currentList
                 self.res.append(path)
                 
-            for l in range(n - start_ind): #0,3; 0,2; 0,1
+            for l in range(n - start_ind): #0,3; 0,2; 0,1;  0,2; 0,1;   0,1
                 if isPalindrome(start_ind, start_ind + l):
                     dfs(start_ind + l + 1, path + [s[start_ind : start_ind + l + 1]] )
                     # dfs(0, []), dfs(1, [a]), dfs(2,[a,a]), dfs(3,[a,a,b])
         
+        n=len(s)
         self.res = []
         dfs(0,[])
         return self.res

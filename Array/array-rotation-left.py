@@ -12,6 +12,9 @@ def leftrotatearray(a,n,r):
 
 a = [1, 3, 4, 6]
 n=len(a)
-r=2
+r=1
 print(a)
 leftrotatearray(a,n,r)
+
+b = [1, 3, 4, 6]
+print(b[r:]+b[0:r])

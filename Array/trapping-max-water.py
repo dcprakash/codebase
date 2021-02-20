@@ -27,4 +27,4 @@ def maxWaterEfficient(height):
 
 w=[4,3,2,1,4]
 print(maxWater(w))
-# print(maxWaterEfficient(w))
+print(maxWaterEfficient(w))

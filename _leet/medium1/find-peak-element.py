@@ -25,7 +25,21 @@ class Solution:
         return self.search(nums, 0, len(nums)-1)
         
     #.  0 1 2 3
-nums = [1,2,3,1]
+nums = [1,3,2,1]
 s=Solution()
-# print(s.findPeakElement(nums))
+print(s.findPeakElement(nums))
 print(s.findPeakElementBinarySearch(nums))
+
+'''
+We start off by finding the middle element, midmid from the given numsnums array. 
+    If this element happens to be lying in a descending sequence of numbers
+    it means that the peak will always lie towards the left of this element. 
+    Thus, we reduce the search space to the left
+    
+If the middle element, midmid lies in an ascending sequence of numbers, or a rising slope
+    it obviously implies that the peak lies towards the right of this element.
+
+In this way, we keep on reducing the search space till we eventually reach a state 
+    where only one element is remaining in the search space. 
+    This single element is the peak element
+'''

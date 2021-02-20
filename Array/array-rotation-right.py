@@ -29,8 +29,11 @@ def prArray( arr, size):
 # Driver code 
 arr = [1, 3, 4, 6] 
 n = len(arr) 
-r = 2
+r = 1
 	
 # Function call 
 rightRotate(arr, r, n) 
 prArray(arr, n) 
+
+b = [1, 3, 4, 6]
+print(b[n-r:]+b[0:n-r])

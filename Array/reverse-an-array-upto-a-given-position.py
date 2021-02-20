@@ -1,15 +1,9 @@
 # https://www.geeksforgeeks.org/reverse-an-array-upto-a-given-position/
 
 a = [1, 2, 3, 4, 5, 6]
-k=3
+k=4
 n=len(a)
 i=0
-while i<n:
-	l=i
-	r=min(i+k-1,n-1)
-	while l<r:
-		a[l],a[r]=a[r],a[l]
-		l+=1
-		r-=1
-	i+=k
+for i in range(0,int(k/2)):
+	a[i],a[k-i-1]=a[k-i-1],a[i]
 print(a)

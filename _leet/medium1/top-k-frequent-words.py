@@ -27,7 +27,7 @@ def topKFrequentEfficient(words, k):
     candidates.sort(key=lambda w: (-count[w], w))
     return candidates[:k]
     
-# Counter({'the': 4, 'is': 3, 'sunny': 2, 'day': 1})
+# Counter({'the': 4, 'is': 3, 'sunny': 2, 'rome': 2, 'day': 1})
 inputs = ["the", "day", "is", "sunny", "rome", "the", "the", "the", "sunny", "is", "is", "rome"]
 k=4
 # print(topKFrequent(inputs, k))

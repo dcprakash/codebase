@@ -6,9 +6,13 @@ def longestIncreasingSubsequence(nums):
     n=len(nums)
     msf=0
     for i in range(n):
-        for j in range(i,n):
-            if nums[i]>nums[j]:   break
-            else:   msf=max(msf,j-i)
+        res=nums[i]
+        for j in range(i+1,n):
+            res=max(res,nums[j])
+            if res>nums[j]:   
+                continue
+            else:
+                msf=max(msf,j-i+1)
     return msf
     
 def longestIncreasingSubsequenceCorrect(nums):
@@ -27,9 +31,9 @@ def longestIncreasingSubsequenceCorrect(nums):
     
 
 # nums = [10,9,2,3,7,101,18]
-# nums = [10,9,2,5,3,7,101,18]
-nums = [2,1,3,4]
-# print(longestIncreasingSubsequence(nums))
+nums = [10,9,2,5,3,7,101,18]
+# nums = [2,1,3,4]
+print(longestIncreasingSubsequence(nums))
 print(longestIncreasingSubsequenceCorrect(nums))
 
 

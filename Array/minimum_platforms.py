@@ -1,7 +1,4 @@
-# Program to find minimum 
-# number of platforms  
-# required on a railway 
-# station 
+# Program to find minimum number of platforms required on a railway station 
 
 # // https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/
 # // Input:  arr[]  = {9:00,  9:40, 9:50,  11:00, 15:00, 18:00}

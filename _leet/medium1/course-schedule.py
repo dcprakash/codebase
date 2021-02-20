@@ -64,3 +64,10 @@ numCourses = 4
 prerequisites = [[1,0],[2,0],[3,1],[3,2]]
 s=Solution()
 print(s.findOrder(numCourses, prerequisites))
+
+
+'''
+We can represent the information provided in the question in the form of a graph.
+Let G(V, E)G(V,E) represent a directed, unweighted graph.
+Each course would represent a vertex in the graph.
+'''

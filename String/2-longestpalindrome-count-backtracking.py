@@ -23,3 +23,9 @@ def countSubstrings(s,n):
 
 s="aaa"
 print(countSubstrings(s,len(s)))
+
+'''
+Input: "aaa"
+Output: 6
+Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+'''

@@ -4,6 +4,12 @@ def sfunc(e):
     return len(e)
 
 
-cars = ['Ford', 'BMW', 'Volvo']
-cars.sort(key=sfunc)
+cars = ['Ford', 'BMWBMW', 'Volvo']
+# cars.sort(key=sfunc)
+
+
+cars.sort(key=lambda x: len(x))
 print(cars)
+
+
+

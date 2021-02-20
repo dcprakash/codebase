@@ -43,7 +43,12 @@ print(s.removeStones(stones))
    0     1     2     3     4
 [[0,0],[0,2],[1,1],[2,0],[2,2]]
 {0: [1, 3], 1: [0, 4], 3: [0, 4], 4: [1, 3]}
+for 0th stone, we have 1st and 3rd stone in same column and row
 
+compare 0,0 and 0,2
+if 0==0 or 0==2:
+    create defaultdict
+    
    0 1 2
 0  1 0 1
 1  0 1 0

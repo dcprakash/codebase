@@ -34,13 +34,13 @@ def removeDuplicatesKchar(s,k):
     return ''.join([stack[i]*counter_stack[i] for i in range(len(stack))])
 
 
-s="abbc"
-# print(removeDuplicates(list(s)))
+s="abbbc"
+print(removeDuplicates(list(s)))
 
-#.   01234
-s = "deeeb"
-k = 3
-print(removeDuplicatesKchar(s,k))
+# #.   01234
+# s = "deeeb"
+# k = 3
+# print(removeDuplicatesKchar(s,k))
 
 
 

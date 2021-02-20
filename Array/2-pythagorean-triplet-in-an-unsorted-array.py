@@ -6,7 +6,7 @@ def pythagoreanTriplet(a,n):
         pya.append(a[i]*a[i])
     pya.sort()
     
-    for i in reversed(range(0,n)):
+    for i in reversed(range(2,n)):
         l=0
         r=i-1
         while(l<r):

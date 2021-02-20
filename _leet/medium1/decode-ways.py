@@ -46,7 +46,7 @@ class Solution(object):
         return dp[len(s)]
         
 s=Solution()
-print(s.numDecodings("123"))
+print(s.numDecodings("18"))
 
 
 '''
