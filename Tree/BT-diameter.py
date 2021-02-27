@@ -2,7 +2,9 @@
 https://leetcode.com/problems/diameter-of-binary-tree/
 
 """
-Definition for a binary tree node.
+# Definition for a binary tree node.
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -10,7 +12,7 @@ class TreeNode:
         self.right = right
 class Solution:
     import math
-    def diameterOfBinaryTree(self, root: TreeNode) -> int:
+    def diameterOfBinaryTree(self, root):
         self.ans=1
         
         def helper(node):
@@ -24,3 +26,11 @@ class Solution:
         helper(root)
         return self.ans-1
         
+
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
+s=Solution()
+print(s.diameterOfBinaryTree(root))

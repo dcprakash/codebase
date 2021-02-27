@@ -44,5 +44,5 @@ root.left.left = Node(4)
 root.left.right = Node(5)
 root.left.left.left = Node(6)
 
-print(lca(root,6,5))
+print(lca(root,2,3))
         

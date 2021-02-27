@@ -2,6 +2,7 @@
 # count duplet key pair differences, K diff pairs in array
 
 def findPairs(nums, k, n):
+    nums.sort()
     l=0
     r=1
     count=0
@@ -20,4 +21,4 @@ def findPairs(nums, k, n):
 
 nums = [3,1,4,1,5]  # 1,1,3,4,5
 k = 3
-print(findPairs(sorted(nums), k, len(nums)-1))
+print(findPairs(nums, k, len(nums)-1))

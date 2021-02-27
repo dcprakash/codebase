@@ -31,6 +31,17 @@ def findDuplicateSubtrees(root):
     helper(root)
     return ans
         
+'''
+for left node
+serial='5,#,#'
+count[serial]+=1
+
+for right node
+serial='5,#,#'
+count[serial]+=1; this is now 2
+'''
+
+
 
 from collections import defaultdict
 

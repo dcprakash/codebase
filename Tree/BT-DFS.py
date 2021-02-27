@@ -14,7 +14,7 @@ class Node:
 		self.right = None
 
 			
-def DFS(root):
+def DFS_global(root):
     if not root:
         return None
     global res
@@ -45,5 +45,5 @@ root.left.left = Node(4)
 root.left.right = Node(5)
 res = []
 print("DFS traversal of binary tree is -")
-print(DFS(root))
+print(DFS_global(root))
 print(DFS_noglobal(root, []))

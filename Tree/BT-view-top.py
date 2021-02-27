@@ -17,7 +17,7 @@ class Node:
 		self.left = None
 		self.right = None
 
-			
+	
 def topview(root):
     columntable = defaultdict(list)
     # deque is like append, this adds root at 0th index

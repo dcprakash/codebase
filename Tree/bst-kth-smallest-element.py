@@ -1,5 +1,5 @@
 """
-https://www.geeksforgeeks.org/connect-nodes-at-same-level/
+
 https://leetcode.com/problems/kth-smallest-element-in-a-bst/solution/
 It's a very straightforward approach with \mathcal{O}(N)O(N) time complexity.
     The idea is to build an inorder traversal of BST which is an array sorted in the ascending order. 

@@ -1,6 +1,9 @@
 # https://www.geeksforgeeks.org/minimum-halls-required-for-class-scheduling/
 # https://leetcode.com/problems/meeting-rooms-ii/submissions/
 # minimum meeting rooms
+# heapq automatically sorts and stores min element at top
+# https://realpython.com/python-heapq-module/#heaps-as-lists-in-the-python-heapq-module
+
 
 import heapq
 
@@ -24,6 +27,7 @@ class Solution:
         for i in intervals[1:]:
 
             # If the room due to free up the earliest is free, assign that room to this meeting.
+            # if meeting in free_rooms ends before start of new meeting i.e., i[0]
             if free_rooms[0] <= i[0]:
                 heapq.heappop(free_rooms)
 

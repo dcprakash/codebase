@@ -1,4 +1,4 @@
-from queue import Queue
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -13,8 +13,7 @@ from queue import Queue
 Your module description
 """
 
-# Recursive Python program for level 
-# order traversal of Binary Tree
+# Recursive Python program for level order traversal of Binary Tree
 
 # A node structure
 class Node:

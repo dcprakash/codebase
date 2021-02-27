@@ -1,5 +1,6 @@
 # https://www.geeksforgeeks.org/find-subarray-with-given-sum/
-
+# sub array sum
+# can also use it for max sum sub array
 
 def subArraysum(a,n,s):
 	for i in range(n):
@@ -13,6 +14,7 @@ def subArraysum(a,n,s):
 				curr_sum+=a[j]
 
 
+# ****
 def subArraysumEfficient(a,n,s):
 	start=0
 	end=0

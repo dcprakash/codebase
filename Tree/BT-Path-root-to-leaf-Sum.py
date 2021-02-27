@@ -11,7 +11,7 @@ class Node:
     
 def sumNumbers(root):
     root_to_leaf = 0
-    stack = [(root, 0) ]
+    stack = [(root, 0)]
     
     while stack:
         root, curr_number = stack.pop()

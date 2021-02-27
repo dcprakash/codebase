@@ -31,7 +31,9 @@ leet:
             longestIncreasingSubsequence
             permutations-of-string-list-backtrack
 Array:
-    3-a-product-array-puzzle        *
+    2-count-duplets-key-pair-difference
+    2-pythagorean-triplet-in-an-unsorted-array
+    3-a-product-array-puzzle
     4-max-sum-without-adjacents     *
     4-subarray-sum-minimum-size
     4-subarray-with-given-sum
@@ -39,7 +41,7 @@ Array:
     equilibrium-index-of-an-array   efficient
     find-item-whose-elements-before-small-after-big *
     find-minimum-difference-pair
-    find-the-leaders-in-an-array
+    minimum-meeting_rooms   *
     rearrange-array-into-zig-zag-fashion
     reorganize-string-alternatively
     reverse-an-array-upto-a-given-position
@@ -49,4 +51,12 @@ string:
     2-longestpalindrome-count-backtracking
     2-longestpalindrome
     2-palindrome-partitioning
-    
+tree:
+    bst-maxpath
+    diameterOfBinaryTree
+    findDuplicateSubtrees
+    BT-Lowest_common_ancestor
+    BT-Path-root-to-leaf
+    connect-nodes-at-same-level     *
+    merge-two-bt-sum
+    tree-traversal-build-preorder   *

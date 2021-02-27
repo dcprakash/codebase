@@ -2,8 +2,8 @@
 # all left elements and smaller than all right elements. 
 # https://www.geeksforgeeks.org/find-the-element-before-which-all-the-elements-are-smaller-than-it-and-after-which-all-are-greater-than-it/
 
-# find-item-whose-elements-before-small-after-big
-# 
+# find item whose elements before small after big
+
 def findElement(arr, n): 
 
 	# leftMax[i] stores maximum of arr[0..i-1] 
@@ -24,7 +24,7 @@ def findElement(arr, n):
 		if leftMax[i] < arr[i] and rightMin > arr[i]: 
 			return i 
 
-		# Update right minimum 
+		# keep minumum element of arr from right to left 
 		rightMin = min(rightMin, arr[i]) 
 	
 	# If there was no element matching criteria 

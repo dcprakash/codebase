@@ -34,13 +34,9 @@ def equilibrium(arr):
       # then return -1 
     return -1
     
-def equilibriumEasy(arr): 
-    leftsum = 0
-    rightsum = 0
+def equilibriumEasy(arr):
     n = len(arr) 
   
-    # Check for indexes one by one  
-    # until an equilibrium index is found 
     for i in range(n): 
         leftsum = 0
         rightsum = 0
@@ -53,8 +49,7 @@ def equilibriumEasy(arr):
         for j in range(i + 1, n): 
             rightsum += arr[j] 
           
-        # if leftsum and rightsum are same, 
-        # then we are done 
+        # if leftsum and rightsum are same, then we are done 
         if leftsum == rightsum: 
             return i 
       

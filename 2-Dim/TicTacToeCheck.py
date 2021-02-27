@@ -8,9 +8,8 @@ def win_check(arr, char):
     # first, second and third row
     # first, second and third column
     # 2 diagnoals
-    matches = [[0, 1, 2], [3, 4, 5],
-               [6, 7, 8], [0, 3, 6],
-               [1, 4, 7], [2, 5, 8],
+    matches = [[0, 1, 2], [3, 4, 5], [6, 7, 8], 
+               [0, 3, 6], [1, 4, 7], [2, 5, 8],
                [0, 4, 8], [2, 4, 6]]
 
     for i in range(8):

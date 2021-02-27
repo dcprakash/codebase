@@ -19,7 +19,7 @@ def findPyTriplet(A, n, X):
 
 if __name__ == "__main__": 
 	
-	A = [1, 4, 45, 6, 10, 12] 
+	A = [1, 4, 45, 6, 10, 12]	# 1 4 6 10 12 45
 	X = 16
 	n = len(A) 
 	findPyTriplet(A, n, X) 

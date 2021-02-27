@@ -44,8 +44,8 @@ def LevelOrder(root):
 root = Node(3)
 root.left = Node(9)
 root.right = Node(20)
-root.right.left = Node(15)
-root.right.right = Node(7)
+# root.right.left = Node(15)
+# root.right.right = Node(7)
 
 print("Level order traversal of binary tree is -")
 print(LevelOrder(root))

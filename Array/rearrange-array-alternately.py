@@ -12,11 +12,10 @@ while l<=r:
 	if rfirst:
 		res.append(a[r])
 		r-=1
-		rfirst=False
 	else:
 		res.append(a[l])
 		l+=1
-		rfirst=True
+	rfirst=not rfirst
 print(res)
 
 

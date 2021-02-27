@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/subarray-sums-divisible-by-k/
 # subarray sums divisible by k
+# list comp
 
 from collections import Counter
 

@@ -14,24 +14,24 @@ def minSubArrayLen(s, nums):
     return res if res!=float('inf') else 0
     
 
-'''
+''' *********
 1. sum all nums in array until sum>=s
 2. start subtracting left most value of array and sum until sum<s 
     2.1 keep track of minimum count
 '''
-def minSubArrayLenEfficient(s, nums):
+def minSubArrayLenEfficient(target, nums):
     res=float('inf')
     left=sum=0
     for i in range(len(nums)):
         sum+=nums[i]
-        while sum>=s:
+        while sum>=target:
             res=min(res, i+1-left)
             sum-=nums[left]
             left+=1
     return res if res!=float('inf') else 0
         
 
-s = 5
+target = 5
 nums = [2,3,1,2,4,3]
-# print(minSubArrayLen(s, nums))
-print(minSubArrayLenEfficient(s, nums))
+# print(minSubArrayLen(target, nums))
+print(minSubArrayLenEfficient(target, nums))
