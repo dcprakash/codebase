@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/solution/
-
+# list comp
 
 from math import ceil
 
