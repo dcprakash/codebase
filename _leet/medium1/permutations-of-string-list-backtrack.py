@@ -22,29 +22,13 @@ https://www.afternerd.com/blog/python-copy-list/
 
 class Solution:
 	def permute(self, nums):
-		# result = []
-		
-		# # base case
-		# if len(nums) == 1:
-		# 	return [nums[:]]	# copy list and return
-		
-		# for i in range(len(nums)):
-		# 	n=nums.pop(0)
-		# 	perms=self.permute(nums)
-			
-		# 	for perm in perms:
-		# 		perm.append(n)
-		# 	result.extend(perms)
-		# 	nums.append(n)
-		
-		# return result
 
-		def backtrack(first=0):
-			if first==n:	output.append(nums[:])
-			for i in range(first, n):
-				nums[first],nums[i]=nums[i],nums[first]
-				backtrack(first+1)
-				nums[first],nums[i]=nums[i],nums[first]
+		def backtrack(ix=0):
+			if ix==n:	output.append(nums[:])
+			for i in range(ix, n):
+				nums[ix],nums[i]=nums[i],nums[ix]
+				backtrack(ix+1)
+				nums[ix],nums[i]=nums[i],nums[ix]
 
 		n=len(nums)
 		output=[]

@@ -20,7 +20,7 @@ class Solution(object):
         f_max=frequencies.pop()
         idle_time = (f_max-1)*n
         
-        while frequencies and idle_time>0:
+        while frequencies and idle_time>0 and frequencies[-1]>0:
             idle_time-=min(f_max-1, frequencies.pop())
         # idle_time=max(0,idle_time)
         

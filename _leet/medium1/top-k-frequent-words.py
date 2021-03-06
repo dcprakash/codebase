@@ -2,6 +2,7 @@
 # https://leetcode.com/problems/top-k-frequent-words/
 # Your answer should be sorted by frequency from highest to lowest
 #  If two words have the same frequency, then the word with the lower alphabetical order comes first.
+# list comp
 
 
 def topKFrequent(words, k):
