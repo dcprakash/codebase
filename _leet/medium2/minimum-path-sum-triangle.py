@@ -1,3 +1,10 @@
+"""
+https://www.youtube.com/watch?v=OM1MTokvxs4&ab_channel=NeetCode
+https://leetcode.com/problems/triangle/
+minimum path sum triangle
+"""
+
+
 class Solution:
     def minimumTotal(self, triangle):
         dp=[0]*(len(triangle)+1)  # last row is longest in triangle
@@ -7,8 +14,7 @@ class Solution:
         
         return dp[0]
             
-        
-        
+
 triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
 s=Solution()
 print(s.minimumTotal(triangle))
