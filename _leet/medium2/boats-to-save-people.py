@@ -11,7 +11,7 @@ note: its assumed that boat is big enough to fit atleast one person
 
 class Solution:
     def numRescueBoats(self, people, limit):
-        people.sort()
+        people.sort()   #[1,2,2,3]
         i=0
         j=len(people)-1
         ans=0

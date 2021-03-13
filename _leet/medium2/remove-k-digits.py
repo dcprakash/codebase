@@ -12,6 +12,8 @@ iterate from the left to right on d1, d2, d3,...dn
     
 Given a non-negative integer num represented as a string, remove k digits from 
     the number so that the new number is the smallest possible.
+    
+arrange smallest
 '''
 
 

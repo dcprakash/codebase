@@ -8,7 +8,7 @@ import yaml
 
 def dir_to_dict(path):
     exclude_dir = set(['.c9','.git'])
-    exclude_files = set(['.cpp.0'])
+    exclude_files = set(['.o'])
     directory = {}
 
     for dirname, dirnames, filenames in os.walk(path):
@@ -22,13 +22,13 @@ def dir_to_dict(path):
 
             
             for f in filenames:
-                if not f.endswith('.cpp.o'):
+                if not f.endswith('.cpp.o'): #  and not f.endswith('.cpp')
                     directory[dn].append(f)
         else:
             # [directory[dn] for files in filenames if not files.endswith('.cpp.o')]
             fnames=[]
             for f in filenames:
-                if not f.endswith('.cpp.o'):
+                if not f.endswith('.cpp.o'): # and not f.endswith('.cpp')
                     fnames.append(f)
             directory[dn] = fnames
 

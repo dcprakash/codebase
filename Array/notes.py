@@ -1,14 +1,8 @@
 class Solution:
-    def minimumTotal(self, triangle):
-        dp=[0]*(len(triangle)+1)  # last row is longest in triangle
-        for row in triangle[::-1]:
-            for i, n in enumerate(row):
-                dp[i] = n + min(dp[i], dp[i+1]) # overwrite original values
-        
-        return dp[0]
-            
-        
-        
-triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+    def shortestBridge(self, matrix):
+        return " "
+
+
+matrix = [[0,1,0],[0,0,0],[0,0,1]]
 s=Solution()
-print(s.minimumTotal(triangle))
+print(s.shortestBridge(matrix))
