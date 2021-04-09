@@ -7,7 +7,8 @@ class Solution:
     def orangesRotting(self, grid):
         queue = deque()
 
-        # Step 1). build the initial set of rotten oranges
+        # Step 1). build the initial set of rotten oranges queue
+        # and fresh oranges count
         fresh_oranges = 0
         ROWS, COLS = len(grid), len(grid[0])
         for r in range(ROWS):
@@ -27,6 +28,7 @@ class Solution:
             row, col = queue.popleft()
             if row == -1:
                 # We finish one round of processing
+                # We use a delimiter (i.e. (row=-1, col=-1)) in the queue to separate cells on different levels.
                 minutes_elapsed += 1
                 if queue:  # to avoid the endless loop
                     queue.append((-1, -1))

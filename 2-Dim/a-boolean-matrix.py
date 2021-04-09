@@ -7,13 +7,13 @@ def booleanMatrix(mat):
     C=len(matrix[0])
     row = [0] * R  
     col = [0] * C 
-    # Initialize all values of row[] as 0  
-    for i in range(0, R): 
-        row[i] = 0
+    # # Initialize all values of row[] as 0  
+    # for i in range(0, R): 
+    #     row[i] = 0
           
-    # Initialize all values of col[] as 0  
-    for i in range(0, C) : 
-        col[i] = 0
+    # # Initialize all values of col[] as 0  
+    # for i in range(0, C) : 
+    #     col[i] = 0
         
     # Store the rows and columns to be marked  
     # as 1 in row[] and col[] arrays respectively  

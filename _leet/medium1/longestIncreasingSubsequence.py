@@ -48,8 +48,8 @@ def longestIncreasingSubsequenceCorrect(nums):
 nums = [3,5]
 # nums = [2,1,3,4]
 # print(longestIncreasingSubsequence(nums))
-# print(LongestIncreasingSequence(nums))
-print(longestIncreasingSubsequenceCorrect(nums))
+print(LongestIncreasingSequence(nums))
+# print(longestIncreasingSubsequenceCorrect(nums))
 
 
 '''

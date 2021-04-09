@@ -19,7 +19,7 @@ class Solution:
                 node = node.setdefault(letter, {})
             # mark the existence of a word in trie node
             node[WORD_KEY] = word
-        
+        print(trie)
         rowNum = len(board)
         colNum = len(board[0])
         

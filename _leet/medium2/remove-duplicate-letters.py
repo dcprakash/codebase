@@ -47,7 +47,8 @@ class Solution:
         return ''.join(stack)
         
         
-string = "cbacdcbc"
+# string = "cbacdcbc"
+string = "bcabc"
 
 s=Solution()
 print(s.removeDuplicateLetters(string))

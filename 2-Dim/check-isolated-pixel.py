@@ -24,6 +24,8 @@ def Check_Isolated_Pixel():
     def check_pixels(grid, rc, cc):
         i_pixels = []
         for i in range(len(grid)):
+            # if not 1, then either there is no 1 or 
+            # more than 1 ones and it cannot be an isolated 1 in that row
             if rc[i] != 1:
                 continue
             for j in range(len(grid[0])):

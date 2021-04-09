@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/max-area-of-island/solution/
 # Use DFS to count max area of an island
+# best DFS
 # find-islands.py finds number of island, this solution finds max area of found islands
 
 

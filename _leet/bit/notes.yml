@@ -1,0 +1,48 @@
+bit manipulation:
+    https://leetcode.com/tag/bit-manipulation/
+
+bitwise operators:
+    https://www.geeksforgeeks.org/python-bitwise-operators/:
+    operators:
+    & | ~ ^
+    >>  shift bits to right and fills 0 on void left:   dividing num by 2
+    <<  shift bits to lieft and fills 0 on void right:  multiply num by 2
+
+    The difference b.w or and xor:
+        true or  true = true
+        true xor true = false
+        
+        true or  true or  true = true
+        true xor true xor true = true
+        
+        true or  false or  true = true
+        true xor false xor true = false
+        Truth table of OR:
+        
+          in1  |  in2  | out
+        -------|-------|-----
+           0   |   0   |  0
+           0   |   1   |  1
+           1   |   0   |  1
+           1   |   1   |  1
+        Truth table of XOR:
+        
+          in1  |  in2  | out
+        -------|-------|-----
+           0   |   0   |  0
+           0   |   1   |  1
+           1   |   0   |  1
+           1   |   1   |  0
+
+
+convert to binary:
+    https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/solution/ 
+    Recall that odd numbers always have a last bit of 1. Subtracting 1, from an odd number, changes the last bit from 1 to 0.
+    Dividing by 2 removes the last bit from the number.
+    Notice how the 0s took one step to remove, and the 1s took two steps to remove.
+    So, to get our answer, we can just add two steps for every 1, and add one step for every 0, for each bit in the binary representation
+    convert num to bin using bin(num), first 2 characters would have 0b, remove this using bin(num)[2:]
+
+
+
+

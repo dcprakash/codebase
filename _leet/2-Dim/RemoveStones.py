@@ -8,13 +8,14 @@ class Solution(object):
     def removeStones(self, stones):
         graph = defaultdict(list)
         for i, x in enumerate(stones):
-            for j in range(i):
-                y = stones[j]
+            for j, y in enumerate(stones[:i]):
+            # for j in range(i):
+            #     y = stones[j]
                 if x[0]==y[0] or x[1]==y[1]:
                     graph[i].append(j)
                     graph[j].append(i)
 
-        # print(graph)
+        print(graph)
         # {0: [1, 3], 1: [0, 4], 3: [0, 4], 4: [1, 3]}
         N = len(stones)
         ans = 0

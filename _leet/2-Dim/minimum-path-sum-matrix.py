@@ -26,6 +26,7 @@ def minPathSumEfficient(grid, i, j):
                 dp[i][j]=grid[i][j]+min(dp[i+1][j],dp[i][j+1])
             else:
                 dp[i][j]=grid[i][j]
+    # print(dp)
     return dp[0][0]
     
 
@@ -35,3 +36,8 @@ grid = [[1,3,1],
 # print(minPathSum(grid, 0, 0))
 print(minPathSumEfficient(grid, 0, 0))
 
+# [
+#     [7, 6, 3], 
+#     [8, 7, 2], 
+#     [7, 3, 1]
+# ]

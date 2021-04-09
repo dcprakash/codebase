@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/solution/
 # divisible by number i.e., 60 efficient approach on leetcode
+# division
 
 def numPairsDivisibleBy60(time):
     count=0

@@ -10,7 +10,8 @@ class Solution:
                     return False
             return True
 
-        new = list(map(int, str(N))) 
+        # new = list(map(int, str(N))) 
+        new=list(str(N))
         if monotone_increasing(new):
             return N
         
@@ -24,6 +25,8 @@ class Solution:
 
 
 # N = 603253281
+# N=987654321
 N = 332
+
 s=Solution()
 print(s.monotoneIncreasingDigits(N))

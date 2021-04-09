@@ -15,7 +15,7 @@ def rotateMatrix(matrix):
 		
 		# Consider elements in group 
 		# of 4 in current square (for 4*4 matrix)
-		for y in range(x, N-x-1):
+		for y in range(x, N-1-x):
 			temp=matrix[x][y]
 			matrix[x][y]=matrix[N-1-y][x]
 			matrix[N-1-y][x]=matrix[N-1-x][N-1-y]
@@ -36,7 +36,7 @@ def displayMatrix( mat ):
 	
 
 # Driver Code 
-mat = [[0 for x in range(N)] for y in range(N)] 
+# mat = [[0 for x in range(N)] for y in range(N)] 
 
 # Test case 1 
 # mat = [ [1, 2, 3, 4 ], 
