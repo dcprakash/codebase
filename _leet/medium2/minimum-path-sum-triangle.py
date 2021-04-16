@@ -16,7 +16,7 @@ class Solution:
         return dp[0]
             
 
-triangle = [[2],[3,4],[6,5,9],[4,10,8,3]]
-# triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+# triangle = [[2],[3,4],[6,5,9],[4,10,8,3]]
+triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
 s=Solution()
 print(s.minimumTotal(triangle))

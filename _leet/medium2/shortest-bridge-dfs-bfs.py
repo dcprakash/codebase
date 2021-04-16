@@ -2,7 +2,19 @@
 https://leetcode.com/problems/shortest-bridge/
 https://www.youtube.com/watch?v=uH9g7aLOgiI&ab_channel=HappyCoding
 
+use DFS to iterate all elements with 1
+    if an element is 1, then find its connected graph and iterate over it
+    we will have islands in seen
+
+add seen islands to another queue
+    expand the first island and do dfs again
+        this time we dont need to check if its 1 but instead, we make sure its not seen yet
+    increase distance to say, we have added 1
+    if distance > 0:
+        we have found number of flips
+
 """
+
 from collections import defaultdict, deque
 
 

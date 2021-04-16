@@ -1,8 +1,17 @@
-class Solution:
-    def shortestBridge(self, matrix):
-        return " "
+from collections import defaultdict
 
+checkin={}
+journey=defaultdict(lambda: [0,0])
 
-matrix = [[0,1,0],[0,0,0],[0,0,1]]
-s=Solution()
-print(s.shortestBridge(matrix))
+void checkIn(int id, string stationName, int t):
+    checkin[id]=[stationName,t]
+    
+void checkOut(int id, string stationName, int t):
+    chkinS,chkinT=checkin[id]
+    journey[(chkinS,stationName)][0]+=t-checkin
+    journey[(chkinS,stationName)][1]+=1
+    
+void get
+    
+    
+

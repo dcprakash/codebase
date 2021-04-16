@@ -31,8 +31,8 @@ class Solution(object):
         """
         if not node:
             return node
-        print(node.val)
-        print([n.val for n in node.neighbors])
+        # print(node.val)
+        # print([n.val for n in node.neighbors])
         # If the node was already visited before.
         # Return the clone from the visited dictionary.
         if node in self.visited:
@@ -44,7 +44,7 @@ class Solution(object):
 
         # The key is original node and value being the clone node.
         self.visited[node] = clone_node
-        print([n.val for n in self.visited])
+        # print([n.val for n in self.visited])
 
         # Iterate through the neighbors to generate their clones
         # and prepare a list of cloned neighbors to be added to the cloned node.
