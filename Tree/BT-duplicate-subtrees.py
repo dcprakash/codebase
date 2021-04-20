@@ -23,6 +23,7 @@ def findDuplicateSubtrees(root):
     def helper(node):
         if not node:    return '#'
         serial="{},{},{}".format(node.data, helper(node.left), helper(node.right))
+        print(serial)
         count[serial]+=1
         if count[serial] == 2:
             ans.append(node.data)

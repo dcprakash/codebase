@@ -29,21 +29,35 @@ class Node:
 import math
 import queue
 
+# def rightView(root):
+#     result = []
+#     if root:
+#         q = queue.Queue()
+#         q.put_nowait((root, 0))
+#         while not q.empty():
+#             node, d = q.get_nowait()
+#             if len(result) == d:
+#                 result.append(node.data)
+#             # for child in (node.left, node.right, ):   # left view
+#             for child in (node.right, node.left, ):
+#                 if child:
+#                     q.put_nowait((child, d + 1))
+#     return result
+		
+		
 def rightView(root):
     result = []
     if root:
-        q = queue.Queue()
-        q.put_nowait((root, 0))
-        while not q.empty():
-            node, d = q.get_nowait()
+        q = []
+        q.append((root, 0))
+        while q:
+            node, d = q.pop(0)
             if len(result) == d:
                 result.append(node.data)
-            # for child in (node.left, node.right, ):   # left view
-            for child in (node.right, node.left, ):
+            for child in (node.right, node.left ):
                 if child:
-                    q.put_nowait((child, d + 1))
+                    q.append((child, d + 1))
     return result
-		
         
         
 

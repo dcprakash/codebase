@@ -20,18 +20,15 @@ class Node:
 
 			
 def lca(root,p,q):
-    if not root:
-        return None
-    if root.data==p or root.data==q:
-    	return root.data
-    
-    left = lca(root.left, p, q)
-    right = lca(root.right, p, q)
-    if left==None and right==None:
-    	return None
-    if left!=None and right!=None:
-    	return root.data
-    return left if left else right
+	if not root:	return None
+	if root.data==p or root.data==q:	return root.data
+	
+	left=lca(root.left,p,q)
+	right=lca(root.right,p,q)
+	if left==None and right==None:	return None
+	if left!=None and right!=None:	return root.data
+
+	return left if left else right
     
         
         

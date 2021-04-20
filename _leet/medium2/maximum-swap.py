@@ -22,8 +22,18 @@ class Solution:
                 oarr[i],oarr[j]=oarr[j],oarr[i]
         return "".join(narr)
 
+    # cannot achieve this with one loop
+    # def maximumSwapEff(self, nums):
+    #     oarr=list(str(nums))
+    #     narr=oarr[:]
+    #     for i in range(len(oarr)-1):
+    #         oarr[i],oarr[i+1]=oarr[i+1],oarr[i]
+    #         if narr<oarr:   narr=oarr[:]
+    #         oarr[i],oarr[i+1]=oarr[i+1],oarr[i]
+    #     return "".join(narr)
 
 # nums=28396
 nums = 98368
 s=Solution()
 print(s.maximumSwap(nums))
+# print(s.maximumSwapEff(nums))

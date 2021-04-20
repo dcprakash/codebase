@@ -18,7 +18,7 @@ def sumTree(root):
 
 def isSumTree(node):
     if not node or (node.left==None and node.right==None):
-        return 1
+        return True
     
     ls=sumTree(node.left)
     rs=sumTree(node.right)
@@ -26,9 +26,9 @@ def isSumTree(node):
     if ((node.data==ls+rs) and
         isSumTree(node.left) and
         isSumTree(node.right)):
-            return 1
+            return True
     else:
-        return 0
+        return False
 
 if __name__=='__main__':
     root=node(26)

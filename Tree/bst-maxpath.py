@@ -1,6 +1,7 @@
 # Python program to find maximum path sum in Binary Tree 
 # https://www.youtube.com/watch?v=cSnETAcziS0&feature=emb_logo&ab_channel=GeeksforGeeks
 # https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/
+# start from bottom of the tree
 
 # A Binary Tree Node 
 class Node: 
@@ -32,7 +33,7 @@ def findMaxUtil(root):
 	# Max top represents the sum when the node under 
 	# consideration is the root of the maxSum path and 
 	# no ancestor of root are there in max sum path 
-	max_top = max(max_single, l+r+ root.data) 
+	max_top = max(l+r+ root.data, max_single) 
 
 	# Static variable to store the changes 
 	# Store the maximum result 
