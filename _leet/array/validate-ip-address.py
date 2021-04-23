@@ -22,6 +22,7 @@ class Solution:
             # Validate hexadecimal in range (0, 2**16):
             # 1. at least one and not more than 4 hexdigits in one chunk
             # 2. only hexdigits are allowed: 0-9, a-f, A-F
+            # Check if all items in a list are True: all
             if len(i) == 0 or len(i) > 4 or not all(c in hexdigits for c in i):
                 return "Neither"
         return "IPv6"

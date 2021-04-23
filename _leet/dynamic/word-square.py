@@ -1,6 +1,14 @@
 '''
 https://leetcode.com/problems/word-squares/solution/
 https://leetcode.com/explore/interview/card/google/62/recursion-4/370/
+
+[
+"ball",
+"area",
+"lead",
+"lady"
+]
+
 '''
 
 class Solution:
@@ -39,5 +47,8 @@ class Solution:
                 
 
 words=["area","ball","lead","lady"]
+# words=['able', 'area', 'lead', 'lady', 'ball']
+# words=['ball', 'able', 'area', 'lead', 'lady']
+
 s=Solution()
 print(s.wordSquares(words))

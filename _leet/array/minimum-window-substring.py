@@ -6,6 +6,8 @@ https://leetcode.com/problems/minimum-window-substring/solution/
 3. increment left pointer, check if windows has all elements, if so capture min window
 4. if incrementing left pointer dont have char in windows, increment right again
 
+# sliding window
+# dictionary insertion
 """
 from collections import Counter
 

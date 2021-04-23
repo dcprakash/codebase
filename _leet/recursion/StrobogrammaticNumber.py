@@ -1,5 +1,8 @@
 '''
 https://leetcode.com/explore/interview/card/facebook/53/recursion-3/3029/
+
+A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+inverse number
 '''
 
 # Python program to print all 

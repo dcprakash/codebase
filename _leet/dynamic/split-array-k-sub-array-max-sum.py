@@ -4,6 +4,24 @@
 
 # Function to check if mid can 
 # be maximum sub - arrays sum 
+
+'''
+Array[] = {1, 2, 3, 4}, K = 3 
+
+min=1
+max=10
+mid=5
+
+maintain count of sub arrays
+include possible sum in sub array until its sum is less than mid
+if count is still less than or equal to K, then this mid is achievable
+
+
+
+
+'''
+
+
 def check(mid, array, n, K): 
 	count = 0
 	sum = 0
@@ -45,10 +63,13 @@ def solve(array, n, K):
 		mid = (start + end) // 2
 
 		# If mid is possible solution 
-		# Put answer = mid; 
+		# Put answer = mid
+		# search in first of list for best possible solution
 		if (check(mid, array, n, K)): 
 			answer = mid 
 			end = mid - 1
+		
+		# we create more groups, to reduce group; increase allowed max sum
 		else: 
 			start = mid + 1
 

@@ -1,76 +1,63 @@
-'''
+# https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/
+# https://leetcode.com/problems/coin-change/solution/
+# https://www.youtube.com/watch?v=jgiZlGzXMBw&feature=emb_logo&ab_channel=BackToBackSWE
 
-For a given node root, the next smallest element will always be the leftmost element in its tree.
-So, for a given root node, we keep on following the leftmost branch until we reach a node which 
-doesn't have a left child and that will be the next smallest element.
-Rest of the nodes are added to the stack because they are pending processing. 
+# A Naive recursive python program to find minimum of coins 
+# to make a given change V 
 
-def inorder_left(root):
-   while (root):
-     S.append(root)
-     root = root.left
+import sys 
 
-It's very easy to implement the hasNext() function since all we need to check is if the stack is empty or not. 
-Suppose we get a call to the next() function, we can return top of stack but, will be left with 2 choices:
-1. If top of stack is a leaf node, then just pop it
-2. Second is where the node has a right child. We don't need to check for the left child because 
-    of the way we have added nodes onto the stack
-
-Again, it's important to understand that obtaining the next smallest element doesn't take much time. 
-However, some time is spent in maintaining the invariant that the stack top will always have the node we are looking for.
-
-'''
-
-# Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+# m is size of coins array (number of different coins) 
+def coinChange(coins, n, amount): 
+    res = sys.maxsize
+    
+    def backtrack(remain, comb, start):
+        nonlocal res
+        if remain==0:
+            res=min(res,len(comb))
+        if remain<0:
+            return
+        for i in range(start, len(coins)):
+            comb.append(coins[i])
+            backtrack(remain-coins[i], comb, i)
+            comb.pop()
+            
+    backtrack(amount, [], 0)
+    return -1 if res==sys.maxsize else res
+    
+    
+def coinChangeEff(coins, amount):
+    dp = [0] + [float('inf')] * amount  # [0, inf, inf, inf]
+    
+    for coin in coins:
+        for i in range(coin, amount+1):
+            dp[i] = min(dp[i], dp[i-coin]+1)
         
+    return dp[-1] if dp[-1] != float('inf') else -1
+    
+    
+def coinChangeMethod(coins, amount):  
+    # base case 
+    if (amount == 0): 
+        return 0
 
-class BSTIterator:
+    # Initialize result 
+    res = sys.maxsize 
+    n=len(coins)
+    # Try every coin that has smaller value than amount
+    for i in range(0, n): 
+        if (coins[i] <= amount): 
+            sub_res = coinChangeMethod(coins, amount-coins[i]) 
 
-    def __init__(self, root: TreeNode):
-        # Stack for the recursion simulation
-        self.stack = []
+            # Check for INT_MAX to avoid overflow and see if 
+            # result can minimized 
+            if (sub_res != sys.maxsize and sub_res + 1 < res): 
+                res = sub_res + 1
 
-        # Remember that the algorithm starts with a call to the helper function
-        # with the root node as the input
-        self._leftmost_inorder(root)
-
-
-    def _leftmost_inorder(self, root):
-        # For a given node, add all the elements in the leftmost branch of the tree
-        # under it to the stack.
-        while root:
-            self.stack.append(root)
-            root = root.left
-        
-
-    def next(self) -> int:
-        """
-        @return the next smallest number
-        """
-        # Node at the top of the stack is the next smallest element
-        topmost_node = self.stack.pop()
-
-        # Need to maintain the invariant. If the node has a right child, call the
-        # helper function for the right child
-        if topmost_node.right:
-            self._leftmost_inorder(topmost_node.right)
-        return topmost_node.val
-        
-
-    def hasNext(self) -> bool:
-        """
-        @return whether we have a next smallest number
-        """
-        return len(self.stack) > 0
-        
-
-
-# Your BSTIterator object will be instantiated and called as such:
-# obj = BSTIterator(root)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()
+    return res 
+# Driver program to test above function 
+coins = [3,7,405,436]
+n = len(coins) 
+amount = 8839
+print("Minimum coins required is",coinChange(coins, n, amount))
+# print("Minimum coins required is",coinChangeEff(coins, amount))
