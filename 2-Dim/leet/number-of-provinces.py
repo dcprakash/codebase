@@ -1,6 +1,9 @@
 # Program to count islands in boolean 2D matrix
 # https://www.geeksforgeeks.org/find-number-of-islands/
 # https://leetcode.com/problems/number-of-provinces/solution/
+# same as find-islands
+
+
 class Graph:
     def __init__(self, row, col, g):
         self.ROW = row

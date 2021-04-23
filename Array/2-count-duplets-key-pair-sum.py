@@ -1,7 +1,7 @@
 # key pair sum
 
 
-def findPyTriplet(A, n, X): 
+def findDupletSum(A, n, X): 
 
 	A.sort() 
 	l=0
@@ -24,5 +24,5 @@ if __name__ == "__main__":
 	A = [1, 4, 45, 6, 10, 12]	# 1 4 6 10 12 45
 	X = 16
 	n = len(A) 
-	findPyTriplet(A, n, X) 
+	findDupletSum(A, n, X) 
 

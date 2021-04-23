@@ -4,9 +4,10 @@
         seen = set() 
         visited=[0]*N
         visited=[[for j in range(n)] for i in range(n)]
-
+        flood-fill-algorithm
     Good examples:
         find-islands-maxarea
+        maximal_square
     
     
     

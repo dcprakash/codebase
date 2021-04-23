@@ -9,8 +9,6 @@ class Solution(object):
         graph = defaultdict(list)
         for i, x in enumerate(stones):
             for j, y in enumerate(stones[:i]):
-            # for j in range(i):
-            #     y = stones[j]
                 if x[0]==y[0] or x[1]==y[1]:
                     graph[i].append(j)
                     graph[j].append(i)
