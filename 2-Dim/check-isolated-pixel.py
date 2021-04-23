@@ -33,14 +33,9 @@ def Check_Isolated_Pixel():
                     continue
                 if grid[i][j] != 1:
                     continue
+                # there is just one 1 in entire row and col bcz r[i]=1, c[i]=1
+                # if grid[i][j]=1, means this will be an isolated 1
                 i_pixels.append([i,j])
-        # for i, iv in enumerate(rc):
-        #     if iv != 1:
-        #         continue
-        #     for j, jv in enumerate(cc):
-        #         if jv != 1:
-        #             continue
-        #         i_pixels.append(grid[i][j])
         return i_pixels
 
 

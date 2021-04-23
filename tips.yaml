@@ -1,0 +1,12 @@
+2-D:
+    helper row, col: helps to keep track of "count and location" of 1's in matrix
+    DFS/ BFS visited: 
+        seen = set() 
+        visited=[0]*N
+        visited=[[for j in range(n)] for i in range(n)]
+
+    Good examples:
+        find-islands-maxarea
+    
+    
+    

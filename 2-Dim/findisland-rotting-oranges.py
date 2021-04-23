@@ -1,6 +1,14 @@
 # https://leetcode.com/problems/rotting-oranges/solution/
 # find islands max area, BFS, fresh oranges, rotten oranges
+'''
+[
+[2,1,1],
+[1,1,0],
+[0,1,1]
+]
 
+
+'''
 
 from collections import deque
 class Solution:
@@ -49,5 +57,6 @@ class Solution:
         return minutes_elapsed if fresh_oranges == 0 else -1
         
 s=Solution()
-grid = [[2,1,1],[0,1,1],[1,0,1]]
+# grid = [[2,1,1],[0,1,1],[1,0,1]]
+grid = [[2,1,1],[1,1,0],[0,1,1]]
 print(s.orangesRotting(grid))

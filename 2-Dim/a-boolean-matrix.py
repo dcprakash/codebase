@@ -5,16 +5,9 @@
 def booleanMatrix(mat):
     R=len(matrix)
     C=len(matrix[0])
-    row = [0] * R  
+    row = [0] * R # Initialize all values of row[] as 0 
     col = [0] * C 
-    # # Initialize all values of row[] as 0  
-    # for i in range(0, R): 
-    #     row[i] = 0
-          
-    # # Initialize all values of col[] as 0  
-    # for i in range(0, C) : 
-    #     col[i] = 0
-        
+    
     # Store the rows and columns to be marked  
     # as 1 in row[] and col[] arrays respectively  
     for i in range(0, R) :
@@ -22,7 +15,9 @@ def booleanMatrix(mat):
             if (mat[i][j] == 1) : 
                 row[i] = 1
                 col[j] = 1
-
+    # print(row)  # [0, 1]  all elemends in second row mat will be 1
+    # print(col)  # [0, 0, 1]   all elemends in third col mat will be 1
+    
     # Modify the input matrix mat[] using the  
     # above constructed row[] and col[] arrays  
     for i in range(0, R) :
@@ -33,6 +28,10 @@ def booleanMatrix(mat):
     return mat
 
 
-matrix=[[1,0],
-        [0,0]]
+# matrix=[[1,0],
+#         [0,0]]
+
+matrix=[[0, 0, 0],
+        [0, 0, 1]]
+        
 print(booleanMatrix(matrix))

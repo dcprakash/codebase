@@ -1,63 +1,87 @@
-# https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/
-# https://leetcode.com/problems/coin-change/solution/
-# https://www.youtube.com/watch?v=jgiZlGzXMBw&feature=emb_logo&ab_channel=BackToBackSWE
+# Program to count islands in boolean 2D matrix
+# https://www.geeksforgeeks.org/find-number-of-islands/
+class Graph:
+    def __init__(self, row, col, g):
+        self.ROW = row
+        self.COL = col
+        self.graph = g
+        self.cnt=0
 
-# A Naive recursive python program to find minimum of coins 
-# to make a given change V 
+    # A function to check if a given cell
+    # (row, col) can be included in DFS
+    def isSafe(self, i, j, visited):
+        # row number is in range, column number
+        # is in range and value is 1
+        # and not yet visited
+        ret_value = (i >= 0 and i < self.ROW and
+                j >= 0 and j < self.COL and
+                not visited[i][j] and self.graph[i][j])
+        #print "for i {}, j {}, visited[i][j], self.graph[i][j], its {}".format(i, j, visited[i][j], self.graph[i][j], ret_value)
+        return ret_value
 
-import sys 
+    # A utility function to do DFS for a 2D
+    # boolean matrix. It only considers
+    # the 8 neighbours as adjacent vertices
+    def DFS(self, i, j, visited):
 
-# m is size of coins array (number of different coins) 
-def coinChange(coins, n, amount): 
-    res = sys.maxsize
-    
-    def backtrack(remain, comb, start):
-        nonlocal res
-        if remain==0:
-            res=min(res,len(comb))
-        if remain<0:
-            return
-        for i in range(start, len(coins)):
-            comb.append(coins[i])
-            backtrack(remain-coins[i], comb, i)
-            comb.pop()
-            
-    backtrack(amount, [], 0)
-    return -1 if res==sys.maxsize else res
-    
-    
-def coinChangeEff(coins, amount):
-    dp = [0] + [float('inf')] * amount  # [0, inf, inf, inf]
-    
-    for coin in coins:
-        for i in range(coin, amount+1):
-            dp[i] = min(dp[i], dp[i-coin]+1)
+        # These arrays are used to get row and
+        # column numbers of 8 neighbours
+        # of a given cell directions / path
+        rowNbr = [-1, 0, 1, 0];
+        colNbr = [0, 1, 0, -1];
+        # -1,-1   -1,0    -1,1
+        # 0,-1    ****    0,1
+        # 1,-1    1,0     1,1
         
-    return dp[-1] if dp[-1] != float('inf') else -1
-    
-    
-def coinChangeMethod(coins, amount):  
-    # base case 
-    if (amount == 0): 
-        return 0
+        # Mark this cell as visited
+        visited[i][j] = True
+        # print("Checking for i {}, j {} : {}".format(i, j, visited[i][j]))
+        # Recur for all connected neighbours
+        # check if neighbours has 1, then call DFS on them
+        for k in range(4):
+            if self.isSafe(i + rowNbr[k], j + colNbr[k], visited):
+                self.DFS(i + rowNbr[k], j + colNbr[k], visited)
+                self.cnt+=1
 
-    # Initialize result 
-    res = sys.maxsize 
-    n=len(coins)
-    # Try every coin that has smaller value than amount
-    for i in range(0, n): 
-        if (coins[i] <= amount): 
-            sub_res = coinChangeMethod(coins, amount-coins[i]) 
 
-            # Check for INT_MAX to avoid overflow and see if 
-            # result can minimized 
-            if (sub_res != sys.maxsize and sub_res + 1 < res): 
-                res = sub_res + 1
+    # The main function that returns
+    # count of islands in a given boolean
+    # 2D matrix
+    def countIslands(self):
+        # Make a bool array to mark visited cells.
+        # Initially all cells are unvisited
+        visited = [[False for j in range(self.COL)] for i in range(self.ROW)]
+        # print(visited)
 
-    return res 
-# Driver program to test above function 
-coins = [3,7,405,436]
-n = len(coins) 
-amount = 8839
-print("Minimum coins required is",coinChange(coins, n, amount))
-# print("Minimum coins required is",coinChangeEff(coins, amount))
+        # Initialize count as 0 and travese
+        # through the all cells of
+        # given matrix
+        count = 0
+        for i in range(self.ROW):
+            for j in range(self.COL):
+                # If a cell with value 1 is not visited yet,
+                # then new island found
+                if visited[i][j] == False and self.graph[i][j] == 2:
+                    # Visit all cells in this island
+                    # and increment island count
+                    self.DFS(i, j, visited)
+                    count += 1
+
+        print(count)
+        print(self.cnt)
+        return count
+
+
+# graph= [[1,1,0,0,0],
+#         [1,1,0,0,0],
+#         [0,0,0,1,1],
+#         [0,0,0,1,1]]
+         
+graph = [[2,1,1],[1,1,0],[0,1,1]]
+row = len(graph)
+col = len(graph[0])
+
+g = Graph(row, col, graph)
+
+print("Number of islands is:")
+print(g.countIslands())
