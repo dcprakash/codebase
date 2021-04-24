@@ -1,6 +1,7 @@
 # https://www.geeksforgeeks.org/find-subarray-with-given-sum/
 # sub array sum
 # can also use it for max sum sub array
+# target sum
 
 def subArraysum(a,n,s):
 	for i in range(n):
