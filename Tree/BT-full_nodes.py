@@ -26,7 +26,7 @@ def fullnodes(root):
     if root.right: fullnodes(root.right)
     return res
     
-
+    
 
 
 # Driver program to test above function
@@ -37,3 +37,4 @@ root.left.left = Node(4)
 root.left.right = Node(5)
 res = []
 print(fullnodes(root))
+print(fullnodesEff(root))

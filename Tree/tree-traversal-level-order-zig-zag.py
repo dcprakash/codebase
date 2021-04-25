@@ -13,12 +13,12 @@ class Node:
 
 
 def levelOrder(root):
-    ret=[]
-    result=deque()
     
     if root is None:
         return []
     
+    ret=[]
+    result=deque()
     queue=deque([root, None])   # added None after root, to create None delimited levels to tell we finished one level
     is_left = True
     

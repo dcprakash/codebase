@@ -12,9 +12,9 @@
 #            j
 # x - - - - > i
 
-def lcs(x,y):
-    m=len(x)
-    n=len(y)
+def lcs(text1,text2):
+    m=len(text1)
+    n=len(text2)
     
     l=[[None]*(n+1) for i in range(m+1)]
     # print(l)
@@ -23,7 +23,7 @@ def lcs(x,y):
         for j in range(n+1):
             if i==0 or j==0:
                 l[i][j]=0
-            elif x[i-1]==y[j-1]:
+            elif text1[i-1]==text2[j-1]:
                 l[i][j]=l[i-1][j-1]+1
             else:
                 l[i][j]=max(l[i-1][j],l[i][j-1])
@@ -31,8 +31,8 @@ def lcs(x,y):
     return l[m][n]
 
 
-X = "GeeksforGeeks"
-Y = "GeeksQuiz"
+X = "abcde"
+Y = "ace"
 # X = "ABC"
 # Y = "AGB"
 print("Length of LCS is ", lcs(X, Y))

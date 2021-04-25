@@ -1,4 +1,4 @@
-# merge tree sum
+# merge tree
 
 
 from collections import deque

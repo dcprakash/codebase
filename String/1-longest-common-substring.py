@@ -30,8 +30,12 @@ def lcs(x,y):
     return result
 
 
-X = "GeeksforGeeks"
-Y = "GeeksQuiz"
+
+X = "abcde"
+Y = "ace"
+
+# X = "GeeksforGeeks"
+# Y = "GeeksQuiz"
 # X = "abcda"
 # Y = "adcba"
 print("Length of LCS is ", lcs(X, Y))
