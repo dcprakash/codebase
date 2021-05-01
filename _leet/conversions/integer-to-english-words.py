@@ -47,7 +47,6 @@ def numberToWords(num):
         }
         return switcher.get(num)
     
-
     def two(num):
         if not num:
             return ''

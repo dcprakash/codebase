@@ -1,6 +1,19 @@
 """
 https://leetcode.com/problems/design-tic-tac-toe/
 
+tic tac toe
+
+ticTacToe.move(2, 1, 1); // return 1 (player 1 wins)
+|X| |O|
+|O|O| |    // Player 1 makes a move at (2, 1).
+|X|X|X|
+
+def check_grid(2, 1, 1):
+    2[0]=2[1]=2[2]='X'              True
+    1[0]='',1[1]=0, 1[2]='X'        False
+    similary check diagonal         False
+    similary check anti-diagonal    False
+
 """
 
 class TicTacToe:
@@ -32,6 +45,8 @@ class TicTacToe:
     
     def check_grid(self, row, col):
         is_hor, is_vec = True, True
+        # no need to check each row, bcz there is new entry at row=1, just check if all col in row 1 has player 1 in it
+        # this avoids running loop at O(n)2
         for i in range(self.n):
             if self.grid[row][i] != self.grid[row][col]:
                 is_hor = False

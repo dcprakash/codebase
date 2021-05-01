@@ -1,6 +1,8 @@
 # https://www.geeksforgeeks.org/write-your-own-atoi/
 # https://www.youtube.com/watch?v=QyDE7cPycnU&ab_channel=CppNuts
 '''
+string to integer
+
 ord('0')=48
 ord('1')=49
 2       =50
@@ -14,13 +16,18 @@ def atoi(s):
     res=0
     sign=1
     i=0
+    
+    # remove white space
+    s=s.strip()
+    
     if s[0]=='-':
         sign=-1
         i+=1
     
     for j in range(i,len(s)):
-        res=res*10 + (ord(s[j]) - ord('0'))  # ord returns unicode of given character
-    
+        if s[j].isdigit():  # check if its a digit
+            res=res*10 + (ord(s[j]) - ord('0'))  # ord returns unicode of given character
+
     return sign * res
     
 s="123"

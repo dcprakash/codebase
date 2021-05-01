@@ -1,4 +1,5 @@
 '''
+https://leetcode.com/problems/binary-search-tree-iterator/
 
 For a given node root, the next smallest element will always be the leftmost element in its tree.
 So, for a given root node, we keep on following the leftmost branch until we reach a node which 
@@ -22,11 +23,11 @@ However, some time is spent in maintaining the invariant that the stack top will
 '''
 
 # Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
         
 
 class BSTIterator:
@@ -52,10 +53,11 @@ class BSTIterator:
         """
         @return the next smallest number
         """
-        # Node at the top of the stack is the next smallest element
+        # Node at the top of the stack is the next smallest element; because left most element will be on top
         topmost_node = self.stack.pop()
 
-        # Need to maintain the invariant. If the node has a right child, call the
+        # no need to check left child, bcz the way we popullate stack
+        # Need to maintain the invariant. If the node has a right child
         # helper function for the right child
         if topmost_node.right:
             self._leftmost_inorder(topmost_node.right)
