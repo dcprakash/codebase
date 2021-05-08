@@ -15,3 +15,8 @@ Array:
     target sum: 4-subarray-sum-minimum-size, 4-subarray-with-given-sum
     maintain sorted list: heapq (minimum-meeting_rooms)
     queue to popleft: deque (findisland-rotting-oranges)
+    
+    
+String:
+    ord(c)  -   to convert strint to integer
+    <number>*10 -   to convert string to number (first digit is 0, then actual number)

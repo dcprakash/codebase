@@ -14,6 +14,10 @@ txt.split("#", 2) will print ['apple', 'banana', 'cherry#orange']
 
 x=['let2', 'own', 'kit', 'dig']
 x.split(' ', 1)[1]  -> 'own', 'kit', 'dig'
+
+sort
+similar to top-k-frequent-words
+
 '''
 
 class Solution(object):

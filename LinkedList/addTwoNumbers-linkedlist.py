@@ -36,7 +36,7 @@ class Solution(object):
             
             # current sum and carry
             val = (carry + x1 + x2) % 10
-            carry = (carry + x1 + x2) // 10 #7//10 = 0
+            carry = (carry + x1 + x2) // 10 #7//10 = 0  12//10=
             
             # update the result: add to front
             curr = ListNode(val)

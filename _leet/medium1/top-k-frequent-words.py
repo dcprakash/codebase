@@ -3,6 +3,7 @@
 # Your answer should be sorted by frequency from highest to lowest
 #  If two words have the same frequency, then the word with the lower alphabetical order comes first.
 # list comp
+ # similar to reorder-data-in-log-files
 
 
 def topKFrequent(words, k):
