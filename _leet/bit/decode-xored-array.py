@@ -1,6 +1,6 @@
 """
 https://leetcode.com/problems/decode-xored-array/
-
+XOR
 """
 class Solution:
     def decode(self, encoded, first):

@@ -20,3 +20,11 @@ Array:
 String:
     ord(c)  -   to convert strint to integer
     <number>*10 -   to convert string to number (first digit is 0, then actual number)
+    
+    
+Sliding Window:
+    https://github.com/dcprakash/codebase/blob/e9d45315727248ec53da54b24f4b54159f2cfe50/String/1-longest-substring-without-repeating-char-easy.py
+    
+loop and condition:
+    /HashTable/hashmap.py
+    https://www.tutorialspoint.com/python3/python_while_loop.htm
