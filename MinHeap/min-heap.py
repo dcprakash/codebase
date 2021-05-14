@@ -63,10 +63,10 @@ class MinHeap:
             self.minHeapify(pos)
         
     def printHeap(self):
-		for i in range(1, (self.size//2)+1): 
-			print(" PARENT : "+ str(self.Heap[i])+" LEFT CHILD : "+
-								str(self.Heap[2 * i])+" RIGHT CHILD : "+
-								str(self.Heap[2 * i + 1])) 
+        for i in range(1, (self.size//2)+1): 
+        	print(" PARENT : "+ str(self.Heap[i])+" LEFT CHILD : "+
+        						str(self.Heap[2 * i])+" RIGHT CHILD : "+
+        						str(self.Heap[2 * i + 1])) 
         
 
 if __name__ == "__main__":

@@ -34,10 +34,10 @@ class Solution:
             frogs = max(frogs, max(counters) - min(counters))
             
             
-        # return -1 if the string is incomplete
+        # return -1 if the string is incomplete; for ex crcoakroa gives counters=[2,2,2,2,1] =set is 2,1
         return frogs if len(set(counters)) == 1 else -1 
 
 
 s=Solution()
 # print(s.minNumberOfFrogs("croakcroak"))
-print(s.minNumberOfFrogs("crcoakroak"))
+print(s.minNumberOfFrogs("crcoakroa"))
