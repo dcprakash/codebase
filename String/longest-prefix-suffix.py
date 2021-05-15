@@ -2,6 +2,8 @@
 #2: remove first 2
 #012345678
 #aabcdaabc
+# longest prefix suffix
+
 
 def longestPrefixSuffix(s):
     n=len(s)

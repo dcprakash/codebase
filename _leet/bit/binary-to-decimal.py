@@ -1,6 +1,9 @@
 """
 bit manipulation
 
+binary to integer
+binardy to decimal
+
 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/solution/
 
 2^3 2^2 2^1 2^0

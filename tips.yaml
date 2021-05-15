@@ -28,3 +28,25 @@ Sliding Window:
 loop and condition:
     /HashTable/hashmap.py
     https://www.tutorialspoint.com/python3/python_while_loop.htm
+    
+zip:
+    parallel iteration https://realpython.com/python-zip-function/
+    Python’s zip() function is defined as zip(*iterables). 
+    The function takes in iterables as arguments and returns an iterator. 
+    This iterator generates a series of tuples containing elements from each iterable.
+    zip() can accept any type of iterable, such as files, lists, tuples, dictionaries, sets, and so on.
+    
+    numbers = [1, 2, 3]
+    letters = ['a', 'b']
+    zipped = zip(numbers, letters)
+    print(list(zipped))  
+    # [(1, 'a'), (2, 'b')]
+    # output will be equal to the length of the shortest iterable.
+    
+    # unzip along with the unpacking operator *
+    pairs = [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]
+    numbers, letters = zip(*pairs)
+    print(numbers)
+    # (1, 2, 3, 4)
+    print(letters)
+    # ('a', 'b', 'c', 'd')
