@@ -1,19 +1,14 @@
-'''
-
-
-
-'''
-
-
 class Solution:
-    def firstUniqChar(self, s: str) -> int:
-        s=sorted(s)
-        for i in range(1,len(s)):
-            if s[i-1]!=s[i]:
-                return i-1
+    def pivotIndex(self, nums):
+        total=sum(nums)
+        leftsum=0
+        for i,x in enumerate(nums):
+            if leftsum==total-x-leftsum:
+                return i
+            leftsum+=x
         return -1
-       
+            
         
         
-obj=Solution()
-print(obj.firstUniqChar("loveleetcode"))
+s=Solution()
+print(s.pivotIndex([1,7,3,6,5,6]))

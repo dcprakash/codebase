@@ -1,5 +1,5 @@
 '''
-https://leetcode.com/problems/add-strings/solution/
+https://leetcode.com/problems/add-strings
 add two number
 add strings
 

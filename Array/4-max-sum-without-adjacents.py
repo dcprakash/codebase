@@ -1,6 +1,10 @@
 # Function to return max sum such that 
 # no two elements are adjacent 
 # https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/
+# alternate
+# adjacent
+# dynamic program
+
 
 def find_max_sum(arr): 
 	incl = 0

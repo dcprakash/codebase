@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/valid-palindrome-ii/solution/
+https://leetcode.com/problems/valid-palindrome-ii
 valid palindrome after removal of one character
 
 """

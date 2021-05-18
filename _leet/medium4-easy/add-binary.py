@@ -2,6 +2,11 @@
 
 https://leetcode.com/problems/add-binary/
 
+11
+1
+
+convert 11 and 1 to int; add those int and display in binary format
+
 
 conversion
 convert
@@ -49,7 +54,7 @@ class Solution:
         
         
 obj=Solution()
-print(obj.addBinary('11','1'))
+print(obj.addBinary('1011','1111011'))
 """
 Your module description
 """
