@@ -1,5 +1,5 @@
 '''
-https://leetcode.com/problems/permutations/submissions/
+https://leetcode.com/problems/permutations
 
 permutation of 3 chars is 3*2*1=6
 

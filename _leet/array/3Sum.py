@@ -1,5 +1,7 @@
+# https://leetcode.com/problems/3sum/
+
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums):
         nums.sort()
         n=len(nums)
         res=[]

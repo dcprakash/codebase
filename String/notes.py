@@ -1,14 +1,18 @@
 class Solution:
-    def pivotIndex(self, nums):
-        total=sum(nums)
-        leftsum=0
-        for i,x in enumerate(nums):
-            if leftsum==total-x-leftsum:
-                return i
-            leftsum+=x
-        return -1
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        result=[]
+        def baktract(ix=0):
+            if ix==n:   result.append([nums[:]])
+            for i in range(ix, n):
+                nums[i], nums[ix] = nums[ix], nums[i]
+                baktract(ix+1)
+                nums[i], nums[ix] = nums[ix], nums[i]
+            
+            
             
         
         
+
+        
 s=Solution()
-print(s.pivotIndex([1,7,3,6,5,6]))
+print(s.combinationSum([2,3,6,7]))

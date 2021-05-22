@@ -1,6 +1,11 @@
 '''
 https://leetcode.com/problems/group-anagrams/
 
+anagrams
+Group-Anagrams
+
+when we sort the string, while adding to dictionary, we keep appending to same key; with actual unsorted values
+
 '''
 
 

@@ -1,6 +1,7 @@
 # https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
 # Condition, requires a negative integer
-
+# kadane
+# kadne
 
 def maxSubArraySum(a,size): 
 	

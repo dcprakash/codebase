@@ -1,5 +1,6 @@
-# https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/solution/
+# https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold
 # list comp
+# lambda method usage
 
 from math import ceil
 

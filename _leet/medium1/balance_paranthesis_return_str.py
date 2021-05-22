@@ -2,7 +2,7 @@
 # return balanced string
 
 '''
-https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/solution/
+https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses
 
 add index of ( to stack
 ignore alphanumeric, and continue with loop

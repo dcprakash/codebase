@@ -1,10 +1,6 @@
-'''
+# key pair sum
 
-https://leetcode.com/problems/two-sum/
 
-two sum
-key pair sum
-'''
 class Solution:
     def twoSum(self, nums, target):
     	seen={}

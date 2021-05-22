@@ -1,10 +1,12 @@
-# https://leetcode.com/problems/generate-parentheses/solution/
+# https://leetcode.com/problems/generate-parentheses
 # backtrack
 
 '''
 keep track of open and close ( )
 	add ( if there is char left place
 	add ) if there is openeing bracket
+	
+backtrack
 '''
 
 

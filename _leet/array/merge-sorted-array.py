@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/merge-sorted-array/solution/
+https://leetcode.com/problems/merge-sorted-array
 
 nums1 = [1,2,3,0,0,0]
 m = 3

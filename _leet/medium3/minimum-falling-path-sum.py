@@ -1,5 +1,7 @@
 '''
 https://leetcode.com/problems/minimum-falling-path-sum/
+start from last but one element, and calculate with last element
+
 
 paint house
 steps

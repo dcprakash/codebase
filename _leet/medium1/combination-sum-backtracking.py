@@ -1,9 +1,11 @@
 '''
- https://leetcode.com/problems/combination-sum/submissions/
+https://leetcode.com/problems/combination-sum
  if the remain==0; we met target, add current comb to list
  if the remain < 0; we exceed target, cease exploration
  combination sum equal to target backtracking
  possible combination of sum
+ 
+backtrack
  
 '''
 

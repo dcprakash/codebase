@@ -1,5 +1,5 @@
 '''
-https://leetcode.com/problems/missing-ranges/solution/
+https://leetcode.com/problems/missing-ranges
 
 check if diffence b.w prv and cur element is same or more than 1, if so append
 for each element in array, check if prv+1<=cur-1 

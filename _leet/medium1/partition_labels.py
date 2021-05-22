@@ -1,5 +1,5 @@
 '''
-https://leetcode.com/problems/partition-labels/submissions/
+https://leetcode.com/problems/partition-labels
 
 For each letter encountered, process the last occurrence of that letter, 
     extending the current partition 

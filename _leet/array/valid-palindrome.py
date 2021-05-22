@@ -1,4 +1,12 @@
-# https://leetcode.com/problems/valid-palindrome/solution/
+# https://leetcode.com/problems/valid-palindrome
+
+'''
+palindrome
+function
+filter 
+map
+
+'''
 
 s="A man, a plan, a canal: Panama"
 

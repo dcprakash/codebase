@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/string-compression/
+# https://leetcode.com/problems/string-compression
 # modify list of characters in place
 # list compression
 
