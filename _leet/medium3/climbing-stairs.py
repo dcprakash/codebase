@@ -8,7 +8,8 @@ We have 2 ways to climb stairs:
     2 steps at a time
 
 We can climb 0 steps in 1 way
-1 step in 1 way
+0 stairs can be climed in 1 way i.e., dont climb
+1 step in 1 way i.e., climb up 1 step
 2 step in :
     1 + 1
     2
@@ -17,6 +18,11 @@ We can climb 0 steps in 1 way
     1+2
     2+1
     
+use array to solve sub-problems
+dp[n+1] is used instead of dp[n] bcz we have 0 stairs to climb in base case
+we can take at most 2 steps so we know this means getting to ith step is:
+    dp[i]=dp[i-1]+dp[i-2]
+
 climb stairs
 steps
 
