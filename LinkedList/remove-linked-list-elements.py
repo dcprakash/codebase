@@ -7,6 +7,8 @@ linkedlist
 remove node from linked list
 delete node from linked list
 
+The things are more complicated when the node or nodes to delete are in the head of linked list.
+We use a dummy node at front, called sentinel node
 
 """
 # Definition for singly-linked list.

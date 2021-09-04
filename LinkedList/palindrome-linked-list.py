@@ -35,6 +35,8 @@ class Solution:
         first_half_end = self.end_of_first_half(head)
         second_half_start = self.reverse_list(first_half_end.next)
 
+        # by this point, 1->2->2->1 will become 1->2->1->2
+
         # Check whether or not there's a palindrome.
         result = True
         first_position = head
@@ -48,11 +50,12 @@ class Solution:
         # Restore the list and return the result.
         first_half_end.next = self.reverse_list(second_half_start)
         return result    
+        
 
     def end_of_first_half(self, head):
         fast = head
         slow = head
-        while fast.next is not None and fast.next.next is not None:
+        while slow.next is not None and fast.next.next is not None:
             fast = fast.next.next
             slow = slow.next
         return slow
