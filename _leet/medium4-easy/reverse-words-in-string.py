@@ -14,6 +14,4 @@ class Solution:
         return " ".join(word[::-1] for word in s.split(' '))
 
 obj=Solution()
-print(obj.reverseWords("Let's take LeetCode contest"))"""
-Your module description
-"""
+print(obj.reverseWords("Let's take LeetCode contest"))

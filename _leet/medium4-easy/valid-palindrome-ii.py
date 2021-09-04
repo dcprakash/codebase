@@ -43,3 +43,5 @@ class Solution(object):
                 # if isPalindrome(s, l, h+1): return True
         return True
             
+s=Solution()
+s.validPalindromeEasy("abca")
