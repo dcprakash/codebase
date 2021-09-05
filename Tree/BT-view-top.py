@@ -31,12 +31,13 @@ def topview(root):
             queue.append((node.left, col-1))
             queue.append((node.right, col+1))
     return ([columntable[x] for x in sorted(columntable.keys())])
-    # columntable={0: [3, 15], 1: [20], 2: [7], -1: [9]})
+    # columntable={0: [2, 1], -1: [9], 1: [8], -2: [4], 2: [7]})
 
 
-root = Node(3)
+root = Node(2)
 root.left = Node(9)
-root.right = Node(20)
-root.right.left = Node(15)
+root.right = Node(8)
+root.left.left = Node(4)
+root.right.left = Node(1)
 root.right.right = Node(7)
 print(topview(root))

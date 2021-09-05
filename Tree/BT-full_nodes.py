@@ -37,4 +37,4 @@ root.left.left = Node(4)
 root.left.right = Node(5)
 res = []
 print(fullnodes(root))
-print(fullnodesEff(root))
+# print(fullnodesEff(root))
