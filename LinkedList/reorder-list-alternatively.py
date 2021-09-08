@@ -12,6 +12,8 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+
 class Solution:
     def reorderList(self, head: ListNode) -> None:
         """
@@ -30,6 +32,13 @@ class Solution:
         while cur:
             cur.next, prv, cur = prv, cur, cur.next
         
+        print("head={}".format(head))
+        print("prv={}".format(prv))
+        '''
+        [1,2,3,4,5] will become below
+        head=ListNode{val: 1, next: ListNode{val: 2, next: ListNode{val: 3, next: None}}}
+        prv= ListNode{val: 5, next: ListNode{val: 4, next: ListNode{val: 3, next: None}}}
+        '''
         # rearragne list alternatively
         first, second = head, prv
         while second.next:

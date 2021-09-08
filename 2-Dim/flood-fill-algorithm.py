@@ -26,3 +26,10 @@ class Solution(object):
         dfs(sr,sc)
         
         return image
+
+s=Solution()
+image=[[1,1,1],[1,1,0],[1,0,1]]
+sr = 1
+sc = 1
+newColor = 2
+print(s.floodFill(image, sr, sc, newColor))

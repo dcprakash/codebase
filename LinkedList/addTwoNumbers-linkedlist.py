@@ -1,26 +1,22 @@
-# https://leetcode.com/problems/add-two-numbers-ii/submissions/
+# https://leetcode.com/problems/add-two-numbers-ii/
 # add linked list
 # add two linked list
 
 
 # Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution(object):
     def reverseList(self, head):
-        last = None
-        while head:
-            # keep the next node
-            tmp = head.next
-            # reverse the link
-            head.next = last
-            # update the last node and the current node
-            last = head
-            head = tmp
-        
-        return last
+        prv, cur = None, head
+        while cur:
+            cur.next, prv, cur = prv, cur, cur.next
+        return prv
+    
     
     def addTwoNumbers(self, l1, l2):
         # reverse lists
@@ -36,7 +32,7 @@ class Solution(object):
             
             # current sum and carry
             val = (carry + x1 + x2) % 10
-            carry = (carry + x1 + x2) // 10 #7//10 = 0  12//10=
+            carry = (carry + x1 + x2) // 10
             
             # update the result: add to front
             curr = ListNode(val)

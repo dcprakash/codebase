@@ -17,6 +17,6 @@ def numberOfPaths(m, n):
 	return numberOfPaths(m-1, n) + numberOfPaths(m, n-1)
 
 # Driver program to test above function
-m = 3
+m = 2
 n = 3
 print(numberOfPaths(m, n))

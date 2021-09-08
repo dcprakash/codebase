@@ -10,6 +10,13 @@ delete node from linked list
 The things are more complicated when the node or nodes to delete are in the head of linked list.
 We use a dummy node at front, called sentinel node
 
+
+head: [1,2,6,3,4,5,6]
+cur: [1,2,6,3,4,5,6]
+
+sentinel: [0,1,2,6,3,4,5,6]
+prv: [0,1,2,6,3,4,5,6]
+
 """
 # Definition for singly-linked list.
 # class ListNode:
@@ -31,3 +38,4 @@ class Solution:
         
         return sentinel.next
         
+

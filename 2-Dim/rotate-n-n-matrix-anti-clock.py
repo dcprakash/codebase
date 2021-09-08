@@ -1,6 +1,7 @@
 # Python3 program to rotate a matrix by 90 degrees 
 # https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/
-# https://leetcode.com/problems/rotate-image/submissions/
+# https://leetcode.com/problems/rotate-image/
+	# https://leetcode.com/problems/rotate-image/solution/
 
 from __future__ import print_function
 N = 3
@@ -19,20 +20,25 @@ def rotateMatrix(mat):
 			
 # 			# store current cell in temp variable 
 # 			print(N-x-1)
-			temp = mat[x][y] 
+			temp = mat[x][y]
+			# print(temp)
 
 			# move values from right to top 
 			mat[x][y] = mat[y][N-1-x] 
+			# print(mat[x][y])
 
 			# move values from bottom to right 
 			mat[y][N-1-x] = mat[N-1-x][N-1-y] 
+			# print(mat[y][N-1-x])
 
 			# move values from left to bottom 
 			mat[N-1-x][N-1-y] = mat[N-1-y][x] 
+			# print(mat[N-1-x][N-1-y])
 
 			# assign temp to left 
 			mat[N-1-y][x] = temp 
-
+			# print(mat[N-1-y][x])
+			print(mat)
 
 # Function to print the matrix 
 def displayMatrix( mat ): 
@@ -47,7 +53,7 @@ def displayMatrix( mat ):
 	
 
 # Driver Code 
-mat = [[0 for x in range(N)] for y in range(N)] 
+# mat = [[0 for x in range(N)] for y in range(N)] 
 
 # Test case 1 
 # mat = [ [1, 2, 3, 4 ], 

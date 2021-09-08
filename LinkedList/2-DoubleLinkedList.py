@@ -102,6 +102,13 @@ class MyLinkedList:
         to_add.next = succ
         pred.next = to_add
         succ.prev = to_add
+        '''
+        i=1
+        head<->1<->3<->tail
+        succ=tail
+        succ=3
+        pred=1
+        '''
         
 
     def deleteAtIndex(self, index: int) -> None:
@@ -128,7 +135,15 @@ class MyLinkedList:
         self.size -= 1
         pred.next = succ
         succ.prev = pred
-        
+        '''
+        i=2
+        head<->0<->1<->2<->3<->4<->5<->6<->tail
+        pred=head
+        pred=2
+        succ=3
+        pred.next=succ
+        succ.prev=pred
+        '''
 
 
 # Your MyLinkedList object will be instantiated and called as such:

@@ -23,7 +23,7 @@ class Solution(object):
                    for c in range(len(grid[0])))
 
 
-grid=[[1,1,0,0,0],
+grid = [[1,1,0,0,0],
         [1,1,0,0,0],
         [0,0,0,1,1],
         [0,0,0,1,1]]
