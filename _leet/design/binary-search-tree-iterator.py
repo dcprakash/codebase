@@ -1,6 +1,13 @@
 '''
 https://leetcode.com/problems/binary-search-tree-iterator/
 
+BST: all elements to left of tree is smaller, and right is larger
+
+1. when next is called, return the "next" smallest number in the tree
+    and if next smallest element has right node, add that and its samllest to stack
+    stack is used to keep track of smaller elements
+2. if stack is not empty, then has_next will return true.
+
 For a given node root, the next smallest element will always be the leftmost element in its tree.
 So, for a given root node, we keep on following the leftmost branch until we reach a node which 
 doesn't have a left child and that will be the next smallest element.

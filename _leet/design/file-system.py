@@ -6,6 +6,9 @@ File System (FileSystem)
 Directory
 
 """
+from collections import defaultdict
+
+
 class TrieNode(object):
     def __init__(self, name):
         self.map = defaultdict(TrieNode)
@@ -68,11 +71,8 @@ class FileSystem:
             cur = cur.map[name]
         return cur.value
 
-            
-        
-
 
 # Your FileSystem object will be instantiated and called as such:
-# obj = FileSystem()
-# param_1 = obj.createPath(path,value)
-# param_2 = obj.get(path)
+obj = FileSystem()
+param_1 = obj.createPath("/a",1)
+print(obj.get("/a"))
