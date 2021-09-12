@@ -12,11 +12,11 @@ class Solution:
 
         new = nums[:]
         for i in range(len(nums)):
-            old_ai = nums[i]
+            temp = nums[i]
             new[i] = new[i-1] if i > 0 else float('-inf')
             if monotone_increasing(new):
                 return True
-            new[i] = old_ai
+            new[i] = temp
 
         return False
 

@@ -1,0 +1,34 @@
+Balance string:
+  stack, index to remove, left+-, right+-, balance+-
+
+Backtrack:
+  _leet:
+    medium1/balanced_paranthesis_generate_backtrack.py
+    medium1/permutations-of-string-list-backtrack.py
+
+DFS:
+  _leet:
+    medium1/course-schedule.py    *
+    medium2/shortest-bridge-dfs-bfs.py    *
+
+Dynamic:
+  _leet:
+    medium1/decode-ways.py
+    medium1/longestIncreasingSubsequence.py
+
+Review:
+  _leet:
+    medium1/clone-graph.py
+    medium1/decode-ways.py
+    medium1/maximum-points-you-can-obtain-from-cards.py
+    medium1/maximum-product-subarray.py   *
+    medium1/perfect_square_sums.py      **
+    medium1/string_compression.py
+    medium1/task-scheduler.py     ***
+
+    medium2/jump-game.py
+    medium2/k-closest-points-to-origin.py
+    medium2/least-number-of-unique-integers-after-k-removals.py
+    medium2/matrix-block-sum.py     ***
+    medium2/remove-k-digits.py
+    medium2/valid-sudoku.py

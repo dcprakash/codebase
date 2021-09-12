@@ -58,6 +58,8 @@ class Solution:
                         dist+=1
 
 
-matrix = [[0,1,0],[0,0,0],[0,0,1]]
+matrix = [[0,1,0],
+          [0,0,0],
+          [0,0,1]]
 s=Solution()
 print(s.shortestBridge(matrix))

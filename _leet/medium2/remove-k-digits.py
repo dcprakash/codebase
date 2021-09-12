@@ -3,6 +3,14 @@ https://leetcode.com/problems/remove-k-digits/
 
 remove k digits from string to keep minimum output
 
+Algorithm
+    use stack
+    iterate over num
+    add each item to stack if item>top of stack
+    remove item from stack if item<top of stack
+        also decrement k
+    
+
 A = 1axxx, B = 1bxxx, if the digits a > b, then A > B
 num=425; k=1
     if we keep 4, then we get 42 or 45
@@ -42,11 +50,11 @@ class Solution:
 # num = "10"
 # k = 2
 
-# num = "14"
-# k = 2
+num = "14"
+k = 2
 
-num = "9"
-k = 1
+# num = "9"
+# k = 1
 
 s=Solution()
 print(s.removeKdigits(num, k))

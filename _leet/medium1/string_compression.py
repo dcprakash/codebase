@@ -17,20 +17,20 @@ def compressEff(chars):
     return write
 
 
-def compress(chars):
-    d={}
-    for i in chars:
-        if i in d:  d[i]+=1
-        else:   d[i]=1
-    res=[]
-    for k,v in sorted(d.items()):
-        res.append(k)
-        res.append(str(v))
-    return len(res)
+# def compress(chars):
+#     d={}
+#     for i in chars:
+#         if i in d:  d[i]+=1
+#         else:   d[i]=1
+#     res=[]
+#     for k,v in sorted(d.items()):
+#         res.append(k)
+#         res.append(str(v))
+#     return len(res)
     
 
 print(compressEff(["a","b","b","c","c"]))
-print(compress(["a","a","b","b","c","c","c"]))
+# print(compress(["a","a","b","b","c","c","c"]))
 
     
     

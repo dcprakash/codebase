@@ -3,36 +3,42 @@ https://leetcode.com/problems/spiral-matrix/
 print matrix in sprial order
 '''
 
+
 class Solution:
-    def generateMatrix(self, n):
+    def spiralOrder(self, matrix):
+        res = []
+        top = left = 0
+        bottom = len(matrix)-1
+        right = len(matrix[0])-1
+        dir = 0
 
-        def spiral_coords(top, left, bottom, right):
-            for c in range(left, right + 1):
-                yield top, c
-            for r in range(top + 1, bottom + 1):
-                yield r, right
-            if top < bottom and left < right:
-                for c in range(right - 1, left, -1):
-                    yield bottom, c
-                for r in range(bottom, top, -1):
-                    yield r, left
-
-        if not n: return []
-        ans = [[0]*n for _ in range(n)]
-
-        top, bottom = 0, n - 1
-        left, right = 0, n - 1
-        num = 1
         while top <= bottom and left <= right:
-            for r, c in spiral_coords(top, left, bottom, right):
-                ans[r][c] = num
-                num += 1
-            top += 1; bottom -= 1
-            left += 1; right -= 1
-            
-        return ans
+            if dir == 0:
+                for m in range(left, right+1):
+                    res.append(matrix[top][m])
+                top += 1
+                dir = (dir+1) % 4
+            elif dir == 1:
+                for m in range(top, bottom+1):
+                    res.append(matrix[m][right])
+                right -= 1
+                dir = (dir+1) % 4
+            elif dir == 2:
+                for m in range(right, left-1, -1):
+                    res.append(matrix[bottom][m])
+                bottom -= 1
+                dir = (dir+1) % 4
+            elif dir == 3:
+                for m in range(bottom, top-1, -1):
+                    res.append(matrix[m][left])
+                left += 1
+                dir = (dir+1) % 4
+
+        return res
 
 
-n=3
-s=Solution()
-print(s.generateMatrix(n))
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+s = Solution()
+print(s.spiralOrder(matrix))

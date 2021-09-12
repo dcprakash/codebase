@@ -8,6 +8,7 @@ return result
 
 
 class Solution:
+    # time limit exceeds
     def maxProduct(self, nums):
         if len(nums) == 0:
             return 0

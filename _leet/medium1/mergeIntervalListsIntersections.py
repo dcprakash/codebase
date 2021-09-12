@@ -3,7 +3,7 @@ lists pairs are disjoint i.e., no 2 intervals are same in list
 lsits are already sorted
 https://www.youtube.com/watch?v=Qh8ZjL1RpLI&ab_channel=TECHDOSE
 '''
-# https://leetcode.com/problems/interval-list-intersections/submissions/
+# https://leetcode.com/problems/interval-list-intersections/
 # Merge Intervals of list intersections
 # interval-list-intersections
 
