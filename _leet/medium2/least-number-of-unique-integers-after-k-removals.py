@@ -3,7 +3,6 @@
 
 class Solution:
     def findLeastNumOfUniqueInts(self,arr,k):
-        ans=0
         from collections import Counter
         count=Counter(arr)
         eliminate=0

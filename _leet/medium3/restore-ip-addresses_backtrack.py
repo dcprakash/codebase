@@ -9,7 +9,7 @@ backtrack
 
 class Solution:
     def restoreIpAddresses(self, s):    
-        def backtrack(s, current, start):
+        def backtrack(current, start):
             nonlocal res
             if len(current) == 4:   
                 if start == len(s):     # when start ix reached end, we dont have any digits left
@@ -26,10 +26,10 @@ class Solution:
                 if s[start] == '0' and i > start:
                     continue
                 if 0 <= int(s[start:i+1]) <= 255:
-                    backtrack(s, current + [s[start:i+1]], i + 1)
+                    backtrack(current + [s[start:i+1]], i + 1)
         
         res = []
-        backtrack(s, [], 0)
+        backtrack([], 0)
         
         return res
 

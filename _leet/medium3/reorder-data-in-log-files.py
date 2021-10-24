@@ -33,7 +33,7 @@ class Solution(object):
             else:
                 digit.append(log)
         
-        # setting the maxsplit parameter to 1, will return a list with 2 elements
+        # setting the maxsplit parameter to 1, will return a list with 2 elements for 'let2 own kit dig' it would be ['let2', 'own kit dig']
         # x is used at the end, is to do another iteration of sort based on let1, let2
         letter.sort(key=lambda x: (x.split(' ', 1)[1], x))
         return letter + digit

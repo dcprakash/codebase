@@ -1,21 +1,3 @@
-Balance string:
-  stack, index to remove, left+-, right+-, balance+-
-
-Backtrack:
-  _leet:
-    medium1/balanced_paranthesis_generate_backtrack.py
-    medium1/permutations-of-string-list-backtrack.py
-
-DFS:
-  _leet:
-    medium1/course-schedule.py    *
-    medium2/shortest-bridge-dfs-bfs.py    *
-
-Dynamic:
-  _leet:
-    medium1/decode-ways.py
-    medium1/longestIncreasingSubsequence.py
-
 Review:
   _leet:
     medium1/clone-graph.py
@@ -32,3 +14,33 @@ Review:
     medium2/matrix-block-sum.py     ***
     medium2/remove-k-digits.py
     medium2/valid-sudoku.py
+
+    medium3/count-binary-substrings.py    *
+    medium3/longest-substring-k-distinct-char.py    **
+    medium3/valid-parenthesis-string.py
+
+    medium4-easy/add-binary.py
+    medium4-easy/find-common-characters.py
+
+
+Balance string:
+  stack, index to remove, left+-, right+-, balance+-
+
+Backtrack:
+  _leet:
+    medium1/balanced_paranthesis_generate_backtrack.py
+    medium1/permutations-of-string-list-backtrack.py
+    medium3/combinations-of-phone-num_backtrack.py
+    medium3/restore-ip-addresses_backtrack.py   *
+
+DFS:
+  _leet:
+    medium1/course-schedule.py    *
+    medium2/shortest-bridge-dfs-bfs.py    *
+
+Dynamic:
+  _leet:
+    medium1/decode-ways.py
+    medium1/longestIncreasingSubsequence.py
+    medium3/climbing-stairs-min-cost.py
+    medium3/climbing-stairs.py
