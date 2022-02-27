@@ -1,6 +1,6 @@
 # https://www.geeksforgeeks.org/convert-array-into-zig-zag-fashion/
-# if True thenfirst element < second element
-# if False thenfirst element > second element
+# if True then first element < second element
+# if False then first element > second element
 
 a=[4, 3, 7, 8, 6, 2, 1]
 n=len(a)

@@ -12,6 +12,14 @@
 #            j
 # x - - - - > i
 
+'''
+A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. 
+LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3. 
+LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4. 
+Following is a tabulated implementation for the LCS problem.
+'''
+
+
 def lcs(text1,text2):
     m=len(text1)
     n=len(text2)

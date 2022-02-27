@@ -8,7 +8,8 @@ def pythagoreanTriplet(a,n):
     pya.sort()
     # print(pya)  #[1, 9, 16, 25, 36]
     
-    # for i in reversed(range(2,n)):
+    # fix one element and find other two 
+    # i goes from n - 1 to 2
     for i in range(n-1,2,-1):   #i=4,3,2
         l=0
         r=i-1

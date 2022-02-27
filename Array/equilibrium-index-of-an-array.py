@@ -1,6 +1,5 @@
 # https://www.geeksforgeeks.org/equilibrium-index-of-an-array/
 """
-refer to cpp version
 
 Input: A[] = {-7, 1, 5, 2, -4, 3, 0}
 Output: 3

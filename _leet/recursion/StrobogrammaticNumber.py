@@ -60,4 +60,4 @@ if __name__ == '__main__':
 	
 	# Print all Strobogrammatic 
 	# number for n = 3 
-	print(strobogrammatic_num(4)) 
+	print(strobogrammatic_num(3)) 

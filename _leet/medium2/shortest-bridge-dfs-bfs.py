@@ -19,7 +19,8 @@ from collections import defaultdict, deque
 
 
 class Solution:
-    def shortestBridge(self, matrix):
+    def shortestBridge(self, A):
+        matrix=A
         m=len(matrix)
         n=len(matrix[0])
         directions=[(-1,0),(1,0),(0,-1),(0,1)]
@@ -63,3 +64,7 @@ matrix = [[0,1,0],
           [0,0,1]]
 s=Solution()
 print(s.shortestBridge(matrix))
+
+
+#{{(0, 1), (0, 2), (1, 1), (0, 0)}
+

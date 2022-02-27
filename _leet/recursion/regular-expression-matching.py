@@ -37,11 +37,11 @@ def isMatch(text, pattern):
         return first_match and isMatch(text[1:], pattern[1:])
 
 
-# text = "aa"
-# pattern = "a*"
+text = "aa"
+pattern = "a*"
 
-text = "aab"
-pattern = "c*a*b"
+# text = "aab"
+# pattern = "c*a*b"
 
 # print(match(text,pattern))
 print(isMatch(text,pattern))

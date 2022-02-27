@@ -33,13 +33,21 @@ if low <0, make low 0 as we can never be less than 0
 return balanced, at the end if if low=0
 
 
+When checking whether the string is valid, we only cared about the "balance": 
+    the number of extra, open left brackets as we parsed through the string. 
+    For example, when checking whether '(()())' is valid, 
+    we had a balance of 1, 2, 1, 2, 1, 0 as we parse through the string
+    
+    
+
+
 """
 class Solution(object):
     def checkValidString(self, s):
         lo = hi = 0
         for c in s:
-            lo += 1 if c == '(' else -1
-            hi += 1 if c != ')' else -1
+            lo += 1 if c == '(' else -1 # when ) we do lo--
+            hi += 1 if c != ')' else -1 #i.e., if c in ('(','*'); when ) we do hi--
             if hi < 0: break
             lo = max(lo, 0)
 

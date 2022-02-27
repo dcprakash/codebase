@@ -1,7 +1,11 @@
 # https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/
+# https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
 # reverse given string
 # n - longest commong substring(x,revers(x))
+'''
 
+
+'''
 
 def lcs_util(x,y):
     m=n=len(x)

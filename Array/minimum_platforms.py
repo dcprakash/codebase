@@ -14,9 +14,8 @@
 # of platforms reqquired 
 def findPlatform(arr,dep,n): 
   
-    # Sort arrival and 
-    # departure arrays 
-    # works even without these
+    # Sort arrival and departure arrays 
+    # Because its time, we can sort it
     arr.sort() 
     dep.sort() 
     print(arr)

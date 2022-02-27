@@ -29,7 +29,7 @@ def compressEff(chars):
 #     return len(res)
     
 
-print(compressEff(["a","b","b","c","c"]))
+print(compressEff(["a","b","b","c","c","c"]))
 # print(compress(["a","a","b","b","c","c","c"]))
 
     

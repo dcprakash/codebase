@@ -3,7 +3,16 @@
 #012345678
 #aabcdaabc
 # longest prefix suffix
+'''
+Given a string s, find the length of the longest prefix, which is also a suffix. 
+The prefix and suffix should not overlap.
 
+Input : aabcdaabc
+Output : 4
+The string "aabc" is the longest
+prefix which is also suffix.
+
+'''
 
 def longestPrefixSuffix(s):
     n=len(s)

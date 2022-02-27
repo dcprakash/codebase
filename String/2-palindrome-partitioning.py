@@ -1,12 +1,27 @@
 '''
 https://leetcode.com/problems/palindrome-partitioning/solution/
 
+Given a string s, partition s such that every substring of the partition is a palindrome. 
+Return all possible palindrome partitioning of s.
+A palindrome string is a string that reads the same backward as forward.
+Example 1:
+Input: s = "aab"
+Output: [["a","a","b"],["aa","b"]]
+
+The aim to partition the string into all possible palindrome combinations. 
+To achieve this, we must generate all possible substrings of a string by partitioning at every index 
+    until we reach the end of the string. 
+Example, abba can be partitioned as ["a","ab","abb","abba"]. 
+Each generated substring is considered as a potential candidate if it a Palindrome.
+
 # palindrome partition backtracking
-Iteratively generate all possible substrings beginning at start index. The end index increments from start till the end of the string.
+Iteratively generate all possible substrings beginning at start index. 
+The end index increments from start till the end of the string.
     Example, abba can be partitioned as ["a","ab","abb","abba"]
 For each of the substring generated, check if it is a palindrome.
-If the substring is a palindrome, the substring is a potential candidate. Add substring to the \text{currentList}currentList and perform a depth-first search on the remaining substring. 
-Backtrack if \text{start}start index is greater than or equal to the string length and add the \text{currentList}currentList to the result.
+If the substring is a palindrome, the substring is a potential candidate. 
+Add substring to the currentList and perform a depth-first search on the remaining substring. 
+Backtrack if start index is greater than or equal to the string length and add the currentList to the result.
 
 '''
 

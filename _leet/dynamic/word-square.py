@@ -3,11 +3,15 @@ https://leetcode.com/problems/word-squares/solution/
 https://leetcode.com/explore/interview/card/google/62/recursion-4/370/
 
 [
-"ball",
-"area",
-"lead",
-"lady"
+"b a l l",
+"a r e a",
+"l e a d",
+"l a d y"
 ]
+
+The idea is that we construct the word square row by row from top to down. 
+At each row, we simply do trial and error, i.e. we try with one word, 
+    if it does not meet the constraint then we try another one.
 
 '''
 

@@ -12,12 +12,13 @@ min=1
 max=10
 mid=5
 
-maintain count of sub arrays
-include possible sum in sub array until its sum is less than mid
-if count is still less than or equal to K, then this mid is achievable
-
-
-
+Idea is to use Binary Search to find an optimal solution.
+For binary search minimum sum can be 1 and the maximum sum can be the sum of all the elements.
+To check if mid is the maximum subarray sum possible. Maintain a count of sub-arrays, 
+	include all possible elements in subarray until their sum is less than mid. 
+ 	After this evaluation, if the count is less than or equal to K, then mid is achievable else not. 
+  	(Since if the count is less than K, we can further divide any subarray its sum will never increase mid)
+Find the minimum possible value of mid which satisfies the condition.
 
 '''
 

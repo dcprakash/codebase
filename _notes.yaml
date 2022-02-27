@@ -1,46 +1,109 @@
 Review:
-  _leet:
-    medium1/clone-graph.py
-    medium1/decode-ways.py
-    medium1/maximum-points-you-can-obtain-from-cards.py
-    medium1/maximum-product-subarray.py   *
-    medium1/perfect_square_sums.py      **
-    medium1/string_compression.py
-    medium1/task-scheduler.py     ***
+  Array:
+    2-count-duplets-key-pair-difference.py
+    2-count-duplets-key-pair-sum
+    2-pythagorean-triplet-in-an-unsorted-array.py
+    4-max-sum-cont-subarray-kadane - greedy
+    4-max-sum-without-adjacents.py  *
+    4-subarray-sums-divisible-by-k - eff  *
+    4-subarray-with-given-sum
+    count-number-of-occurrences-or-frequency-in-a-sorted-array.py
+    equilibrium-index-of-an-array
+    find-item-whose-elements-before-small-after-big.py
+    minimum-meeting_rooms
+    reorganize-string-alternatively **
+    https://leetcode.com/problems/trapping-rain-water-ii/
 
-    medium2/jump-game.py
-    medium2/k-closest-points-to-origin.py
-    medium2/least-number-of-unique-integers-after-k-removals.py
-    medium2/matrix-block-sum.py     ***
-    medium2/remove-k-digits.py
-    medium2/valid-sudoku.py
+
+  String:
+    0.1-longest-substring-without-repeating-characters.py
+    1-minimum-insertions-to-form-a-palindrome.py
+    2-longestpalindrome-substring.py
+    2-longestpalindrome.py
+    2-palindrome-partitioning.py  *
+    colNameForNumberExcel.py
+    implement-strstr.py   **
+    permutations-of-a-given-string-backtracking.py
+    remove-minimum-number-characters-two-strings-become-anagram-2.py
+    word-break.py
+
+
+  _leet:
+    medium1
+      clone-graph.py
+      decode-ways.py
+      longestIncreasingSubsequence.py   *
+      maximum-points-you-can-obtain-from-cards.py
+      maximum-product-subarray.py(eff)   *
+      minimum-time-difference.py
+        perfect_square_sums.py      ***
+      partition_labels.py
+      permutations-of-string-list-backtrack.py
+      string_compression.py   *
+        task-scheduler.py     ***
+
+    medium2
+      jump-game.py
+          k-closest-points-to-origin.py   ***
+      majority-element.py
+      least-number-of-unique-integers-after-k-removals.py
+          matrix-block-sum.py     ***
+      minimum-path-sum-triangle.py
+      next-permutation.py
+      number-of-connected-components-in-an-undirected-graph.py
+      remove-duplicate-letters.py
+      remove-k-digits.py
+        shortest-bridge-dfs-bfs.py  **
+      valid-sudoku.py
 
     medium3/count-binary-substrings.py    *
     medium3/longest-substring-k-distinct-char.py    **
-    medium3/valid-parenthesis-string.py
+    medium3/valid-parenthesis-string.py   *
 
     medium4-easy/add-binary.py
     medium4-easy/find-common-characters.py
 
 
-Balance string:
-  stack, index to remove, left+-, right+-, balance+-
 
-Backtrack:
-  _leet:
-    medium1/balanced_paranthesis_generate_backtrack.py
-    medium1/permutations-of-string-list-backtrack.py
-    medium3/combinations-of-phone-num_backtrack.py
-    medium3/restore-ip-addresses_backtrack.py   *
+Concepts:
+  Balance string:
+    stack, index to remove, left+-, right+-, balance+-
 
-DFS:
-  _leet:
-    medium1/course-schedule.py    *
-    medium2/shortest-bridge-dfs-bfs.py    *
+  Backtrack:
+    _leet:
+      medium1/balanced_paranthesis_generate_backtrack.py
+      medium1/permutations-of-string-list-backtrack.py
+      medium3/combinations-of-phone-num_backtrack.py
+      medium3/restore-ip-addresses_backtrack.py   *
 
-Dynamic:
-  _leet:
-    medium1/decode-ways.py
-    medium1/longestIncreasingSubsequence.py
-    medium3/climbing-stairs-min-cost.py
-    medium3/climbing-stairs.py
+  DFS:
+    _leet:
+      medium1/course-schedule.py    *
+      medium2/shortest-bridge-dfs-bfs.py    *
+
+  Dynamic:
+    _leet:
+      medium1/decode-ways.py
+      medium1/longestIncreasingSubsequence.py
+      medium3/climbing-stairs-min-cost.py
+      medium3/climbing-stairs.py
+
+
+
+Tricks:
+  Array:
+    l=0,r=1
+    l=0,r=n-1
+
+    seen={} - to check if we already computed this value
+    enumerate - to keep track of index of array and its value
+
+    Counter() - gives dict of element as key, and how many times it repeated as value
+
+    for i in range(n-1,2,-1) - reverese order from n-1th element to 2nd element
+
+    helper function for sort - arrange-largest-number
+
+
+  String:
+    sliding window  String/0.1-longest-substring-without-repeating-characters.py

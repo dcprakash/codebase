@@ -47,7 +47,7 @@ class Solution:
         return ''.join(stack)
         
         
-# string = "cbacdcbc"
+# string = "acdcbc"
 string = "bcabc"
 
 s=Solution()

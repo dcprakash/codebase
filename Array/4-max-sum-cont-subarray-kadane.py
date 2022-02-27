@@ -21,7 +21,7 @@ def maxSubArraySum(a,size):
 	return max_so_far 
 	
 
-def maxSubArraySumGreedy(a, size):
+def maxSubArraySumGreedy(a, n):
 	max_sum = cur_sum = a[0]
 	for i in range(1, n):
 		cur_sum=max(a[i], cur_sum+a[i])

@@ -8,13 +8,19 @@ ili
 ilik
 ilike
 
+
 If the prefix is present in dictionary, we recur for rest of the string (or suffix).
 wordBreak(wordList, word[i:])
-
 Ex: i was present in dictionary, so we recursive call to find if "like" exist in dict
-
 If the recursive call for suffix returns true, we return true, otherwise we try next prefix.
 
+
+The any() function returns True if any element of an iterable is True. If not, it returns False.
+boolean_list = ['True', 'False', 'True']
+# check if any element is true
+result = any(boolean_list)
+print(result)
+# Output: True
 '''
 
 

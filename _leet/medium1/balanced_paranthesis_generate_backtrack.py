@@ -12,7 +12,7 @@ backtrack
 
 class Solution(object):
     def generateParenthesis(self, N):
-        ans = []
+        
         def backtrack(S = '', left = 0, right = 0):
             if len(S) == 2 * N:
                 ans.append(S)
@@ -24,6 +24,7 @@ class Solution(object):
             if right < left:
                 backtrack(S+')', left, right+1)
 
+        ans = []
         backtrack()
         return ans
 

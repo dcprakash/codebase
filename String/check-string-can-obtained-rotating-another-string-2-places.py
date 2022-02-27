@@ -2,8 +2,8 @@
 # https://www.geeksforgeeks.org/check-string-can-obtained-rotating-another-string-2-places/
 # string rotation
 # array rotation
-# Function to check if string2 is  
-# obtained by string 1 
+# Check if a string can be obtained by rotating another string 2 places
+
 def isRotated(str1, str2): 
     print("str1 = {}".format(str1))
     print("str2 = {}".format(str2))

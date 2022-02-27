@@ -10,6 +10,14 @@
 # result = max(result, LCSuff[i][j])
 # result = 4
 
+'''
+Input : X = “GeeksforGeeks”, y = “GeeksQuiz” 
+Output : 5 
+Explanation:
+The longest common substring is “Geeks” and is of length 5.
+
+'''
+
 
 def lcs(x,y):
     m=len(x)

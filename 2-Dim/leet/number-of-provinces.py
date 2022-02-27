@@ -4,6 +4,26 @@
 # same as find-islands
 
 
+class Solution:
+    def dfs(self,r,grid,visited):
+        visited.append(r)
+        for j in range(len(grid)):
+            if grid[r][j]==1 and j not in visited:
+                self.dfs(j,grid,visited)
+    
+    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+        visited=[]
+        count=0
+        for row in range(len(isConnected)):
+            if row not in visited:
+                self.dfs(row,isConnected,visited)
+                count+=1
+        return count
+
+
+
+
+'''
 class Graph:
     def __init__(self, row, col, g):
         self.ROW = row
@@ -89,7 +109,7 @@ print("Number of islands is:")
 print(g.countIslands())
 
 
-
+'''
 
 
 

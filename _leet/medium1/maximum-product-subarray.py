@@ -49,5 +49,5 @@ nums=[2,3,-2,4]
 # nums=[2,-5,3,1,-4,0,-10,2,8]
         
 s=Solution()
-# print(s.maxProduct(nums))
+print(s.maxProduct(nums))
 print(s.maxProductEfficient(nums))

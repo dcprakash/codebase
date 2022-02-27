@@ -27,7 +27,7 @@ def findOcuurence(a,n,x,left):
     r=n-1
     result=0
     while l<=r:
-        m=(l+r)/2;
+        m=(l+r)//2;
         if a[m]==x:
             if left:
                 r=m-1

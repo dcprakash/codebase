@@ -1,6 +1,7 @@
 # Function to return max sum such that 
 # no two elements are adjacent 
 # https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/
+# https://leetcode.com/problems/house-robber/
 # alternate
 # adjacent
 # dynamic program
@@ -9,15 +10,15 @@
 def find_max_sum(arr): 
 	incl = 0
 	excl = 0
-	
+
 	for i in arr: 
-	    new_excl=max(incl,excl)
+		new_excl=max(incl,excl)
 		
 		# Current max including i 
-	    incl = excl + i 
-	    excl = new_excl 
-	    print("for i={}, incl={}, excl={}, new_excl={}".format(i,incl,excl,new_excl))
-	
+		incl = excl + i 
+		excl = new_excl 
+		print("for i={}, incl={}, excl={}, new_excl={}".format(i,incl,excl,new_excl))
+
 	# return max of incl and excl 
 	return (excl if excl>incl else incl) 
 

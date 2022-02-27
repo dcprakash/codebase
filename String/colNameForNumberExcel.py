@@ -22,18 +22,18 @@ def printString(n):
 		if rem == 0:
 			string[i] = 'Z'
 			i += 1
-			n = (n / 26) - 1
+			n = (n // 26) - 1
 		else:
 			# convert number like 25 to its alpha equivalent by
 			# ord('A') + 25-1 = 'Y'
 			string[i] = chr((rem - 1) + ord('A'))
 			i += 1
-			n = n / 26
+			n = n // 26
 	string[i] = '\0'
 
 	# Reverse the string and print result
 	string = string[::-1]
-	print "".join(string)
+	print("".join(string))
 
 # Driver program to test the above Function
 printString(26)
