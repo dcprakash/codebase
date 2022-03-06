@@ -7,10 +7,12 @@ maximum path sum in matrix
 # https://leetcode.com/problems/minimum-path-sum/
 import sys
 
+'''
 def minPathSum(grid, i, j):
     if i==len(grid) or j==len(grid[0]):    return float("inf")
     if i==len(grid)-1 and j==len(grid[0])-1:    return grid[i][j]
     return grid[i][j] + min(minPathSum(grid,i+1,j), minPathSum(grid,i,j+1))
+'''
     
 
 def minPathSumEfficient(grid, i, j):

@@ -42,8 +42,15 @@ serial='5,#,#'
 count[serial]+=1; this is now 2
 '''
 
+# Driver program to test above function
+root = Node(2)
+root.left = Node(5)
+root.right = Node(5)
 
+print(findDuplicateSubtrees(root))
+# print(findDuplicateSubtreesEfficient(root))
 
+'''
 from collections import defaultdict
 
 def findDuplicateSubtreesEfficient(root):
@@ -62,12 +69,4 @@ def findDuplicateSubtreesEfficient(root):
     
     helper(root)
     return ans
-
-
-# Driver program to test above function
-root = Node(2)
-root.left = Node(5)
-root.right = Node(5)
-
-print(findDuplicateSubtrees(root))
-# print(findDuplicateSubtreesEfficient(root))
+'''

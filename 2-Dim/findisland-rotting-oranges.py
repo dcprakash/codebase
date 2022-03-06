@@ -11,7 +11,10 @@
 '''
 
 from collections import deque
+
+
 class Solution:
+    
     def orangesRotting(self, grid):
         queue = deque()
 
@@ -55,7 +58,8 @@ class Solution:
 
         # return elapsed minutes if no fresh orange left
         return minutes_elapsed if fresh_oranges == 0 else -1
-        
+
+
 s=Solution()
 # grid = [[2,1,1],[0,1,1],[1,0,1]]
 grid = [[2,1,1],[1,1,0],[0,1,1]]

@@ -3,10 +3,10 @@ https://leetcode.com/problems/minimum-window-substring/solution/
 0. create dict_t of all unique chars in t; len of this is required number of chars
 1. left and right pointer pointing to 0
 2. keep moving right pointer until window has all elements
-3. increment left pointer, check if windows has all elements, if so capture min window
+3. increment left pointer, check if windows still has all elements, if so capture min window
 4. if incrementing left pointer dont have char in windows, increment right again
 
-same concept as 0.1-longest-substring-without-repeating-characters
+same concept as String/0.1-longest-substring-without-repeating-characters.py
 # sliding window
 # dictionary insertion
 """

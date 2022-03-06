@@ -34,4 +34,4 @@ class Solution:
         return res
 
 s=Solution()
-print(s.restoreIpAddresses("0000"))
+print(s.restoreIpAddresses("25525511135"))

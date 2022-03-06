@@ -21,4 +21,4 @@ class Solution:
             
         
 obj=Solution()
-print(obj.subdomainVisits(["9001 discuss.leetcode.com"]))
+print(obj.subdomainVisits(["9001 discuss.leetcode.com", "50 yahoo.com"]))

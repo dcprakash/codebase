@@ -9,7 +9,13 @@ https://leetcode.com/explore/interview/card/google/62/recursion-4/370/
 "l a d y"
 ]
 
-The idea is that we construct the word square row by row from top to down. 
+As we can see from the definition, for a word square with equal-sized row and column, 
+    the resulting letter matrix should be symmetrical across its diagonal.
+
+
+
+
+The idea is that we construct the word square row by row from top to bottom. 
 At each row, we simply do trial and error, i.e. we try with one word, 
     if it does not meet the constraint then we try another one.
 

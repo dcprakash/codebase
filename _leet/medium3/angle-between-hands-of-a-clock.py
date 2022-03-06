@@ -11,9 +11,10 @@ hour handle
     when minutes>0, consider minutes for hour handle moment
         hour_angle = (hour % 12 + minutes / 60)
 
-hour 3*30=90
-    but hour handle has moved a bit, (3+(30/60))*30=105
-minute 30*6=180
+hour 3:30
+    3*30=90
+        but hour handle has moved a bit, (3+(30/60))*30=105
+    minute 30*6=180
 
 
 """

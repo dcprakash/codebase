@@ -29,7 +29,7 @@ Review:
 
 
   _leet:
-    medium1
+    medium1:
       clone-graph.py
       decode-ways.py
       longestIncreasingSubsequence.py   *
@@ -42,7 +42,7 @@ Review:
       string_compression.py   *
         task-scheduler.py     ***
 
-    medium2
+    medium2:
       jump-game.py
           k-closest-points-to-origin.py   ***
       majority-element.py
@@ -56,12 +56,50 @@ Review:
         shortest-bridge-dfs-bfs.py  **
       valid-sudoku.py
 
-    medium3/count-binary-substrings.py    *
-    medium3/longest-substring-k-distinct-char.py    **
-    medium3/valid-parenthesis-string.py   *
+    medium3:
+      angle-between-hands-of-a-clock.py
+      combinations-of-phone-num_backtrack.py
+      count-binary-substrings.py    *
+      longest-substring-k-distinct-char.py    **
+      min-num-frogs-croaking.py
+      restore-ip-addresses_backtrack.py     *
+      valid-parenthesis-string.py   *
 
-    medium4-easy/add-binary.py
-    medium4-easy/find-common-characters.py
+    medium4-easy:
+      add-binary.py
+      add-strings.py
+      find-common-characters.py
+      pascals-triangle.py
+      find-common-characters.py
+
+    medium5-easy:
+      verifying-an-alien-dictionary.py
+
+    medium6:
+      merge-sorted-array.py
+      minimum-cost-to-hire-work.py    TODO
+      minimum-window-substring.py
+      split-array-k-sub-array-max-sum.py  **
+      word-square.py    **
+    
+      
+  2-dim:
+    https://www.geeksforgeeks.org/print-all-possible-paths-from-top-left-to-bottom-right-of-a-mxn-matrix/
+    TicTacToeCheck.py
+    leet:
+      n-queens.py
+      RemoveStones.py
+
+
+  Tree:
+    BT-diameter.py
+    bst-maxpath.py
+    BT-Lowest_common_ancestor.py
+    connect-nodes-at-same-level.py   TODO
+    BT-Path-root-to-leaf.py
+    invert-binary-tree.py
+    merge-two-bt-sum.py
+    tree-traversal-build-preorder.py   TODO
 
 
 
@@ -88,6 +126,9 @@ Concepts:
       medium3/climbing-stairs-min-cost.py
       medium3/climbing-stairs.py
 
+  string:
+    map and filter _leet/array/valid-palindrome.py 
+
 
 
 Tricks:
@@ -107,3 +148,6 @@ Tricks:
 
   String:
     sliding window  String/0.1-longest-substring-without-repeating-characters.py
+
+  dictionary:
+    set default value: 2-Dim/leet/word-search-board.py

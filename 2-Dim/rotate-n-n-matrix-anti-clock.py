@@ -6,14 +6,13 @@
 from __future__ import print_function
 N = 3
 
+
 # An Inplace function to rotate 
 # N x N matrix by 90 degrees in 
 # anti-clockwise direction 
-def rotateMatrix(mat): 
-	
+def rotateMatrix(mat):
 	# Consider all squares one by one 
 	for x in range(0, int(N / 2)):
-		
 		# Consider elements in group 
 		# of 4 in current square (for 4*4 matrix)
 		for y in range(x, N-1-x):
@@ -38,18 +37,15 @@ def rotateMatrix(mat):
 			# assign temp to left 
 			mat[N-1-y][x] = temp 
 			# print(mat[N-1-y][x])
-			print(mat)
+			# print(mat)
+
 
 # Function to print the matrix 
-def displayMatrix( mat ): 
-	
+def displayMatrix( mat ):
 	for i in range(0, N): 
-		
 		for j in range(0, N): 
-			
 			print (mat[i][j], end = ' ') 
-		print ("") 
-	
+		print ("") 	
 	
 
 # Driver Code 
@@ -72,6 +68,7 @@ mat = [ [1, 2, 3 ],
 # mat = [ [1, 2 ], 
 # 		[4, 5 ] ] 
 
-
-rotateMatrix(mat) 
-displayMatrix(mat) 
+displayMatrix(mat)
+rotateMatrix(mat)
+print("\n")
+displayMatrix(mat)

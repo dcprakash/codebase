@@ -74,7 +74,7 @@ board = [["o","a","a","n"],
         ["i","h","k","r"],
         ["i","f","l","v"]]
 
-words = ["oath","pea","oad","rain"]
+words = ["oath","pea","oad","rain", "eat"]
 
 s=Solution()
 print(s.findWords(board, words))
@@ -82,9 +82,17 @@ print(s.findWords(board, words))
 
 '''
 {
-    'o': {'a': {'t': {'h': {'$': 'oath'}}, 
-    'd': {'$': 'oad'}}}, 
+    'o':{
+        'a': 
+            {
+            't': {'h': {'$': 'oath'}},
+            'd': {'$': 'oad'}
+            }
+        }, 
     'p': {'e': {'a': {'$': 'pea'}}}, 
-    'r': {'a': {'i': {'n': {'$': 'rain'}}}}}
+    'r': {'a': {'i': {'n': {'$': 'rain'}}}}
+}
+
+
 
 '''

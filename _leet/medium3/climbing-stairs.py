@@ -41,5 +41,5 @@ class Solution:
         
         
 obj=Solution()
-print(obj.climbStairs(8))
+print(obj.climbStairs(3))
 

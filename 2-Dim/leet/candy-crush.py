@@ -20,6 +20,7 @@ gravity step: all candys should go down
         when read sees candy, write will write it down and move one place
         write 0 to reminder of column
         
+repeat candy crush recursively until there is no todo
     
 '''
 
@@ -112,4 +113,17 @@ print(s.candyCrush(board))
 9    [4,     -1,     4,      4,      1014]
  
       0       1       2       3       4
+      
+      
+      
+    [0, 0, 0, 0, 0], 
+    [0, 0, 0, 0, 0], 
+    [0, 0, 0, 0, 0], 
+    [110, 0, 0, 0, 114], 
+    [210, 0, 0, 0, 214], 
+    [310, 0, 0, 113, 314], 
+    [410, 0, 0, 213, 414], 
+    [610, 211, 112, 313, 614], 
+    [710, 311, 412, 613, 714], 
+    [810, 411, 512, 713, 1014]]
 '''

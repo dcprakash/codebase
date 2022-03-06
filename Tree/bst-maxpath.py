@@ -3,6 +3,26 @@
 # https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/
 # start from bottom of the tree
 
+'''
+def findmaxpath(root):
+    
+    def helper(node):
+        nonlocal res
+        if not node:    return
+        l=helper(node.left)
+        r=helper(node.right)
+        max_single=max(max(l,r)+node.data, node.data)
+        max_top=max(l+r+node.data, max_single)
+        res=max(res, max_top)
+        return max_single
+    
+    res=float("-inf")
+    helper(root)
+    
+    return res
+'''
+
+
 # A Binary Tree Node 
 class Node: 
 	

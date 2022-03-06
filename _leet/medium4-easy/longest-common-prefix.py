@@ -13,7 +13,6 @@ set is used to check if there are uncommon characters, if so len will be > 1
 class Solution:
     def longestCommonPrefix(self, strs):
         prefix=[]
-        num = len(strs)
         # zip(*iterables) unpacks list, tuples, dicts in parallel
         for x in zip(*strs):
             ''' 

@@ -40,7 +40,7 @@ class Solution(object):
             right+=1
             
             if len(hashmap)==k+1:   # we only need k distinct char, if reached then evaluate
-                # delete the leftmost character
+                # delete the character with most distinct value
                 del_idx = min(hashmap.values())
                 # remove from hashmap (no need to remove from actual string)
                 del hashmap[s[del_idx]]

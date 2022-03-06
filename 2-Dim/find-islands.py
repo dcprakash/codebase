@@ -27,8 +27,10 @@ class Graph:
         # These arrays are used to get row and
         # column numbers of 8 neighbours
         # of a given cell directions / path
-        rowNbr = [-1, -1, -1, 0, 0, 1, 1, 1];
-        colNbr = [-1, 0, 1, -1, 1, -1, 0, 1];
+        rowNbr = [-1, 0, 0, 1];
+        colNbr = [0, -1, 1, 0];
+        # rowNbr = [-1, -1, -1, 0, 0, 1, 1, 1];
+        # colNbr = [-1, 0, 1, -1, 1, -1, 0, 1];
         # -1,-1   -1,0    -1,1
         # 0,-1    ****    0,1
         # 1,-1    1,0     1,1
@@ -38,7 +40,7 @@ class Graph:
         # print("Checking for i {}, j {} : {}".format(i, j, visited[i][j]))
         # Recur for all connected neighbours
         # check if neighbours has 1, then call DFS on them
-        for k in range(8):
+        for k in range(4):
             if self.isSafe(i + rowNbr[k], j + colNbr[k], visited):
                 self.DFS(i + rowNbr[k], j + colNbr[k], visited)
 
@@ -75,11 +77,12 @@ class Graph:
 #          [0, 0, 0, 0, 0],
 #          [1, 0, 1, 0, 1]]
 
-graph= [[1,1,0,0,0],
-        [1,1,0,0,0],
-        [0,0,0,1,1],
-        [0,0,0,1,1]]
+# graph= [[1,1,0,0,0],
+#         [1,1,0,0,0],
+#         [0,0,0,1,1],
+#         [0,0,0,1,1]]
          
+graph = [[1,0,0],[0,1,0],[0,0,1]]
 
 row = len(graph)
 col = len(graph[0])
@@ -88,3 +91,29 @@ g = Graph(row, col, graph)
 
 print("Number of islands is:")
 print(g.countIslands())
+
+
+'''
+class Solution:
+    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+        
+        def dfs(i,j):
+            seen.add((i,j))
+            for d in directions:
+                newi=i+d[0]
+                newj=j+d[1]
+                if 0<=newi<m and 0<=newj<n and isConnected[i][j]==1 and (newi, newj) not in seen:
+                    dfs(newi, newj)
+            
+        directions=[(-1,0),(1,0),(0,-1),(0,1)]
+        seen=set()
+        m=len(isConnected)
+        n=len(isConnected[0])
+        count=0
+        for i in range(m):
+            for j in range(n):
+                if isConnected[i][j]==1 and (i, j) not in seen:
+                    dfs(i,j)
+                    count+=1
+        return count
+'''

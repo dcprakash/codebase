@@ -10,10 +10,6 @@ largest square, not rectangle
 
 
 def maximalSquare(matrix):
-    row=len(matrix)
-    col=len(matrix[0])
-    cache={} #dictionary of tuples with location of matrix as key and value as max square
-    
     
     def helper(r,c):
         if r>=row or c>=col:
@@ -26,13 +22,15 @@ def maximalSquare(matrix):
             
             cache[(r,c)]=0
             if matrix[r][c]=="1":
-                cache[(r,c)]=1+min(right,down,diag)
+                cache[(r,c)]=1+min(right,down,diag)     # for nth row and col, this will be 1+min(0,0,0)=1
                 
-        return cache[(r,c)]
-    
-    
+        return cache[(r,c)]    
+
+    row=len(matrix)
+    col=len(matrix[0])
+    cache={} #dictionary of tuples with location of matrix as key and value as max square
     helper(0,0)
-    print(cache)
+    # print(cache)
     # {(1, 2): 2, (0, 1): 0, (3, 2): 0, (1, 3): 2, (3, 1): 0, (3, 3): 1, (3, 0): 1, (2, 2): 1, (1, 1): 0, (1, 4): 1, (0, 2): 1, (2, 0): 1, (0, 0): 1, (2, 3): 1, (2, 1): 1, (0, 4): 0, (1, 0): 1, (0, 3): 0, (3, 4): 0, (2, 4): 1}
     return max(cache.values()) ** 2
             
@@ -49,3 +47,8 @@ matrix = [
     ]
 # {(1, 1): 1, (0, 1): 1, (1, 0): 1, (0, 0): 2}    
 print(maximalSquare(matrix))
+
+
+'''
+bcz of cahce, time complexity is O(m*n)
+'''

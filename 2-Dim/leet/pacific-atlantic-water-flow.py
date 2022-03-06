@@ -106,3 +106,32 @@ matrix=[[1,2,2,3,5],
         
 s=Solution()
 print(s.pacificAtlantic(matrix))
+
+
+'''
+traverse from matrix edges towards inwards
+if matrix[edge] number is smaller than matrix[inwards] number
+    water can flow to ocean, so mark that block as 1
+after complete marking 1s for all the blocks from where water can flow downwards
+compare both pacific and altantic matrix, if they both have 1
+    water from that point can flow to both pacific and atlantic ocean
+
+pacific
+[[1,1,1,1,1]
+[1,1,1,1,1]
+[1,1,1,0,0]
+[1,1,0,0,0]
+[1,0,0,0,0]]
+---------
+
+atlantic
+[[0,0,0,0,1]
+[0,0,0,1,1]
+[0,0,1,1,1]
+[1,1,1,1,1]
+[1,1,1,1,1]]
+
+--------
+[(0, 4), (1, 3), (1, 4), (2, 2), (3, 0), (3, 1), (4, 0)]
+
+'''
