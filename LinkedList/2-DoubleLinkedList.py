@@ -43,7 +43,8 @@ class MyLinkedList:
 
     def addAtHead(self, val: int) -> None:
         """
-        Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+        Add a node of value val before the first element of the linked list. After the insertion, 
+            the new node will be the first node of the linked list.
         """
         pred, succ = self.head, self.head.next
         
@@ -53,7 +54,7 @@ class MyLinkedList:
         to_add.next = succ
         pred.next = to_add
         succ.prev = to_add
-        
+   
 
     def addAtTail(self, val: int) -> None:
         """

@@ -20,6 +20,19 @@ from collections import deque
 #         self.queue.append(value)
         
 
+'''
+keep a HashMap of numbers to booleans, where for each number that has been added, 
+    we're storing the answer to the question is this number unique?. 
+    We'll call it isUnique. Then, when FirstUnique.add(number) is called, one of three cases will apply:
+
+This particular number has never been seen before now. Add it to isUnique with a value of true. Also, add it to the queue.
+This particular number has already been seen by isUnique, with a value of true. 
+    This means that the number was previously unique (and is currently in the queue), but with this new addition, it no longer is. 
+    Update its value to false. Do not add it to the queue.
+This particular number has already been seen by isUnique, with a value of false. 
+    This means that it has already been seen twice before. We don't need to do anything, and shouldn't add it to the queue.
+
+'''
 
 class FirstUnique:
 

@@ -1,13 +1,27 @@
 """
 https://leetcode.com/problems/design-file-system/solution/
+
+The basic data structure that is used for representing a Trie is a dictionary. 
+    The dictionary and other potential flags/data values can be a part of a custom TreeNode data structure. 
+    For this problem, we will have a TrieNode data structure that will contain three things 
+        1. The string representing the path name. 
+        2. The value corresponding to this path. 
+        3. And finally, a dictionary representing the outgoing connections to other TrieNodes.
+
+The root of our trie will be a TrieNode containing the empty string.
+
+Create()
+    First, we will split the given path into various components using / as the delimiter. 
+    So for the path /a/b/c, we will have four components namely , a, b, and c.
+
 """
 from collections import defaultdict
 
 class TrieNode(object):
-    def __init__(self, name):
-        self.map = defaultdict(TrieNode)
+    def __init__(self, name):        
         self.name = name
         self.value = -1
+        self.map = defaultdict(TrieNode)
         
 class FileSystem:
 
@@ -35,8 +49,8 @@ class FileSystem:
                 if i == len(components) - 1:
                     cur.map[name] = TrieNode(name)
                 else:
-                    # If /a/b/c is path, and this is first createPath call; we would not have
-                    # create parent dirs like a and b, so we cannot create c and hence, return False
+                    # If /a/b/c is path, and this is first createPath call; if we did not
+                    # create parent directories a and b, we cannot create c and hence, return False
                     return False
             cur = cur.map[name]
         

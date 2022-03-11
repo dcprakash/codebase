@@ -82,13 +82,21 @@ Review:
       split-array-k-sub-array-max-sum.py  **
       word-square.py    **
     
-      
+    design:
+      binary-search-tree-iterator.py
+      hit-counter.py
+      log-storage-system.py
+      twitter.py
+      words-data-structure.py
+
+
   2-dim:
     https://www.geeksforgeeks.org/print-all-possible-paths-from-top-left-to-bottom-right-of-a-mxn-matrix/
     TicTacToeCheck.py
     leet:
       n-queens.py
       RemoveStones.py
+      word-search-board.py
 
 
   Tree:
@@ -100,6 +108,12 @@ Review:
     invert-binary-tree.py
     merge-two-bt-sum.py
     tree-traversal-build-preorder.py   TODO
+
+
+  LinkedList:
+    palindrome-linked-list.py
+    reorder-list-alternatively.py
+    sort-linked-list.py    **
 
 
 
@@ -129,6 +143,11 @@ Concepts:
   string:
     map and filter _leet/array/valid-palindrome.py 
 
+  FileSystem:
+    _leet/design/design-file-system.py
+    _leet/design/words-data-structure.py
+    2-Dim/leet/word-search-board.py
+
 
 
 Tricks:
@@ -151,3 +170,8 @@ Tricks:
 
   dictionary:
     set default value: 2-Dim/leet/word-search-board.py
+      trie = {}
+
+  sort:
+    bisect, bisect.insort,  i = bisect.bisect_left(<list>, 3) returns index wher 3 can be inserted
+    heapq.heappush (useful when we have tuples to sort) - example _leet/design/twitter.py 

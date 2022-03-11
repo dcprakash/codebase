@@ -59,6 +59,6 @@ class WordDictionary:
 wordDictionary = WordDictionary();
 wordDictionary.addWord("bag")
 wordDictionary.addWord("dad")
-# wordDictionary.search("pad")
-wordDictionary.search(".ad")
+wordDictionary.addWord("bab")   # {'b': {'a': {'g': {'$': True}, 'b': {'$': True}}}, 'd': {'a': {'d': {'$': True}}}}
+wordDictionary.search(".ag")
 # {'b': {'a': {'g': {'$': True}}}, 'd': {'a': {'d': {'$': True}}}}

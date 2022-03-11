@@ -48,8 +48,9 @@ class RandomizedSet():
         """
         if val in self.dict:
             # move the last element to the place idx of the element to delete
-            last_element, idx = self.list[-1], self.dict[val]
-            self.list[idx], self.dict[last_element] = last_element, idx
+            last_element = self.list[-1]
+            delidx = self.dict[val]
+            self.list[delidx], self.dict[last_element] = last_element, delidx
             # delete the last element
             self.list.pop()
             del self.dict[val]

@@ -1,17 +1,18 @@
 """
 https://leetcode.com/problems/merge-sorted-array
 
-The simplest implementation would be to make a copy of the values in nums1, called nums1Copy, and then use two read pointers and one write pointer to read values from nums1Copy and nums2 and write them into nums1.
+The simplest implementation would be to make a copy of the values in nums1, called nums1Copy, 
+    and then use two read pointers and one write pointer to read values from nums1Copy and nums2 and write them into nums1.
 
 Initialize nums1Copy to be a new array containing the first m values of nums1.
 Initialize read pointer p1 to the beginning of nums1Copy.
 Initialize read pointer p2 to the beginning of nums2.
 Initialize write pointer p to the beginning of nums1.
 While p is still within nums1:
-If nums1Copy[p1] exists and is less than or equal to nums2[p2]:
-Write nums1Copy[p1] into nums1[p], and increment p1 by 1.
-Else
-Write nums2[p2] into nums1[p], and increment p2 by 1.
+    If nums1Copy[p1] exists and is less than or equal to nums2[p2]:
+        Write nums1Copy[p1] into nums1[p], and increment p1 by 1.
+    Else
+        Write nums2[p2] into nums1[p], and increment p2 by 1.
 Increment p by 1.
 
 

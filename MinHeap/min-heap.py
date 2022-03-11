@@ -1,5 +1,20 @@
 """
 https://www.geeksforgeeks.org/min-heap-in-python/
+
+root node is alway smaller
+
+insert:
+    insert at the end of the tree (usually from left to right)
+    if inserted point does not meet the constraint of min heap structure, bubble it up until we stasify constraint
+    
+remove min element:
+    remove root
+    move last element to place of root
+    move max element down until it satisfy the constraint
+    
+    
+    pain management 9498247246
+    
 """
 import sys
 
@@ -42,7 +57,7 @@ class MinHeap:
     
     # 3 as root, 1 left child and 2 right child    
     def minHeapify(self, pos):
-        if not self.isLeaf(pos):
+        if not self.isLeaf(pos):            # If the node is a non-leaf node and greater
             if (self.Heap[pos] > self.Heap[self.leftChild(pos)] or
                 self.Heap[pos] > self.Heap[self.rightChild(pos)]):
                     if self.Heap(self.leftChild(pos)) < self.Heap[self.rightChild(pos)]:

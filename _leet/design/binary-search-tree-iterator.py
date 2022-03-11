@@ -1,6 +1,12 @@
 '''
 https://leetcode.com/problems/binary-search-tree-iterator/
 
+The hasNext() function returns a boolean value indicating whether there are any more elements left in the binary search tree or not. 
+
+The next() function returns the next smallest element in the BST. 
+    Therefore, the first time we call the next() function, it should return the smallest element in the BST and 
+    likewise, when we call next() for the very last time, it should return the largest element in the BST
+
 BST: all elements to left of tree is smaller, and right is larger
 
 1. when next is called, return the "next" smallest number in the tree

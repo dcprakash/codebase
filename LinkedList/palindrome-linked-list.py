@@ -4,10 +4,12 @@ https://leetcode.com/problems/palindrome-linked-list
 
 
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution:
     # copy linked list to array and validate array
     def isPalindromeEasy(self, head: ListNode) -> bool:

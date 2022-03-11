@@ -32,3 +32,11 @@ class Leaderboard:
 # obj.addScore(playerId,score)
 # param_2 = obj.top(K)
 # obj.reset(playerId)
+
+'''
+bisect(list, num, beg, end) :- This function returns the position in the sorted list, where the number passed in argument can be placed so as to maintain the resultant list in sorted order.
+bisect_left(list, num, beg, end) :- This function returns the position in the sorted list, where the number passed in argument can be placed so as to maintain the resultant list in sorted order. If the element is already present in the list, the left most position where element has to be inserted is returned.
+bisect_right(list, num, beg, end)
+insort(list, num, beg, end) :- This function returns the sorted list after inserting number in appropriate position, if the element is already present in the list, the element is inserted at the rightmost possible position.
+insort_left(list, num, beg, end) 
+'''

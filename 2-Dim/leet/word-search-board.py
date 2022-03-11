@@ -23,10 +23,6 @@ class Solution:
             # mark the existence of a word in trie node
             node[WORD_KEY] = word
         print(trie)
-        rowNum = len(board)
-        colNum = len(board[0])
-        
-        matchedWords = []
         
         def backtracking(row, col, parent):    
             
@@ -59,6 +55,9 @@ class Solution:
             if not currNode:
                 parent.pop(letter)
 
+        rowNum = len(board)
+        colNum = len(board[0])
+        matchedWords = []
         for row in range(rowNum):
             for col in range(colNum):
                 # starting from each of the cells

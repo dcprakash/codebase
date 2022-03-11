@@ -9,15 +9,14 @@ class Twitter:
         Initialize your data structure here.
         """
         #Tracks all users of twitter. Key is the user, value is a "SET" the user follows
-        
         self.users = {} #contains {follwer1:set(followee1, followee2),   follower2:set()}
+        
         #Maps users to all tweets they've made. Tweets are a tuple where we track recency of tweet with the
         #tweet counter below, and the actual tweet ID
-        
         self.tweets = {}    #contains list of (tweet_counter, tweetId)
+        
         # tweet_counter helps to store "LIST" of tweets in most recent order inside "HEAPQ": useful for dashboard
         # this also means, to display dashboard, we dont have to iterate over all the tweets and sort to most recent
-        
         #Tracks all tweets being made on twitter. Python doesn't have max heap so we use a negative to record.
         #Every time a tweet is made, tweet_counter is decremented. The most recent tweet will be the most
         #negative number we see. If you use a max heap, this would be the greatest number from a positive,
@@ -135,3 +134,44 @@ class Twitter:
 # param_2 = obj.getNewsFeed(userId)
 # obj.follow(followerId,followeeId)
 # obj.unfollow(followerId,followeeId)
+
+'''
+heapq.heappush(heap, item)
+Push the value item onto the heap, maintaining the heap invariant.
+
+heapq.heappop(heap)
+Pop and return the smallest item from the heap, maintaining the heap invariant. 
+If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0].
+
+>>> def heapsort(iterable):
+...     h = []
+...     for value in iterable:
+...         heappush(h, value)
+...     return [heappop(h) for i in range(len(h))]
+...
+>>> heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+>>> h = []
+>>> heappush(h, (5, 'write code'))
+>>> heappush(h, (7, 'release product'))
+>>> heappush(h, (1, 'write spec'))
+>>> heappush(h, (3, 'create tests'))
+>>> heappop(h)
+(1, 'write spec')
+
+
+A priority queue is common use for a heap, and it presents several implementation challenges:
+- Sort stability: how do you get two tasks with equal priorities to be returned in the order they were originally added?
+- Tuple comparison breaks for (priority, task) pairs if the priorities are equal and the tasks do not have a default comparison order.
+- If the priority of a task changes, how do you move it to a new position in the heap?
+- Or if a pending task needs to be deleted, how do you find it and remove it from the queue?
+
+A solution to the first two challenges is to store entries as 3-element list including the priority, an entry count, and the task. 
+The entry count serves as a tie-breaker so that two tasks with the same priority are returned in the order they were added. 
+And since no two entry counts are the same, the tuple comparison will never attempt to directly compare two tasks.
+
+
+
+'''

@@ -2,10 +2,36 @@
 # sort linked list
 
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+
+'''
+class Solution:
+  def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    queue = []
+    
+    while head:
+      queue.append(head.val)
+      head = head.next
+      
+    queue.sort(reverse=True);
+    
+    dummy = ListNode();
+    pointer = dummy
+    
+    while len(queue) > 0:
+      val = queue.pop();
+      pointer.next = ListNode(val)
+      pointer = pointer.next
+      
+    return dummy.next
+'''
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution:
     def sortList(self, head: ListNode) -> ListNode:
         if head is None or head.next is None:

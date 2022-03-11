@@ -1,20 +1,29 @@
 '''
 https://leetcode.com/problems/shortest-word-distance-ii/solution/
 
+When the problem talks about the distance between two words, 
+    it essentially means the absolute gap between the indices of the two words in the list. 
+    For e.g. if the first word occurs at a location i and the second word occurs at the location j, 
+    then the distance between the two would be abs(i - j).
+
+
 words can occur at multiple locations. If we have K occurrences for the word1 and L occurrences for the word2, 
 then iteratively checking every pair of indices will give us a O(N^2)  algorithm which won't be optimal at all.
 
-word1_locations = [2,4,5,9]
-word2_locations = [4,10,11]
+The idea is to use a two pointer approach. 
+Let's say we have a pointer i for the sorted list of indices of word1 and j for the sorted list of indices of word2. 
+At every iteration, we record the difference of indices i.e. abs(word1[i] - word2[j]). 
+Once we've done that, we have two possible choices for progressing the two pointers.
 
-i, j = 0, 0
-min_diff = 2 (abs(2 - 4))
-word1[i] < word2[j] i.e. 2 < 4
-  move i one step forward
-
-i, j = 1, 0 (abs(4 - 4))
-min_diff = 0 (We hit the jackpot!)  
-
+    word1[i] < word2[j]
+    If this is the case, that means there is no point in moving the j pointer forward. 
+    The location indices for the words are in a sorted order. We know that word2[j + 1] > word2[j] because these indices are sorted. 
+    So, if we move j forward, then the difference abs(word1[i] - word2[j + 1]) would be even greater than abs(word1[i] - word2[j]). 
+    That doesn't help us since we want to find the minimum possible distance (difference) overall.
+    
+    So, if we have (word1[i] < word2[j]), we move the pointer 'i' one step forward i.e. (i + 1) in the hopes that 
+    abs(word1[i + 1] - word2[j]) would give us a lower distance than abs(word1[i] - word2[j])
+    
 
 '''
 
@@ -32,8 +41,9 @@ class WordDistance:
             self.locations[w].append(i)
         print(self.locations)
         # {'practice': [0], 'makes': [1, 4], 'perfect': [2], 'coding': [3]})
-
-
+        # Since we process all the words from left to right, we will get all the indices in a sorted order by default for all the words. 
+        # So, we don't have to sort the indices ourselves.
+        
     def shortest(self, word1, word2):
         """
         :type word1: str
