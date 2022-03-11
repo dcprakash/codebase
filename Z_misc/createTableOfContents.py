@@ -22,13 +22,13 @@ def dir_to_dict(path):
 
             
             for f in filenames:
-                if not f.endswith('.cpp.o'): #  and not f.endswith('.cpp')
+                if f.endswith('.py'): #  
                     directory[dn].append(f)
         else:
             # [directory[dn] for files in filenames if not files.endswith('.cpp.o')]
             fnames=[]
             for f in filenames:
-                if not f.endswith('.cpp.o'): # and not f.endswith('.cpp')
+                if f.endswith('.py'): # 
                     fnames.append(f)
             directory[dn] = fnames
 

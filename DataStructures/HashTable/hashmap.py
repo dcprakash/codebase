@@ -17,7 +17,7 @@ class ListNode(object):
         self.next = None
         
 class MyHashMap:
-    SIZE = 1000
+    SIZE = 10
 
     def __init__(self):
         """
@@ -33,7 +33,7 @@ class MyHashMap:
         head = self.hashing[key % self.SIZE]
         current = head.next
         # itereate cur.nxt until key is found, if found then break loop and update that cur.val
-        # if no more cur.nxt left and key not found; add item at end; update cur.val
+        # if no more cur.nxt left and key not found; add item at begining; update cur.val
         while current:
             if current.key==key:    break
             current=current.next
@@ -72,7 +72,10 @@ class MyHashMap:
 
 
 # Your MyHashMap object will be instantiated and called as such:
-# obj = MyHashMap()
-# obj.put(key,value)
-# param_2 = obj.get(key)
-# obj.remove(key)
+obj = MyHashMap()
+obj.put(1,100)
+obj.put(2,200)
+obj.put(11,300)
+print(obj.get(2))
+obj.remove(11)
+print(obj.get(1))

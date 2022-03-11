@@ -1,6 +1,12 @@
 # https://medium.com/@info.gildacademy/a-simpler-way-to-implement-trie-data-structure-in-python-efa6a958a4f2
 # https://leetcode.com/problems/implement-trie-prefix-tree/
 
+
+'''
+A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings.
+
+'''
+
 from collections import defaultdict
 
 
@@ -19,47 +25,34 @@ class Trie():
     def get_node(self):
         return TrieNode()
 
-    def get_index(self, ch):
-        return ord(ch) - ord('a')
-
     def insert(self, word):
-
         root = self.root
         len1 = len(word)
-
         for i in range(len1):
-            index = self.get_index(word[i])
-
-            if index not in root.children:
-                root.children[index] = self.get_node()
-            root = root.children.get(index)
-
+            if word[i] not in root.children:
+                root.children[word[i]] = self.get_node()
+            root = root.children.get(word[i])
         root.terminating = True
+
 
     def search(self, word):
         root = self.root
         len1 = len(word)
-
         for i in range(len1):
-            index = self.get_index(word[i])
             if not root:
                 return False
-            root = root.children.get(index)
-
+            root = root.children.get(word[i])
         return True if root and root.terminating else False
 
-    def delete(self, word):
 
+    def delete(self, word):
         root = self.root
         len1 = len(word)
-
         for i in range(len1):
-            index = self.get_index(word[i])
-
             if not root:
                 print ("Word not found")
                 return -1
-            root = root.children.get(index)
+            root = root.children.get(word[i])
 
         if not root:
             print ("Word not found")
@@ -76,8 +69,8 @@ class Trie():
     
 
 if __name__ == "__main__":
-
-    strings = ["pqrs", "pprt", "psst", "qqrs", "pqrs"]
+    # strings = ["pqrs", "pprt", "psst", "qqrs", "pqrs"]
+    strings = ["pqrs", "qqrs", "pqrs", "pprt"]
 
     t = Trie()
     for word in strings:

@@ -54,7 +54,6 @@ class MaxStack:
         # print(self.main)
         # print(self.max)
         return max_ele
-        
 
 
 # Your MaxStack object will be instantiated and called as such:
