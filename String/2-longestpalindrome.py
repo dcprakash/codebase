@@ -1,11 +1,12 @@
 '''
 https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
-https://leetcode.com/problems/palindromic-substrings/solution/ (similar)
 
 Given a string, find the longest substring which is palindrome. 
 For example, 
 Input: Given string :"forgeeksskeegfor", 
 Output: "geeksskeeg"
+
+sliding window
 '''
 
 def longestpalindrome(s):
@@ -29,5 +30,6 @@ def longestpalindrome(s):
     return res
 
 # s = "aaa"
-s="forgeeksskeegfor"
+# s="forgeeksskeegfor"
+s="geeks"
 print(longestpalindrome(s))

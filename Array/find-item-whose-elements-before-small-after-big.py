@@ -38,6 +38,17 @@ if __name__ == "__main__":
 	print("Index of the element is", findElement(arr, n))
 
 '''
+[5, 1, 4, 3, 6, 8, 10, 7, 9] 
+ 5  5  5  5  6  8  10  10 10
+						   9
+						7
+					7
+				7
+			 6	
+'''
+
+
+'''
 Easy approach
 for i in range(n):
 	for j in range(i,-1,-1):

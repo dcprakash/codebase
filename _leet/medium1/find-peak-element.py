@@ -27,7 +27,7 @@ class Solution:
     #.  0 1 2 3
 nums = [1,3,2,1]
 s=Solution()
-print(s.findPeakElement(nums))
+#print(s.findPeakElement(nums))
 print(s.findPeakElementBinarySearch(nums))
 
 '''

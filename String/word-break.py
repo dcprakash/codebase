@@ -27,16 +27,16 @@ print(result)
 # def wordBreak(wordList,word):
 # 	n=len(word)
 # 	for i in range(1,n+1):
-# 		if any((word[:i] in wordList) and wordBreak(wordList, word[i:])):
+# 		if any([(word[:i] in wordList) and wordBreak(wordList, word[i:])]):
 # 			return True
 # 	return False
 	
-def wordBreak(wordList, word): 
-	if word == '': 
+def wordBreak(wordList, word):
+	print(word)
+	if word == '':
 		return True
 	else: 
-		wordLen = len(word) 
-		return any([(word[:i] in wordList) and wordBreak(wordList, word[i:]) for i in range(1, wordLen+1)])
+		return any([(word[:i] in wordList) and wordBreak(wordList, word[i:]) for i in range(1, len(word)+1)])
 
 
 

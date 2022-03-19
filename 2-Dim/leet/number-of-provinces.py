@@ -12,28 +12,40 @@
   0--3
      |
   1--2
+  
+  
+  0 1 2 3
+0[1,0,0,1]
+1[0,1,0,0]
+2[0,0,1,1]
+3[1,0,1,1]
+
+  0--3
+     |
+  1  2
 '''
 
 class Solution:
-    def dfs(self,r,grid,visited):
-        visited.append(r)
-        for j in range(len(grid)):
-            if grid[r][j]==1 and j not in visited:
-                self.dfs(j,grid,visited)
+    def dfs(self,row,graph,visited):
+        visited.append(row)
+        for col in range(len(graph)):
+            if graph[row][col]==1 and col not in visited:
+                self.dfs(col,graph,visited)
     
-    def findCircleNum(self, isConnected):
+    def findCircleNum(self,graph):
         visited=[]
         count=0
-        for row in range(len(isConnected)):
+        for row in range(len(graph)):
             if row not in visited:
-                self.dfs(row,isConnected,visited)
+                self.dfs(row,graph,visited)
                 count+=1
         return count
 
 
-graph=[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
+# graph=[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
+grid=[[1,0,0,1],[0,1,0,0],[0,0,1,1],[1,0,1,1]]
 s=Solution()
-print(s.findCircleNum(graph))
+print(s.findCircleNum(grid))
 
 
 

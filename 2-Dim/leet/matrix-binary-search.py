@@ -4,7 +4,6 @@
 def searchMatrix(matrix,target):
     rows = len(matrix)
     cols = len(matrix[0])
-    l=cols
     for row in range(rows):
         lo=0
         hi=cols-1
@@ -13,9 +12,9 @@ def searchMatrix(matrix,target):
             if matrix[row][mid]==target:
                 return True
             elif matrix[row][mid]<target:
-                lo+=1   #why not lo=mid+1?
+                lo=mid+1
             else:
-                hi-=1
+                hi=mid-1
     return False
     
 

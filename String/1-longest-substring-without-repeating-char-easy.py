@@ -14,29 +14,36 @@ Since j found first duplicate, add this char to hash set and remove ith characte
     also move left index +1, to slide window forward
 If we do this for all i, we get our answer.
 
-# sliding window
+sliding window
+same concept as minimum-window-substring
+look for substring, not sub sequence
+
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.**********************
 '''
 
 
 class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        def check(start, end):
-            chars = [0] * 128
-            for i in range(start, end + 1):
-                c = s[i]
-                chars[ord(c)] += 1
-                if chars[ord(c)] > 1:
-                    return False
-            return True
+    # def lengthOfLongestSubstring(self, s: str) -> int:
+    #     def check(start, end):
+    #         chars = [0] * 128
+    #         for i in range(start, end + 1):
+    #             c = s[i]
+    #             chars[ord(c)] += 1
+    #             if chars[ord(c)] > 1:
+    #                 return False
+    #         return True
 
-        n = len(s)
+    #     n = len(s)
 
-        res = 0
-        for i in range(n):
-            for j in range(i, n):
-                if check(i, j):
-                    res = max(res, j - i + 1)
-        return res
+    #     res = 0
+    #     for i in range(n):
+    #         for j in range(i, n):
+    #             if check(i, j):
+    #                 res = max(res, j - i + 1)
+    #     return res
         
         
     def lengthOfLongestSubstringEff(self, s: str) -> int:

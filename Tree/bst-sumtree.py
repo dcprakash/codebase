@@ -10,9 +10,7 @@ class node:
     
     
 def sumTree(root):
-    if root==None:
-        return 0
-    return sumTree(root.left) + root.data + sumTree(root.right)
+    return sumTree(root.left) + root.data + sumTree(root.right) if root else 0
         
 
 

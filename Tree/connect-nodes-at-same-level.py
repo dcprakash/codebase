@@ -4,8 +4,13 @@ https://www.geeksforgeeks.org/connect-nodes-at-same-level/
 
 # Recursive Python program for level 
 # order traversal of Binary Tree
+# Method 2 (Extend Pre Order Traversal) 
+
 
 # A node structure
+from operator import le
+
+
 class Node:
 
 	# A utility function to create a new node
@@ -19,24 +24,20 @@ class Node:
 def LevelOrder(root):
     if not root:
         return None
-    res=[]
     q=[]
     q.append(root)
-    temp=Node(None)
     while q:
-        n=len(q)
-        for i in range(n):
-            prv=temp
+        prv=Node(None)
+        for _ in range(len(q)):
             tq=q.pop(0)
-            if i>0:
-                prv.nextright=temp
-            res.append(tq.data)
             if tq.left:
                 q.append(tq.left)
             if tq.right:
                 q.append(tq.right)
-        temp.nextright=None
-    return res
+            if prv is not None:
+                prv.nextright=tq
+            prv=tq
+        prv.nextright=None
         
         
 
@@ -50,3 +51,4 @@ root.right = Node(20)
 print("Level order traversal of binary tree is -")
 print(LevelOrder(root))
 print("Next right of {} is {}".format(root.left.data, root.left.nextright.data))
+# print("Next right of {} is {}".format(root.right.data, root.right.nextright.data))

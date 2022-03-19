@@ -62,8 +62,10 @@ class MinHeap:
                 self.Heap[pos] > self.Heap[self.rightChild(pos)]):
                     if self.Heap(self.leftChild(pos)) < self.Heap[self.rightChild(pos)]:
                         self.swap(pos, self.Heap[self.leftChild(pos)])
+                        self.minHeapify(self.leftChild(pos))
                     else:
                         self.swap(pos, self.Heap[self.rightChild(pos)])
+                        self.minHeapify(self.rightChild(pos))
                     
     # extract min element
     def remove(self):

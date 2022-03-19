@@ -36,6 +36,6 @@ def printString(n):
 	print("".join(string))
 
 # Driver program to test the above Function
-printString(26)
+# printString(26)
 printString(51)
 printString(52)

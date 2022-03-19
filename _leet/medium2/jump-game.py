@@ -1,6 +1,4 @@
-'''
-https://leetcode.com/problems/meeting-scheduler/
-'''
+
 # https://leetcode.com/problems/jump-game/
 # steps
 # https://www.youtube.com/watch?v=2HnlGToCdCc&feature=emb_logo&ab_channel=TerribleWhiteboard

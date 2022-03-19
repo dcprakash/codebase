@@ -15,6 +15,7 @@ While p is still within nums1:
         Write nums2[p2] into nums1[p], and increment p2 by 1.
 Increment p by 1.
 
+"""
 
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
@@ -31,15 +32,14 @@ class Solution:
         for p in range(n + m):
             # We also need to ensure that p1 and p2 aren't over the boundaries
             # of their respective arrays.
+            # p2 can be bigger than n, bcz m is big and also due to n+m
             if p2 >= n or (p1 < m and nums1_copy[p1] <= nums2[p2]):
                 nums1[p] = nums1_copy[p1] 
                 p1 += 1
             else:
                 nums1[p] = nums2[p2]
                 p2 += 1
-    
-    
-"""
+
 
 nums1 = [1,2,3,0,0,0]
 m = 3

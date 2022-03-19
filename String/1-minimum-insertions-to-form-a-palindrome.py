@@ -3,8 +3,13 @@
 # reverse given string
 # n - longest commong substring(x,revers(x))
 '''
-
-
+    a d c b a
+  0 0 0 0 0 0
+a 0 1 1 1 1 1
+b 0 1 1 1 2 2
+b 0 1 1 1 2 2
+d 0 1 2 1 2 2
+a 0 1 2 2 2 2
 '''
 
 def lcs_util(x,y):

@@ -55,5 +55,6 @@ class MyStack:
 obj = MyStack()
 obj.push(1)
 obj.push(2)
+obj.push(3)
 print(obj.pop())
 print(obj.top())

@@ -1,8 +1,7 @@
 '''
-https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
 https://leetcode.com/problems/palindromic-substrings/solution/
 palindrome substrings
-backtracking
+
 
 Given a string, find the longest substring which is palindrome. 
 
@@ -27,7 +26,7 @@ def countSubstrings(s,n):
     return ans
 
 
-s="Geeks"
+s="aab"
 print(countSubstrings(s,len(s)))
 
 '''

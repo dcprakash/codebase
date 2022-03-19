@@ -8,25 +8,6 @@ same as:
 # add linked list
 # https://leetcode.com/problems/add-two-numbers-ii/submissions/
 '''
-
-class Solution(object):
-    def addStringsEasy(self, num1, num2):
-        """
-        :type num1: str
-        :type num2: str
-        :rtype: str
-        """
-        def convert(c):
-            return ord(c)-ord('0')
-        
-        x1=x2=0
-        for i in num1:
-            x1=x1*10+convert(i)
-        for j in num2:
-            x2=x2*10+convert(j)
-        
-        return x1+x2
-        
         
     def addStrings(self, num1, num2):
         res=[]
@@ -50,4 +31,24 @@ class Solution(object):
 
 s=Solution()
 print(s.addStringsEasy("24", "10"))
-    
+
+
+'''
+class Solution(object):
+    def addStringsEasy(self, num1, num2):
+        """
+        :type num1: str
+        :type num2: str
+        :rtype: str
+        """
+        def convert(c):
+            return ord(c)-ord('0')
+        
+        x1=x2=0
+        for i in num1:
+            x1=x1*10+convert(i)
+        for j in num2:
+            x2=x2*10+convert(j)
+        
+        return x1+x2
+'''

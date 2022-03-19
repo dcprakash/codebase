@@ -4,7 +4,7 @@ Your module description
 
 # Recursive Python program for level 
 # order traversal of Binary Tree
-
+# queue - FIFO
 # A node structure
 class Node:
 

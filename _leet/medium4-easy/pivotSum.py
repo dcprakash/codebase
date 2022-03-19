@@ -16,3 +16,16 @@ class Solution:
 
 obj=Solution()
 print(obj.pivotIndex([1,7,3,6,5,6]))
+
+
+'''
+        ls=0
+        rs=sum(nums)
+        for i,n in enumerate(nums):
+            
+            rs-=n
+            if ls==rs:
+                return i
+            ls+=n
+        return -1
+'''

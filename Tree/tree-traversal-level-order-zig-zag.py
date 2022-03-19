@@ -25,8 +25,8 @@ def levelOrder(root):
     while len(queue) > 0:
         node = queue.popleft()
         if node:
-            if is_left: result.append(node.val)
-            else:   result.appendleft(node.val)
+            if is_left: result.appendleft(node.val)
+            else:   result.append(node.val)
             if node.left:
                 queue.append(node.left)
             if node.right:

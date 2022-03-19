@@ -28,6 +28,7 @@ class Solution:
 
             # If the room due to free up the earliest is free, assign that room to this meeting.
             # if meeting in free_rooms ends before start of new meeting i.e., i[0]
+            # samllest will be on top of heapq (acc to heap data structure)
             if free_rooms[0] <= i[0]:
                 heapq.heappop(free_rooms)
 

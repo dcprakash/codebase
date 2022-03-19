@@ -21,6 +21,7 @@ class HitCounter:
         # at index 100, we store value 400 and count=1 to indicate 400 occured for first time
         # if timestamp=400 comes again, then at 100 we already have 400, just increase the count
         i=timestamp%300
+        i-=1
         if self.time[i]!=timestamp:
             self.time[i]=timestamp
             self.count[i]=1
@@ -37,8 +38,8 @@ class HitCounter:
         # add number hits from count to ans if time less than 300sec
         # from 0 to 300, if all self.time values are b.w 0 and 300,
         # all hits came within 300sec i.e., 5min
-        print(self.time)
-        print(self.count)
+        # print(self.time)
+        # print(self.count)
         ans=0
         for i in range(300):
             #
@@ -54,8 +55,8 @@ hitCounter.hit(2)       # hit at timestamp 2.
 hitCounter.hit(3)       # hit at timestamp 3.
 # hitCounter.getHits(4)   # get hits at timestamp 4, return 3.
 hitCounter.hit(300)     # hit at timestamp 300.
-hitCounter.getHits(300) # get hits at timestamp 300, return 4.
-hitCounter.getHits(301) # get hits at timestamp 301, return 3.
+print(hitCounter.getHits(300)) # get hits at timestamp 300, return 4.
+print(hitCounter.getHits(301)) # get hits at timestamp 301, return 3.
 
 
 '''

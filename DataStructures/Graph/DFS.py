@@ -17,7 +17,7 @@ class Graph:
     # function to add an edge to graph
     def addEdge(self,u,v):
         self.graph[u].append(v)
-        print(self.graph)
+        # print(self.graph)
 
     # A function used by DFS
     def DFSUtil(self,v,visited):
@@ -37,10 +37,11 @@ class Graph:
 
         # Mark all the vertices as not visited
         visited = [False]*(len(self.graph))
-        print(visited)
+        #print(visited)
 
         # Call the recursive helper function to print
         # DFS traversal
+        print(self.graph)
         self.DFSUtil(v,visited)
 
 
@@ -56,3 +57,4 @@ g.addEdge(3, 3)
 
 print("Following is DFS from (starting from vertex 2)")
 g.DFS(2)
+

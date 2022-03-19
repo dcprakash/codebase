@@ -10,8 +10,8 @@ def booleanMatrix(mat):
     
     # Store the rows and columns to be marked  
     # as 1 in row[] and col[] arrays respectively  
-    for i in range(0, R) :
-        for j in range(0, C) : 
+    for i in range(R) :
+        for j in range(C) : 
             if (mat[i][j] == 1) : 
                 row[i] = 1
                 col[j] = 1
@@ -20,8 +20,8 @@ def booleanMatrix(mat):
     
     # Modify the input matrix mat[] using the  
     # above constructed row[] and col[] arrays  
-    for i in range(0, R) :
-        for j in range(0, C): 
+    for i in range(R) :
+        for j in range(C): 
             if ( row[i] == 1 or col[j] == 1 ) : 
                 mat[i][j] = 1
                 

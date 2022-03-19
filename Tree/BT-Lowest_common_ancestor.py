@@ -40,6 +40,10 @@ root.right = Node(1)
 root.left.left = Node(6)
 root.left.right = Node(2)
 root.right.right = Node(8)
-
-print(lca(root,5,2))
+print(lca(root,5,1))
         
+'''
+        3
+	5		1
+  6   2	      8
+'''

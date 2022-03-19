@@ -57,3 +57,13 @@ print("The product array is:")
 productArray(arr, n) 
 
 # This code is contributed by ankush_953 
+# a[]=	10 3 5
+# l[]=	1 10 30
+# r[]=	15 5 1
+# p[]=	15,50,30
+
+l=r=[0]*n
+l[0]=1
+r[n-1]=1
+for i in range(1,n-1):
+	l[i]=arr[i-1]*l[i-1]

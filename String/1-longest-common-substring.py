@@ -40,7 +40,7 @@ def lcs(x,y):
 
 
 X = "abcde"
-Y = "ace"
+Y = "abce"
 
 # X = "GeeksforGeeks"
 # Y = "GeeksQuiz"

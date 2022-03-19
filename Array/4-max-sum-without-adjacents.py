@@ -5,6 +5,8 @@
 # alternate
 # adjacent
 # dynamic program
+# https://leetcode.com/problems/house-robber/solution/
+# https://www.youtube.com/watch?v=6w60Zi1NtL8&t=3s&ab_channel=GeeksforGeeks
 
 
 def find_max_sum(arr): 
@@ -12,12 +14,11 @@ def find_max_sum(arr):
 	excl = 0
 
 	for i in arr: 
-		new_excl=max(incl,excl)
+		excl_curr=max(incl,excl)	# max sum excluding current element i
 		
-		# Current max including i 
-		incl = excl + i 
-		excl = new_excl 
-		print("for i={}, incl={}, excl={}, new_excl={}".format(i,incl,excl,new_excl))
+		incl = excl + i		# Current max including current element i
+		excl = excl_curr 
+		print("for i={}, incl={}, excl={}, new_excl={}".format(i,incl,excl,excl_curr))
 
 	# return max of incl and excl 
 	return (excl if excl>incl else incl) 
@@ -25,3 +26,17 @@ def find_max_sum(arr):
 # Driver program to test above function 
 arr = [3, 2, 7, 10] 
 print(find_max_sum(arr))
+
+
+'''
+Loop for all elements in arr[] and maintain two sums incl and excl where 
+	incl = Max sum including the previous element  
+	excl = Max sum excluding the previous element.
+Max sum excluding the current element will be max(incl, excl)
+max sum including the current element will be excl + current element 
+(Note that only excl is considered because elements cannot be adjacent).
+At the end of the loop return max of incl and excl.
+
+
+
+'''
