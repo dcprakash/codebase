@@ -3,7 +3,6 @@
 # trie for word dictionary
 '''
 https://leetcode.com/explore/interview/card/google/62/recursion-4/462/
-https://leetcode.com/problems/word-search-ii/solution/
 word-search-board.py
 word search board
 '''

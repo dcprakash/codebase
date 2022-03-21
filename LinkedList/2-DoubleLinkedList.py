@@ -134,7 +134,7 @@ class MyLinkedList:
             
         # delete pred.next 
         self.size -= 1
-        pred.next = succ
+        pred.next = succ        #******************
         succ.prev = pred
         '''
         i=2

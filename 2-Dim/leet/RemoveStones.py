@@ -8,7 +8,7 @@ class Solution(object):
     def removeStones(self, stones):
         graph = defaultdict(list)
         for i, x in enumerate(stones):
-            for j, y in enumerate(stones[:i]):
+            for j, y in enumerate(stones[:i]):      #***************
                 if x[0]==y[0] or x[1]==y[1]:
                     graph[i].append(j)
                     graph[j].append(i)

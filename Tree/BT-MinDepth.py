@@ -17,8 +17,8 @@ class Solution:
         rightD=self.minDepth(root.right) if root.right else float('inf')
         return 1 + min(leftD, rightD)
         
-    def easyMinDepth(self, root):
-        return 1+min(self.easyMinDepth(root.left), self.easyMinDepth(root.right)) if root else 0
+    # def easyMinDepth(self, root):
+    #     return 1+min(self.easyMinDepth(root.left), self.easyMinDepth(root.right)) if root else 0
         
 # Driver program to test above function
 root = TreeNode(1)

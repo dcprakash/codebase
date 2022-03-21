@@ -10,13 +10,12 @@ class Solution:
                     return False
             return True
 
-        new = nums[:]
         for i in range(len(nums)):
             temp = nums[i]
-            new[i] = new[i-1] if i > 0 else float('-inf')
-            if monotone_increasing(new):
+            nums[i] = nums[i-1] if i > 0 else float('-inf')
+            if monotone_increasing(nums):
                 return True
-            new[i] = temp
+            nums[i] = temp
 
         return False
 

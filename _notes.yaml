@@ -16,7 +16,6 @@ Review:
       medium2:
         jump-game.py
             k-closest-points-to-origin.py   TODO
-        majority-element.py
         least-number-of-unique-integers-after-k-removals.py   *
             matrix-block-sum.py     TODO
         minimum-path-sum-triangle.py
@@ -35,7 +34,7 @@ Review:
         count-binary-substrings.py    *
         longest-substring-k-distinct-char.py    **
         min-num-frogs-croaking.py   *
-        restore-ip-addresses_backtrack.py     **
+        restore-ip-addresses_backtrack.py     **    TODO
         simplify-path.py
         valid-parenthesis-string.py   **
 
@@ -44,7 +43,6 @@ Review:
         add-strings.py
         find-common-characters.py
         pascals-triangle.py
-        find-common-characters.py
 
       medium5-easy:
         happy-number.py
@@ -75,6 +73,7 @@ Review:
   2-dim:
     https://www.geeksforgeeks.org/print-all-possible-paths-from-top-left-to-bottom-right-of-a-mxn-matrix/
     find-islands-maxarea.py
+    flood-fill-algorithm.py
     possible-paths-top-left-bottom-right-nxm-matrix.py
     leet:
       maximal_square.py
@@ -100,10 +99,11 @@ Review:
       https://leetcode.com/problems/trapping-rain-water-ii/   TODO
 
 
+
   String:
-    1-longest-substring-without-repeating-char-easy.py      *
+    1-longest-substring-count-without-repeating-char.py      *
     2-longestpalindrome.py      *
-    2-palindrome-partitioning.py  *
+    2-palindrome-partitioning.py  **
     2-palindrome-substring.py     *
     colNameForNumberExcel.py
     implement-strstr.py   **
@@ -113,13 +113,12 @@ Review:
 
 
  
-
   Tree:
-    bst-maxpath.py
-    bst-sumtree.py
+    bst-validate.py
     BT-diameter.py
     BT-duplicate-subtrees.py
     BT-Lowest_common_ancestor.py
+    BT-MinDepth.py   **
     BT-Path-root-to-leaf-Sum.py
     BT-Path-root-to-leaf.py
     connect-nodes-at-same-level.py    TODO
@@ -128,13 +127,15 @@ Review:
     tree-traversal-build-preorder.py   TODO
 
 
+
   LinkedList:
     2-DoubleLinkedList.py
     addTwoNumbers-linkedlist.py
-    palindrome-linked-list.py
-    remove-linked-list-elements.py
-    reorder-list-alternatively.py   **
+    partition-linked-list.py  *
+    remove-linked-list-elements.py  *
+    reorder-list-alternatively.py   *
     sort-linked-list.py    **
+
 
 
   DataStructures:
@@ -217,8 +218,13 @@ Tricks:
     _leet/medium4-easy/find-common-characters.py
 
 TODO:
-  medium3
-  2-d
+  python
+
+
 
 Reviewd:
+  _leet
+  2_dim
+  Tree
+  linkedlist
 

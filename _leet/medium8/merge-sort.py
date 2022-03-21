@@ -9,7 +9,7 @@ LinkedList/sort-linked-list.py
 class Solution:
     def sortList(self, arr):
         if len(arr)<=1: return arr
-        mid=len(arr//2)
+        mid=len(arr)//2
         left = self.sortList(arr[:mid])
         right = self.sortList(arr[mid:])
         return self.merge(left, right)

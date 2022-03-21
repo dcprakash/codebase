@@ -2,7 +2,13 @@
 # https://leetcode.com/problems/jump-game/
 # steps
 # https://www.youtube.com/watch?v=2HnlGToCdCc&feature=emb_logo&ab_channel=TerribleWhiteboard
-
+'''
+ 0
+[4,_,_,_,_]
+can you get from 0th index to end of array?
+enf of arry is 4 places further
+from 0th index + 4 steps = end of array
+'''
 
 def canJump(nums):
     lastValidIndex=len(nums)-1

@@ -18,7 +18,7 @@ from collections import Counter
 
 def findDuplicateSubtrees(root):
     ans = []
-    count = Counter()
+    count = Counter()       #**************
     
     def helper(node):
         if not node:    return '#'
