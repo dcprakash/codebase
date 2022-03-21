@@ -1,17 +1,12 @@
 Review:
+  _leet/3-graph/clone-graph.py
+
+  _leet/5-dynamicProgram
+
+  _leet/7.3-subSequence/longestIncreasingSubsequence.py
+
 
   _leet:
-      medium1:
-        clone-graph.py
-        decode-ways.py
-        find-peak-element.py  - eff *
-        longestIncreasingSubsequence.py   *
-        maximum-product-subarray.py(eff)   *
-        minimum-time-difference.py
-          perfect_square_sums.py      TODO
-        permutations-of-string-list-backtrack.py
-        string_compression.py   **
-          task-scheduler.py     TODO
 
       medium2:
         jump-game.py
@@ -22,6 +17,7 @@ Review:
         next-permutation.py
         number-of-connected-components-in-an-undirected-graph.py
         remove-duplicate-letters.py
+        _leet/medium2/remove-k-digits.py    **
         shortest-bridge-dfs-bfs.py  **
         shortest-unsorted-continuous-subarray.py
         spiral-matrix-ii.py
@@ -227,4 +223,5 @@ Reviewd:
   2_dim
   Tree
   linkedlist
+
 
