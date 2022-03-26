@@ -27,35 +27,37 @@ def coinChange(coins, n, amount):
     return -1 if res==sys.maxsize else res
     
     
-def coinChangeEff(coins, amount):
-    dp = [0] + [float('inf')] * amount  # [0, inf, inf, inf]
+# def coinChangeEff(coins, amount):
+#     dp = [0] + [float('inf')] * amount  # [0, inf, inf, inf]
     
-    for coin in coins:
-        for i in range(coin, amount+1):
-            dp[i] = min(dp[i], dp[i-coin]+1)
+#     for coin in coins:
+#         for i in range(coin, amount+1):
+#             dp[i] = min(dp[i], dp[i-coin]+1)
         
-    return dp[-1] if dp[-1] != float('inf') else -1
+#     return dp[-1] if dp[-1] != float('inf') else -1
     
     
-def coinChangeMethod(coins, amount):  
-    # base case 
-    if (amount == 0): 
-        return 0
+# def coinChangeMethod(coins, amount):  
+#     # base case 
+#     if (amount == 0): 
+#         return 0
 
-    # Initialize result 
-    res = sys.maxsize 
-    n=len(coins)
-    # Try every coin that has smaller value than amount
-    for i in range(0, n): 
-        if (coins[i] <= amount): 
-            sub_res = coinChangeMethod(coins, amount-coins[i]) 
+#     # Initialize result 
+#     res = sys.maxsize 
+#     n=len(coins)
+#     # Try every coin that has smaller value than amount
+#     for i in range(0, n): 
+#         if (coins[i] <= amount): 
+#             sub_res = coinChangeMethod(coins, amount-coins[i]) 
 
-            # Check for INT_MAX to avoid overflow and see if 
-            # result can minimized 
-            if (sub_res != sys.maxsize and sub_res + 1 < res): 
-                res = sub_res + 1
+#             # Check for INT_MAX to avoid overflow and see if 
+#             # result can minimized 
+#             if (sub_res != sys.maxsize and sub_res + 1 < res): 
+#                 res = sub_res + 1
 
-    return res 
+#     return res
+
+ 
 # Driver program to test above function 
 coins = [3,7,405,436]
 n = len(coins) 

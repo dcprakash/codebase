@@ -6,8 +6,7 @@ class Solution:
         n = len(digits)
 
         # move along the input array starting from the end
-        for i in range(n):
-            idx = n - 1 - i
+        for idx in range(n):
             # set all the nines at the end of array to zeros
             if digits[idx] == 9:
                 digits[idx] = 0
