@@ -54,7 +54,8 @@ class Solution:
         
         
 obj=Solution()
-print(obj.addBinary('1011','1111011'))
+# print(obj.addBinary('1011','1111011'))
+print(obj.addBinary('11','1'))
 """
 Your module description
 """

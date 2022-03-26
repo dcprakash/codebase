@@ -43,7 +43,7 @@ class Solution(object):
                 # delete the character with most distinct value
                 del_idx = min(hashmap.values())
                 # remove from hashmap (no need to remove from actual string)
-                del hashmap[s[del_idx]]
+                del hashmap[s[del_idx]]                                                     #********
                 # move left pointer of the slidewindow
                 left = del_idx + 1
 

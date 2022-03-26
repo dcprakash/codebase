@@ -1,9 +1,6 @@
 """
 https://leetcode.com/problems/simplify-path/solution/
 
-list join
-stack join
-
 simplify path
 directory
 """

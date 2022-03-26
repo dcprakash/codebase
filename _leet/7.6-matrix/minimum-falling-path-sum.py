@@ -2,32 +2,26 @@
 https://leetcode.com/problems/minimum-falling-path-sum/
 start from last but one element, and calculate with last element
 
-
-paint house
-steps
-stairs
-dynamic program
     
 '''
 
 
 class Solution:
-    def minFallingPathSum(self, matrix):
+    def minFallingPathSum(self, matrix: List[List[int]]) -> int:
         
-        n = len(matrix)        
-        dp = matrix
+        n = len(matrix)
         
         # for row in reversed(range(n-1)):
         for row in range(n-2,-1,-1):
             for col in range(n):
                 if col == 0:
-                    dp[row][col] += min(dp[row+1][col], dp[row+1][col+1])
+                    matrix[row][col] += min(matrix[row+1][col], matrix[row+1][col+1])
                 elif col == n-1:
-                    dp[row][col] += min(dp[row+1][col-1], dp[row+1][col])
+                    matrix[row][col] += min(matrix[row+1][col-1], matrix[row+1][col])
                 else:
-                    dp[row][col] += min(dp[row+1][col-1], dp[row+1][col], dp[row+1][col+1])
+                    matrix[row][col] += min(matrix[row+1][col-1], matrix[row+1][col], matrix[row+1][col+1])
                           
-        return min(dp[0])
+        return min(matrix[0])
         
 
         
