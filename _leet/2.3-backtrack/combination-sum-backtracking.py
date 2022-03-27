@@ -39,7 +39,7 @@ class Solution:
         return results
 
 
-candidates = [3,4,5]
-target = 8
+candidates = [1, 2, 5]
+target = 11
 s=Solution()
 print(s.combinationSum(candidates, target))

@@ -8,23 +8,24 @@
 
 import sys 
 
-# m is size of coins array (number of different coins) 
-def coinChange(coins, n, amount): 
-    res = sys.maxsize
-    
-    def backtrack(remain, comb, start):
-        nonlocal res
-        if remain==0:
-            res=min(res,len(comb))
-        if remain<0:
-            return
-        for i in range(start, len(coins)):
-            comb.append(coins[i])
-            backtrack(remain-coins[i], comb, i)
-            comb.pop()
-            
-    backtrack(amount, [], 0)
-    return -1 if res==sys.maxsize else res
+class Solution:
+    def coinChange(self, coins, amount):  
+        res = sys.maxsize
+
+        def backtrack(remain, comb, start):
+            nonlocal res
+            if remain==0:
+                res=min(res,len(comb))
+            if remain<0:
+                return
+            for i in range(start, len(coins)):
+                comb.append(coins[i])
+                backtrack(remain-coins[i], comb, i)
+                comb.pop()
+
+        backtrack(amount, [], 0)
+        return -1 if res==sys.maxsize else res
+        
     
     
 # def coinChangeEff(coins, amount):
@@ -59,8 +60,8 @@ def coinChange(coins, n, amount):
 
  
 # Driver program to test above function 
-coins = [3,7,405,436]
-n = len(coins) 
-amount = 8839
-print("Minimum coins required is",coinChange(coins, n, amount))
+coins = [3]
+amount = 11
+s=Solution()
+print(s.coinChange(coins, amount))
 # print("Minimum coins required is",coinChangeEff(coins, amount))
