@@ -1,0 +1,7 @@
+this are contents of file in docs
+1. line1
+2. line2
+3. line3
+4. line4
+5. line5
+6. line6

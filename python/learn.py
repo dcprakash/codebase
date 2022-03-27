@@ -12,7 +12,7 @@ import shutil
 import zipfile
 import logging
 
-logging.basicConfig(filename='/Users/dprakash/Documents/IDA/Cloud9/1IDA/LocalCode/learn.log',
+logging.basicConfig(filename='/Users/dprakash/Documents/Git/codebase/python/learn.log',
                     level=logging.INFO)
 
 
@@ -52,10 +52,14 @@ def parse_file(file):
 def parse_dir(dir):
     results = {}
     for root, dirs, files in os.walk(dir):
+        for name in files:
+            print(os.path.join(root,name))
+        for name in dirs:
+            print(os.path.join(root,name))
         for file in files:
             with open(os.path.join(root, file), "r") as f:
                 data = f.read()
-                results.update({data: os.path.join(root, file)})
+                results.update({os.path.join(root, file): data})
     print(results)
 
 
@@ -122,12 +126,15 @@ def zip_processed_file():
 
 
 if __name__=='__main__':
-    url = None
-    file_path = None
-    dir_path = None
+    url = "www.bbc.com"
+    file_path = "/Users/dprakash/Documents/Git/codebase/python/test/file1.txt"
+    dir_path = "/Users/dprakash/Documents/Git/codebase/python/test"
     json_path = None
     try:
         opts, args = getopt.getopt(sys.argv[1:], "h:u:f:d:", ["help=", "url=", "file=", "dir="])
+        print(opts)
+        print(args)
+        
         for opt, arg in opts:
             if opt in ("-h", "--help"):
                 print("Usage Help: -u url -f file_path")
@@ -145,8 +152,8 @@ if __name__=='__main__':
     # parse_url(url)
     # parse_file(file_path)
     # parse_dir(dir_path)
-    # parse_metadata(json_path)
+    parse_metadata(json_path)
     # generate_file()
     # process_file()
     # zip_processed_file()
-    pro_file()
+    # pro_file()
