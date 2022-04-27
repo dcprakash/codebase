@@ -1,5 +1,8 @@
 '''
 https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
+https://zkf85.github.io/2019/03/26/leetcode-005-longest-palindrome#solution-5
+https://leetcode.com/problems/longest-palindromic-substring/solution/
+
 
 Given a string, find the longest substring which is palindrome. 
 For example, 
@@ -10,26 +13,27 @@ sliding window
 '''
 
 def longestpalindrome(s):
-    n=len(s)
-    max_len=1
-    start=0
-    for i in range(1,n):
-        l=i-1
-        h=i
+    if s is "":
+        return ""
+    
+    rev = s[::-1]
+    dp = [[0 for i in range(len(s))] for j in range(len(s))]
+    max_len = 0
+    max_end = 0
+    for i in range(len(s)):
+        for j in range(len(s)):
+            if s[i] == rev[j]:
+                if i == 0 or j == 0:
+                    dp[i][j] = 1
+                else:
+                    dp[i][j] = dp[i-1][j-1] + 1
+            if dp[i][j] > max_len:
+                max_len = dp[i][j]
+                max_end = i
             
-        while l>=0 and h<n and s[l]==s[h]:
-            if h-l+1>max_len:
-                max_len=h-l+1
-                start=l
-            l-=1
-            h+=1
-
-    res=""
-    for i in range(start,start+max_len):
-        res+=s[i]
-    return res
+    return s[max_end - max_len + 1: max_end + 1]
 
 # s = "aaa"
-# s="forgeeksskeegfor"
-s="geeks"
+s="forgeeksskeegfor"
+#s="babad"
 print(longestpalindrome(s))

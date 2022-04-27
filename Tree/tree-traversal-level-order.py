@@ -1,7 +1,8 @@
 # https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 
 
-from collections import deque
+from collections import defaultdict, deque
+from email.policy import default
 
 
 class Node:
@@ -13,18 +14,15 @@ class Node:
 		self.right = None
 
 
-def levelOrder(root):
-    levels=[]
-    if not root:    return levels
+def levelOrderEff(root):
+    columntable=defaultdict(list)
+    if not root:    return []
     def helper(root, depth):
-        if len(levels)==depth:
-            levels.append([])
-        levels[depth].append(root.data)
+        columntable[depth].append(root.data)
         if root.left:   helper(root.left, depth+1)
         if root.right:  helper(root.right, depth+1)
     helper(root, 0)
-    return levels
-
+    return [columntable[x] for x in sorted(columntable.keys())]
 
 root = Node(3)
 root.left = Node(9)
@@ -32,4 +30,4 @@ root.right = Node(20)
 root.right.left = Node(15)
 root.right.right = Node(7)
 print("DFS traversal of binary tree is -")
-print(levelOrder(root))
+print(levelOrderEff(root))

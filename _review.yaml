@@ -1,0 +1,50 @@
+
+Tree:
+  BT-diameter.py
+  BT-duplicate-subtrees.py
+  BT-Lowest_common_ancestor.py
+  BT-Path-root-to-leaf-Sum.py
+    connect-nodes-at-same-level.py  *
+  merge-two-bt-sum.py
+    tree-traversal-build-preorder.py **
+
+
+
+_leet:
+  1-string:
+    2-longestpalindrome.py    **
+    2-palindrome-partitioning.py
+    2-palindrome-substring.py
+  1.1-subSequence:
+    1-longest-substring-count-without-repeating-char.py *
+    1-longest-substring-k-distinct-char.py
+    1-minimum-window-substring.py
+    remove-minimum-number-characters-two-strings-become-anagram-2.py
+    string_compression.py
+  2-array:
+    find-peak-element.py  eff
+    merge-sort.py
+  2.1-meetingSchedules:
+    minimum-meeting_rooms.py
+  2.2-dynamicProgram:
+    count-binary-substrings.py
+    decode-ways.py
+    minimum-path-sum-triangle.py
+    pascals-triangle.py
+  2.3-backtrack:
+    MaxLenOfConcatStrWithUniqueChars_backtrack.py
+  3-graph:
+    number-of-connected-components-in-an-undirected-graph.py
+  3.1-matrix:
+    valid-sudoku.py
+  5-tree:
+    word-square.py
+  recursion:
+    StrobogrammaticNumber.py
+
+  _leet/a-1/android-unlock-patterns.py   **
+  _leet/a-1/count-of-smaller-numbers-after-self.py  **
+  _leet/a-1/1-longest-substring-count-with-repeating-char.py
+  _leet/a-1/design-search-autocomplete.py
+
+

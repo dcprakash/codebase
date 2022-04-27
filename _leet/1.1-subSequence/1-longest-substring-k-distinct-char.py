@@ -12,8 +12,18 @@ should NOT have more than k distinct characters
     If hashmap contains k + 1 distinct characters, remove the leftmost character from the hashmap and move the left pointer so that sliding window contains again k distinct characters only.
     Update max_len.
 
+
 sliding window
 
+
+https://leetcode.com/problems/fruit-into-baskets/ 
+longest two distinct numbers
+each basket can hold one type of fruit, if we picked 1 i.e., apple then we cannot store 2 i.e., orange in that basket
+we are given 2 baskets, so we can only carry two type of fruits.
+    in the array find which numbers repeat most
+we also need to stop when we come across a fruit we cannot pickup
+    cannot use counter(fruits) and pick most fruits  
+    
 '''
 from collections import defaultdict
 

@@ -10,6 +10,10 @@
 # l[]=	1 10 30
 # r[]=	15 5 1
 # p[]=	15,50,30
+'''
+https://leetcode.com/problems/product-of-array-except-self/
+product of array
+'''
 
 
 def productArray(arr, n): 

@@ -15,8 +15,9 @@ class Solution:
     def maximumSwap(self, nums):
         oarr=list(str(nums))
         narr=oarr[:]
-        for i in range(len(oarr)):
-            for j in range(i+1, len(oarr)):
+        n=len(oarr)
+        for i in range(n):
+            for j in range(i+1, n):
                 oarr[i],oarr[j]=oarr[j],oarr[i]
                 if narr<oarr:   narr=oarr[:]
                 oarr[i],oarr[j]=oarr[j],oarr[i]

@@ -17,7 +17,7 @@ class Solution:
     def search(self, nums, l, r):
         if l==r:    return l
         mid = (l+r)//2;
-        if nums[mid]>nums[mid+1]:   return self.search(nums, l, mid)
+        if nums[mid]>nums[mid+1]:   return self.search(nums, l, mid) #mid=1 i.e., 3 which is greater than 2, since we found 1st of condition to prove preak elemend, now we check if element behind mid is smaller by searching on left of the array
         else:   return self.search(nums, mid+1, r)
         
         

@@ -68,8 +68,8 @@ def parse_metadata(json_path):
     metadata = json.loads(open('/Users/dprakash/Documents/IDA/Cloud9/1IDA/LocalCode/content/metadata.json').read())
     for i,(k, v) in enumerate(metadata.items()):
         if k == "api_dependencies" and isinstance(v, list):
-            for i in v:
-                dependent_services.append(i["name"])
+            for idx in v:
+                dependent_services.append(idx["name"])
     print("Dependent services are {}".format(dependent_services))
 
 
@@ -92,18 +92,17 @@ def generate_file():
 def process_file():
     logging.info("\n \n processing files")
     try:
-        os.mkdir('/Users/dprakash/Documents/IDA/Cloud9/1IDA/LocalCode/content/processed')
+        os.mkdir('/Users/dprakash/Documents/Git/codebase/python/test')
     except OSError as e:
         print("Error creating dir {}".format(e))
 
-    receipt_files = glob.glob('/Users/dprakash/Documents/IDA/Cloud9/1IDA/LocalCode/content/files/receipts-[0-4]*.json')
+    receipt_files = glob.glob('/Users/dprakash/Documents/Git/codebase/python/test/receipts/receipts-[0-4].json')
     subtotal = 0
     for file in receipt_files:
         data = json.loads(open(file, "r").read())
         subtotal += float(data['amount'])
-
         dest_file_name = file.split('/')[-1]
-        destination_path = '/Users/dprakash/Documents/IDA/Cloud9/1IDA/LocalCode/content/processed/%s' % dest_file_name
+        destination_path = '/Users/dprakash/Documents/Git/codebase/python/test/receipts/processed/%s' % dest_file_name
         shutil.move(file, destination_path)
         logging.info("Moved file from {} to {}".format(file, destination_path))
     print("Total amount {}".format(subtotal))
@@ -114,8 +113,8 @@ def zip_processed_file():
     # file_list.extend(glob.glob('/Users/dprakash/Documents/IDA/Cloud9/1IDA/LocalCode/content/Test/**/*.txt', recursive=True))
 
     file_list = []
-    base_dir = '/Users/dprakash/Documents/IDA/Cloud9/1IDA/LocalCode/content/'
-    z = zipfile.ZipFile("".join([base_dir, "zipfile/package.zip"]), "w")
+    base_dir = '/Users/dprakash/Documents/Git/codebase/python/test/receipts/processed/'
+    z = zipfile.ZipFile("".join([base_dir, "processed.zip"]), "w")
     for root, dirs, files in os.walk(base_dir):
         for f in files:
             if os.path.join(root, f).endswith(".txt") or os.path.join(root, f).endswith(".json"):
@@ -152,8 +151,8 @@ if __name__=='__main__':
     # parse_url(url)
     # parse_file(file_path)
     # parse_dir(dir_path)
-    parse_metadata(json_path)
+    # parse_metadata(json_path)
     # generate_file()
     # process_file()
-    # zip_processed_file()
+    zip_processed_file()
     # pro_file()

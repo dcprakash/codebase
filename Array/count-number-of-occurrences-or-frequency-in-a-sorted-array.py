@@ -1,6 +1,7 @@
 
 # https://www.geeksforgeeks.org/count-number-of-occurrences-or-frequency-in-a-sorted-array/
-
+# binary search
+# leftmost
 # can use dictionary
 
 # Given a sorted array arr[] and a number x, 

@@ -1,44 +1,29 @@
-# https://www.geeksforgeeks.org/find-four-numbers-with-sum-equal-to-given-sum/
+'''
+https://leetcode.com/problems/4sum/
+4 sum
+'''
 
-# A sorting based solution to print all combination 
-# of 4 elements in A[] with sum equal to X 
-def find4Numbers(A, n, X): 
+class Solution:
+    def fourSum(self, nums, target):
+        nums.sort()
+        n=len(nums)
+        res=[]
+        for i in range(n-3):
+            for j in range(i+1,n-2):
+                l=j+1
+                r=n-1
+                while l<r:
+                    if nums[i]+nums[j]+nums[l]+nums[r]==target:
+                        if [nums[i],nums[j],nums[l],nums[r]] not in res:
+                            res.append([nums[i],nums[j],nums[l],nums[r]])
+                        l+=1
+                        r-=1
+                    elif nums[i]+nums[j]+nums[l]+nums[r]>target:
+                        r-=1
+                    else:
+                        l+=1
+        return res
+        
 
-	# Sort the array in increasing order, 
-	# using library function for quick sort 
-	A.sort() 
-
-	# Now fix the first 2 elements one by 
-	# one and find the other two elements 
-	for i in range(n - 3): 
-		for j in range(i + 1, n - 2): 
-			
-			# Initialize two variables as indexes 
-			# of the first and last elements in 
-			# the remaining elements 
-			l = j + 1
-			r = n - 1
-
-			# To find the remaining two elements, 
-			# move the index variables (l & r) 
-			# toward each other. 
-			while (l < r): 
-				if(A[i] + A[j] + A[l] + A[r] == X): 
-					print(A[i], ",", A[j], ",", 
-						A[l], ",", A[r]) 
-					l += 1
-					r -= 1
-				
-				elif (A[i] + A[j] + A[l] + A[r] < X): 
-					l += 1
-				else: # A[i] + A[j] + A[l] + A[r] > X 
-					r -= 1
-
-# Driver Code 
-if __name__ == "__main__": 
-	
-	A = [1, 4, 45, 6, 10, 12] 
-	X = 21
-	n = len(A) 
-	find4Numbers(A, n, X) 
-
+sol=Solution()
+print(sol.fourSum([-3,-1,0,2,4,5],2))

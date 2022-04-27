@@ -1,6 +1,7 @@
 """
 https://leetcode.com/problems/merge-intervals
 merge intervals of list
+insert intervals
 """
 
 
@@ -16,7 +17,9 @@ def mergeIntervals(intervals, n):
         if not merged or merged[-1][1] < item[0]:
             merged.append(item)
         else:
-            merged[-1][1]=max(merged[-1][1],item[1])
+            # intervals=[[1,4],[2,3]] will need to be merged to [[1,4]]
+            # so we do max()
+            merged[-1][1]=max(merged[-1][1], item[1])
     
     return merged   
 

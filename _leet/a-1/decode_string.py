@@ -13,7 +13,6 @@ class Solution:
     def decodeString(self, s):
         
         left = 0
-        output = ""
         stack = [""]
         num_stack = []
         while left < len(s):
@@ -25,8 +24,8 @@ class Solution:
                     left += 1
                 
                 digit_int = int(digit)
-                stack.append("")
-                num_stack.append(digit_int)                
+                num_stack.append(digit_int)  
+                stack.append("")              
             elif s[left] == ']':                    
                 mul_string = num_stack.pop()
                 top_str = stack.pop()                    

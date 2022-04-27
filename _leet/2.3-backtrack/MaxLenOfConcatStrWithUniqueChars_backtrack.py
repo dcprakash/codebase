@@ -49,19 +49,19 @@ class Solution:
         #     return False
             
         
-        def backtrack(cur, ix):
-            nonlocal ans
-            ans=max(ans,len(cur))
-            for i in range(ix,n):
-                new=cur+arr[i]
+        def backtrack(path, start):
+            nonlocal res
+            res=max(res,len(path))
+            for i in range(start,n):
+                new=path+arr[i]
                 if not hasduplicate(new):
                     backtrack(new,i+1)
                 #no need to replace backtrack orginal val, we used new string
             
-        ans=0
+        res=0
         n=len(arr)
         backtrack("", 0)
-        return ans
+        return res
 
 
 arr = ["un","ue","iq"]

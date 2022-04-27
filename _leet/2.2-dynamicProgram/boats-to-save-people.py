@@ -14,13 +14,13 @@ class Solution:
         people.sort()   #[1,2,2,3]
         i=0
         j=len(people)-1
-        ans=0
+        boats=0
         while i<=j:
-            ans+=1
+            boats+=1
             if people[i]+people[j]<=limit:
                 i+=1
             j-=1
-        return ans
+        return boats
 
 
 people = [3,2,2,1]

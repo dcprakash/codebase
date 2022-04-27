@@ -2,6 +2,9 @@
 # https://www.geeksforgeeks.org/check-if-two-trees-are-mirror/
 
 # A Binary Tree Node 
+# flip binary tree
+
+
 class Node: 
 	def __init__(self, data): 
 		self.data = data 
@@ -13,7 +16,7 @@ def mirror(root1, root2):
     # Base case : Both empty
     if root1==None and root2==None: return True
     # Base case : only one empty
-    if root1==None or root2==None: return True
+    if root1==None or root2==None: return False
     return (mirror(root1.left, root2.right) and mirror(root1.right, root2.left)) if root1.data==root2.data else False
 
 

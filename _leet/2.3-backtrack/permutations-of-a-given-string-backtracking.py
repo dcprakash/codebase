@@ -13,22 +13,22 @@ Iterate over the integers from index first to index n - 1.
 class Solution:
     def permute(self, nums):
         
-        def backtrack(first = 0):
-            if first == n:  
-                output.append(nums[:])
-            for i in range(first, n):
+        def backtrack(start = 0):
+            if start == n:  
+                res.append(nums[:])
+            for i in range(start, n):
                 # place i-th integer first 
                 # in the current permutation
-                nums[first], nums[i] = nums[i], nums[first]
+                nums[start], nums[i] = nums[i], nums[start]
                 # use next integers to complete the permutations
-                backtrack(first + 1)
+                backtrack(start + 1)
                 # backtrack
-                nums[first], nums[i] = nums[i], nums[first]
+                nums[start], nums[i] = nums[i], nums[start]
         
         n = len(nums)
-        output = []
+        res = []
         backtrack()
-        return output
+        return res
 
 
 nums = [1,2,3]

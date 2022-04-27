@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/minimum-size-subarray-sum/
 # target sum
+# sum closest
 
 def minSubArrayLen(s, nums):
     res=float('inf')

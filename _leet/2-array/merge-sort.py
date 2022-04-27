@@ -28,7 +28,3 @@ class Solution:
         result += list1[left_index:]
         result += list2[right_index:]
         return result
-        
-
-                
-            

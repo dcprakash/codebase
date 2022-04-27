@@ -1,2 +1,13 @@
 INFO:root:b' 1  192.168.0.1 (192.168.0.1)  9.596 ms  1.988 ms  2.800 ms\n 2  10.72.64.1 (10.72.64.1)  16.451 ms  10.090 ms  10.416 ms\n 3  ip68-4-14-60.oc.oc.cox.net (68.4.14.60)  11.816 ms  15.331 ms  16.876 ms\n 4  100.120.104.8 (100.120.104.8)  14.902 ms  14.179 ms  13.695 ms\n 5  langbprj01-ae1.rd.la.cox.net (68.1.1.13)  17.379 ms  33.414 ms\n    68.1.4.254 (68.1.4.254)  12.540 ms\n 6  *'
 INFO:root:b'traceroute to 151.101.24.81 (151.101.24.81), 64 hops max, 52 byte packets\n'
+INFO:root:
+ 
+ processing files
+INFO:root:
+ 
+ processing files
+INFO:root:
+ 
+ processing files
+INFO:root:Moved file from /Users/dprakash/Documents/Git/codebase/python/test/receipts/receipts-3.json to /Users/dprakash/Documents/Git/codebase/python/test/receipts/processed/receipts-3.json
+INFO:root:Moved file from /Users/dprakash/Documents/Git/codebase/python/test/receipts/receipts-1.json to /Users/dprakash/Documents/Git/codebase/python/test/receipts/processed/receipts-1.json

@@ -38,9 +38,10 @@ class Solution:
             
         # list strip needed for num="14" and k=2
         # here we did not pop anything from stack and k is still 2
-        numStack = numStack[:-k] if k else numStack
+        numStack = numStack[k:] if k else numStack
         
         # or "0" is to address num="14" and k=2
+        # .lstrip('0) is to address leading 0's when num="10200" and k=1
         return "".join(numStack).lstrip('0') or "0"
 
 
@@ -50,8 +51,11 @@ class Solution:
 # num = "10"
 # k = 2
 
-num = "14"
-k = 2
+# num = "14"
+# k = 2
+
+num="10200"
+k=1
 
 # num = "9"
 # k = 1

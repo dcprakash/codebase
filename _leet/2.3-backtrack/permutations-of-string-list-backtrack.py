@@ -37,7 +37,7 @@ class Solution:
 		return output
 	
 
-nums=[1,2,3]
+nums=["1123", "2123", "3234"]
 # nums=[1]
 s=Solution()
 print(s.permute(nums))
