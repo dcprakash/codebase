@@ -11,9 +11,7 @@ class Solution:
         max_profit = 0
         for i in range(len(prices) - 1):
             for j in range(i + 1, len(prices)):
-                profit = prices[j] - prices[i]
-                if profit > max_profit:
-                    max_profit = profit
+                    max_profit = max(prices[j] - prices[i], max_profit)
         return max_profit
 
     def maxProfitEff(self, prices: List[int]) -> int:

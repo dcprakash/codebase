@@ -1,6 +1,54 @@
 # Program to count islands in boolean 2D matrix
 # https://www.geeksforgeeks.org/find-number-of-islands/
 # same as number-of-provinces
+
+
+class Solution:
+    def findCircleNum(self, isConnected):
+        
+        def dfs(i,j):
+            seen.add((i,j))
+            for d in directions:
+                newi=i+d[0]
+                newj=j+d[1]
+                if 0<=newi<m and 0<=newj<n and isConnected[i][j]==1 and (newi, newj) not in seen:
+                    dfs(newi, newj)
+            
+        directions=[(-1,0),(1,0),(0,-1),(0,1)]
+        seen=set()
+        m=len(isConnected)
+        n=len(isConnected[0])
+        count=0
+        for i in range(m):
+            for j in range(n):
+                if isConnected[i][j]==1 and (i, j) not in seen:
+                    dfs(i,j)
+                    count+=1
+        return count
+
+
+# graph = [[1,0,0],[0,1,0],[0,0,1]]
+
+# graph = [[1, 1, 0, 0, 0],
+#          [0, 1, 0, 0, 1],
+#          [1, 0, 0, 1, 1],
+#          [0, 0, 0, 0, 0],
+#          [1, 0, 1, 0, 1]]
+         
+# row = len(graph)
+# col = len(graph[0])
+# g = Graph(row, col, graph)
+# print("Number of islands is:")
+# print(g.countIslands())
+
+graph= [[1,1,0,0,0],
+        [1,1,0,0,0],
+        [0,0,0,1,1],
+        [0,0,0,1,1]]
+s=Solution()
+print(s.findCircleNum(graph))
+
+'''
 class Graph:
     def __init__(self, row, col, g):
         self.ROW = row
@@ -68,52 +116,5 @@ class Graph:
                     self.DFS(i, j, visited)
                     count += 1
 
-        return count
-
-
-# graph = [[1, 1, 0, 0, 0],
-#          [0, 1, 0, 0, 1],
-#          [1, 0, 0, 1, 1],
-#          [0, 0, 0, 0, 0],
-#          [1, 0, 1, 0, 1]]
-
-# graph= [[1,1,0,0,0],
-#         [1,1,0,0,0],
-#         [0,0,0,1,1],
-#         [0,0,0,1,1]]
-         
-graph = [[1,0,0],[0,1,0],[0,0,1]]
-
-row = len(graph)
-col = len(graph[0])
-
-g = Graph(row, col, graph)
-
-print("Number of islands is:")
-print(g.countIslands())
-
-
-'''
-class Solution:
-    def findCircleNum(self, isConnected: List[List[int]]) -> int:
-        
-        def dfs(i,j):
-            seen.add((i,j))
-            for d in directions:
-                newi=i+d[0]
-                newj=j+d[1]
-                if 0<=newi<m and 0<=newj<n and isConnected[i][j]==1 and (newi, newj) not in seen:
-                    dfs(newi, newj)
-            
-        directions=[(-1,0),(1,0),(0,-1),(0,1)]
-        seen=set()
-        m=len(isConnected)
-        n=len(isConnected[0])
-        count=0
-        for i in range(m):
-            for j in range(n):
-                if isConnected[i][j]==1 and (i, j) not in seen:
-                    dfs(i,j)
-                    count+=1
         return count
 '''

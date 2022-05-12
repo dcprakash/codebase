@@ -28,11 +28,10 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-class Solution:
-    import math
-    def diameterOfBinaryTree(self, root):
-        self.ans=1
         
+        
+class Solution:
+    def diameterOfBinaryTree(self, root):
         def helper(node):
             if not node:
                 return 0
@@ -40,7 +39,8 @@ class Solution:
             R=helper(node.right)
             self.ans=max(self.ans, L+R+1)
             return max(L,R)+1
-            
+        
+        self.ans=1    
         helper(root)
         return self.ans-1
         

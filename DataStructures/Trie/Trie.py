@@ -11,14 +11,12 @@ from collections import defaultdict
 
 
 class TrieNode():
-
     def __init__(self):
         self.children = defaultdict()
         self.terminating = False
 
 
 class Trie():
-
     def __init__(self):
         self.root = self.get_node()
 
@@ -27,8 +25,7 @@ class Trie():
 
     def insert(self, word):
         root = self.root
-        len1 = len(word)
-        for i in range(len1):
+        for i in range(len(word)):
             if word[i] not in root.children:
                 root.children[word[i]] = self.get_node()
             root = root.children.get(word[i])
@@ -37,8 +34,7 @@ class Trie():
 
     def search(self, word):
         root = self.root
-        len1 = len(word)
-        for i in range(len1):
+        for i in range(len(word)):
             if not root:
                 return False
             root = root.children.get(word[i])
@@ -47,8 +43,7 @@ class Trie():
 
     def delete(self, word):
         root = self.root
-        len1 = len(word)
-        for i in range(len1):
+        for i in range(len(word)):
             if not root:
                 print ("Word not found")
                 return -1

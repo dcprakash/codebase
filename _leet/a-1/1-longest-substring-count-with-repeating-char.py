@@ -19,7 +19,7 @@ class Solution:
             maxfreq = max(maxfreq, chars[ord(r)])     # to get length of most frequent char, in given window we would want to replace char that appears less
                                                       # no need to decrement maxfreq when chars[ord(l)] -= 1 because we only care about maximizing the results
             if (right-left+1)-maxfreq>k:   # in given window length - most frequent chars = chars that are less frequent; if less frequent char > k, we need to find another window that fits size
-                l = s[left]
+                l = s[left]                # in given window len i.e., right-left+1, remove max frequent chars; if remaining is still > k then we have to reduce window. there are too many repeating chars that cannot be replaced by k
                 chars[ord(l)] -= 1
                 left += 1
 
@@ -33,6 +33,8 @@ s=Solution()
 print(s.characterReplacement("ABAB",2))
 
 '''
+0123
+ABAB
 when right=3, left=0
 maxfreq 2 (bcz A and B appeared twice)
 res=3

@@ -1,7 +1,7 @@
 # https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/
 # https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
 # reverse given string
-# n - longest commong substring(x,revers(x))
+# n - longest commong sub-sequence(x,revers(x))
 '''
     a d c b a
   0 0 0 0 0 0

@@ -18,5 +18,10 @@ def numberOfPaths(m, n):
 
 # Driver program to test above function
 m = 2
-n = 3
+n = 2
 print(numberOfPaths(m, n))
+
+'''
+* *
+* *
+'''

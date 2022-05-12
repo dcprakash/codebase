@@ -16,15 +16,17 @@ def minPathSum(grid, i, j):
     
 
 def minPathSumEfficient(grid, i, j):
-    dp = [[None for j in range(len(grid))] for i in range(len(grid[0]))]
+    row=len(grid)
+    col=len(grid[0])
+    dp = [[None for _ in range(row)] for _ in range(col)]
     # from end of matrix to begining
-    for i in range(len(grid)-1, -1, -1):
-        for j in range(len(grid[0])-1,-1,-1):
-            if i==len(grid)-1 and j!=len(grid[0])-1:
+    for i in range(row-1, -1, -1):
+        for j in range(col-1,-1,-1):
+            if i==row-1 and j!=col-1:
                 dp[i][j]=grid[i][j]+dp[i][j+1]
-            elif i!=len(grid)-1 and j==len(grid[0])-1:
+            elif i!=row-1 and j==col-1:
                 dp[i][j]=grid[i][j]+dp[i+1][j]
-            elif i!=len(grid)-1 and j!=len(grid[0])-1:
+            elif i!=row-1 and j!=col-1:
                 dp[i][j]=grid[i][j]+min(dp[i+1][j],dp[i][j+1])
             else:
                 dp[i][j]=grid[i][j]

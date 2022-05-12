@@ -3,7 +3,9 @@
 
 from collections import Counter
 
+
 # returns all duplicates
+# question asks for using only constant extra space, below is not correct
 def findDuplicate(nums) -> int:
     seen = set()
     for num in nums:
@@ -12,9 +14,25 @@ def findDuplicate(nums) -> int:
         seen.add(num)
 
 
+# returns first duplicate occurence
+# question asks for without modifying the array, below is not correct
+def findDuplicateModifyArray(nums):
+    nums.sort()
+    # this can also return 2 but it has appearer more than twice
+    # [1,2,2,2,3,4,4,5]
+    # 4 is correct answer
+    for i in range(1, len(nums)):
+        if nums[i] == nums[i-1]:
+            return nums[i]
+            
+
+
 '''
 All these solution does not use constant space, to acheive problem goal we explore flyod's algorithm
 https://leetcode.com/problems/find-the-duplicate-number/solution/
+
+Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+pay attention to [1, n] inclusive, this means if 7 exist in array, then there are at least 7 elements in array
 
 Floyd's algorithm consists of two phases and uses two pointers, usually called tortoise and hare.
 
@@ -38,16 +56,24 @@ In phase 2, we give the tortoise a second chance by slowing down the hare,
 The tortoise is back at the starting position, and the hare starts from the intersection point.
 '''
 
-# returns first duplicate occurence
-def findDuplicateModifyArray(nums):
-    nums.sort()
-    # this can also return 2 but it has appearer more than twice
-    # [1,2,2,2,3,4,4,5]
-    # 4 is correct answer
-    for i in range(1, len(nums)):
-        if nums[i] == nums[i-1]:
-            return nums[i]
-            
-
+class Solution:
+    def findDuplicate(self, nums):
+        # Find the intersection point of the two runners.
+        tortoise = hare = nums[0]
+        while True:
+            tortoise = nums[tortoise]
+            hare = nums[nums[hare]]
+            if tortoise == hare:
+                break
+        
+        # Find the "entrance" to the cycle.
+        tortoise = nums[0]
+        while tortoise != hare:
+            tortoise = nums[tortoise]
+            hare = nums[hare]
+        
+        return hare
+    
+    
 nums=[2,2,3,2,3]
 print(findDuplicate(nums))

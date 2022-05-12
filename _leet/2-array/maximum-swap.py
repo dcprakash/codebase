@@ -23,9 +23,10 @@ class Solution:
                 oarr[i],oarr[j]=oarr[j],oarr[i]
         return "".join(narr)
 
-    # cannot achieve this with one loop
+    
     # def maximumSwapEff(self, nums):
     #     oarr=list(str(nums))
+    #     oarr.sort()
     #     narr=oarr[:]
     #     for i in range(len(oarr)-1):
     #         oarr[i],oarr[i+1]=oarr[i+1],oarr[i]

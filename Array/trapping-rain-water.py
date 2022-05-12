@@ -1,9 +1,18 @@
 # https://www.geeksforgeeks.org/trapping-rain-water/
 # https://leetcode.com/problems/trapping-rain-water-ii/
 
-def maxWater(a,n):
-	if len(a) == 0:	return 0
-	
+'''
+a=3, 0, 2, 0, 4
+l=3, 3, 3, 3, 4
+r=4, 4, 4, 4, 4
+
+
+'''
+
+def maxWater(a):
+	n=len(a)
+	if n == 0:	return 0
+ 
 	left=[None]*n
 	left[0]=a[0]
 	for i in range(1,n):
@@ -22,7 +31,6 @@ def maxWater(a,n):
 	
 
 if __name__=='__main__':
-	# a = [3, 0, 2, 0, 4]
-	a=[0,1,0,2,1,0,1,3,2,1,2,1]
-	n=len(a)
-	print("Max water={}".format(maxWater(a,n)))
+	a = [3, 0, 2, 0, 4]
+	# a=[0,1,0,2,1,0,1,3,2,1,2,1]
+	print("Max water={}".format(maxWater(a)))

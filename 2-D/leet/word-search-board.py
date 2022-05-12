@@ -6,8 +6,7 @@ word search board
 word matrix
 word boggle boogle
 
-words-data-structure.py
-https://leetcode.com/problems/design-add-and-search-words-data-structure/
+
 '''
 
 class Solution:
@@ -80,6 +79,7 @@ print(s.findWords(board, words))
 
 
 '''
+trie = 
 {
     'o':{
         'a': 

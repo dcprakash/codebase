@@ -6,8 +6,6 @@
 [1,1,0],
 [0,1,1]
 ]
-
-
 '''
 
 from collections import deque
@@ -48,13 +46,12 @@ class Solution:
                 # then it would contaminate its neighbors
                 for d in directions:
                     neighbor_row, neighbor_col = row + d[0], col + d[1]
-                    if ROWS > neighbor_row >= 0 and COLS > neighbor_col >= 0:
-                        if grid[neighbor_row][neighbor_col] == 1:
-                            # this orange would be contaminated
-                            grid[neighbor_row][neighbor_col] = 2
-                            fresh_oranges -= 1
-                            # this orange would then contaminate other oranges
-                            rotten_queue.append((neighbor_row, neighbor_col))
+                    if ROWS > neighbor_row >= 0 and COLS > neighbor_col >= 0 and grid[neighbor_row][neighbor_col] == 1:
+                        # this orange would be contaminated
+                        grid[neighbor_row][neighbor_col] = 2
+                        fresh_oranges -= 1
+                        # this orange would then contaminate other oranges
+                        rotten_queue.append((neighbor_row, neighbor_col))
 
         # return elapsed minutes if no fresh orange left
         return minutes_elapsed if fresh_oranges == 0 else -1

@@ -16,7 +16,7 @@ class Solution:
             r=n-1
             while l<r:
                 if nums[i]+nums[l]+nums[r]<target:  #IF THREESUM < TARGET, THEN BECAUSE THEE ARRAY IS SORTED
-                    res+=r-l    #ALL NUMBERS IN BETWEEN WILL ALSO BE LESS OR EQUAL TO K AND THEREFORE BE VALID ANSWERS
+                    res+=r-l  #ALL NUMBERS IN BETWEEN WILL ALSO BE LESS OR EQUAL TO K AND THEREFORE BE VALID ANSWERS
                     l+=1
                 else:
                     r-=1

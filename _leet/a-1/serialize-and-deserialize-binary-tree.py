@@ -1,6 +1,9 @@
 '''
 https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 '''
+'''
+https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+'''
 
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -17,18 +20,20 @@ class Codec:
         :type root: TreeNode
         :rtype: str
         """
-        def rserialize(root, string):
-            """ a recursive helper function for the serialize() function."""
-            # check base case
-            if root is None:
-                string += 'None,'
-            else:
-                string += str(root.val) + ','
-                string = rserialize(root.left, string)
-                string = rserialize(root.right, string)
-            return string
-        
-        return rserialize(root, '')
+        return str(root.val) + ',' + self.serialize(root.left) + self.serialize(root.right) if root else 'None,'
+#         def rserialize(root, string):
+#             """ a recursive helper function for the serialize() function."""
+#             # check base case
+#             if root is None:
+#                 string += 'None,'
+#             else:
+#                 string += str(root.val) + ','
+#                 string = rserialize(root.left, string)
+#                 string = rserialize(root.right, string)
+#             return string
+#         res=rserialize(root, '')
+#         print(res)
+#         return res
         
 
     def deserialize(self, data):
@@ -37,6 +42,7 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
+        print(data)
         def rdeserialize(l):
             """ a recursive helper function for deserialization."""
             if l[0] == 'None':

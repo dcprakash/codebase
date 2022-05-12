@@ -1,6 +1,6 @@
 '''
 https://leetcode.com/problems/time-based-key-value-store/
-
+defaultdict list vs dictionary list
 '''
 
 class TimeMap:
@@ -33,9 +33,13 @@ class TimeMap:
 
 
 # Your TimeMap object will be instantiated and called as such:
-# obj = TimeMap()
-# obj.set(key,value,timestamp)
-# param_2 = obj.get(key,timestamp)
+obj = TimeMap()
+obj.set("foo", "bar", 1)
+obj.set("foo", "bar", 2)
+print(obj.get("foo", 1))
+obj.set("foo", "bar5", 6)
+obj.set("foo", "car", 8)
+print(obj.get("foo", 7))
 
 
 '''

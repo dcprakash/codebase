@@ -9,21 +9,27 @@ Tree:
     tree-traversal-build-preorder.py **
 
 
-
 _leet:
   1-string:
     2-longestpalindrome.py    **
     2-palindrome-partitioning.py
     2-palindrome-substring.py
   1.1-subSequence:
-    1-longest-substring-count-without-repeating-char.py *
+    1-longest-substring-count-without-repeating-char.py
     1-longest-substring-k-distinct-char.py
     1-minimum-window-substring.py
+    1.1-subSequence/2-longestIncreasingSubsequence.py
     remove-minimum-number-characters-two-strings-become-anagram-2.py
     string_compression.py
+  1.2-balanceString:
+    valid-parenthesis-string.py
   2-array:
+    1-split-array-k-sub-array-max-sum.py
     find-peak-element.py  eff
     merge-sort.py
+    min-moves-to-equal-array-elements.py
+    next-permutation.py
+    single-element-in-a-sorted-array.py
   2.1-meetingSchedules:
     minimum-meeting_rooms.py
   2.2-dynamicProgram:
@@ -35,12 +41,24 @@ _leet:
     MaxLenOfConcatStrWithUniqueChars_backtrack.py
   3-graph:
     number-of-connected-components-in-an-undirected-graph.py
+    3-graph/shortest-bridge-dfs-bfs.py
   3.1-matrix:
     valid-sudoku.py
   5-tree:
+    simplify-path.py
     word-square.py
+  7.1-L=lambda:
+  design:
+    shortest-word-distance.py
   recursion:
     StrobogrammaticNumber.py
+  a-1:
+    android-unlock-patterns.py    **
+    count-of-smaller-numbers-after-self.py    **
+    design-search-autocomplete.py
+    permutation-in-string.py  *
+    longest-consecutive-sequence.py
+    insert-interval.py
 
   _leet/a-1/android-unlock-patterns.py   **
   _leet/a-1/count-of-smaller-numbers-after-self.py  **
@@ -48,3 +66,69 @@ _leet:
   _leet/a-1/design-search-autocomplete.py
 
 
+LinkedList:
+  LinkedList/reorder-list-alternatively.py
+  LinkedList/sort-linked-list.py
+
+Array:
+  Array/2-count-duplets-key-pair-difference.py
+  Array/2-count-duplicates-appear-twice.py
+  Array/4-max-sum-cont-subarray-kadane.py eff
+  Array/4-max-sum-without-adjacents-house-robber.py
+  Array/4-subarray-sums-divisible-by-k.py eff   **
+  Array/4-subarray-with-given-sum.py
+  Array/find-item-whose-elements-before-small-after-big.py
+  Array/reorganize-string-alternatively.py
+
+String:
+    String/implement-strstr.py  *
+  String/longest-prefix-suffix.py
+
+2-D:
+  2-D/find-islands-maxarea.py
+    2-D/possible-paths-top-left-bottom-right-nxm-matrix.py  *
+  2-D/leet/candy-crush.py
+  2-D/leet/maximal_square.py
+  2-D/leet/minimum-path-sum-matrix.py
+      2-D/leet/n-queens.py    **
+  2-D/leet/RemoveStones.py    *
+    2-D/leet/snakes-and-ladders.py  *
+  2-D/leet/word-search-board.py
+  2-D/leet/word-search-board.py
+
+DataStructures:
+
+Tree:
+  Tree/BT-diameter.py
+
+
+
+
+
+
+
+
+
+similar:
+  Array/stock-buy-and-sell.py
+
+  Array/count-number-of-occurrences-or-frequency-in-a-sorted-array.py
+
+tricks:
+  two pointer:  
+    l=0, r=1
+    l=0, r=n-1
+
+  left_max, right_max:
+    Array/trapping-rain-water.py
+
+
+
+todo:
+  https://leetcode.com/problems/trapping-rain-water-ii/
+
+list comp:
+  _leet/1-string/find-common-characters.py
+
+defaultdict list vs dict list: 
+  _leet/a-1/time-based-key-value-store.py

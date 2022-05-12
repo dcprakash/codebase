@@ -28,12 +28,29 @@ def longestpalindrome(s):
                 else:
                     dp[i][j] = dp[i-1][j-1] + 1
             if dp[i][j] > max_len:
-                max_len = dp[i][j]
-                max_end = i
+                if i-dp[i][j]+1 == len(s)-1-j:  #if all chars are accounted for with palnifrom in place with maxlen
+                    max_len = dp[i][j]
+                    max_end = i
+    print(dp)
             
     return s[max_end - max_len + 1: max_end + 1]
 
 # s = "aaa"
-s="forgeeksskeegfor"
-#s="babad"
+# s="forgeeksskeegfor"
+s="babd"
 print(longestpalindrome(s))
+
+'''
+   d b a b
+   
+b  0 1 0 1  (i=0, j=3) 0-1+1==4-1-3
+a
+b
+d
+   
+[[0, 1, 0, 1], 
+ [0, 0, 2, 0], 
+ [0, 1, 0, 3], 
+ [1, 0, 0, 0]]
+
+'''

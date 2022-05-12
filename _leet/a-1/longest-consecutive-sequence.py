@@ -10,7 +10,8 @@ sort and check gives O(nlgn)
 
 we can use hashmap option to optimize it
 the numbers are stored in a HashSet (or Set, in Python) to allow O(1)O(1) lookups
-we only attempt to build sequences from numbers that are not already part of a longer sequence
+we only attempt to build sequences from numbers that are not already part of a longer sequence 
+    (while iterating, when we pick item 2, then 2-1=1 is in set so we skip 2 because 1,2 is already part of longer sequence)
 This is accomplished by first ensuring that the number that would immediately precede the current number in a sequence is not present, 
     as that number would necessarily be part of a longer sequence.
 '''
@@ -54,3 +55,6 @@ class Solution:
 
         return longest_streak
 
+
+s=Solution()
+print(s.longestConsecutiveEff([100,4,200,1,3,2]))

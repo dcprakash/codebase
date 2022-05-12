@@ -1,11 +1,11 @@
 '''
-https://leetcode.com/problems/fruit-into-baskets/  
+https://leetcode.com/problems/license-key-formatting/
 
 '''
 
 class Solution:
     def licenseKeyFormatting(self, s: str, k: int) -> str:
-        key_str = ("".join(s.split('-'))).upper()[::-1]
+        key_str = ("".join(s.split('-'))).upper()[::-1] #reverse because chars could be shorter than k but still must contain at least one character
         res = ""
         for i in range(0, len(key_str), k):
             res += key_str[i:i+k] + "-"

@@ -2,6 +2,7 @@
 https://leetcode.com/problems/count-of-smaller-numbers-after-self/solution/
 
 can solve this with 2 for loops
+    A straightforward approach is to use brute force with two for-loops. The first loop iterates over all num in nums, and the second loop iterates over all elements after num. However, this approach costs O(N^2)
 efficient approach is shown below using merger sort
     we are not sorting the actuall array, instead we keep track of indicies
     if items need to be sorted, we sort in temp array and keep track of how many times its sorted in res []

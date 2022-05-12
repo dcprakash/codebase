@@ -45,6 +45,7 @@ class Solution:
                 hour_spent += ceil(pile / middle)
             
             # Check if middle is a workable speed, and cut the search space by half.
+            # we finished early, keep this as our tentative ans. Now reduce right so koko can eat slowly
             if hour_spent <= h:
                 right = middle
             else:

@@ -5,7 +5,13 @@
 # get middle of list
 # reverse second part of list
 # rearragne list alternatively
-
+        
+'''
+12345
+12354
+h  t
+res=[rearrange alternatively]
+'''
 
 # Definition for singly-linked list.
 # class ListNode:

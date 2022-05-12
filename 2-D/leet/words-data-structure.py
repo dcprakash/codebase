@@ -1,10 +1,14 @@
-# https://leetcode.com/problems/design-add-and-search-words-data-structure/
+'''
+words-data-structure.py
+https://leetcode.com/problems/design-add-and-search-words-data-structure/
 # Design workd dictionary
 # trie for word dictionary
-'''
+
+similar
 https://leetcode.com/explore/interview/card/google/62/recursion-4/462/
 word-search-board.py
 word search board
+
 '''
 
 

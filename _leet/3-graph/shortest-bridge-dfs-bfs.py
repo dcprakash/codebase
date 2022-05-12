@@ -45,8 +45,8 @@ class Solution:
                     queue=deque(seen)
                     dist=0
                     
-                    while queue:
-                        for _ in range(len(queue)):
+                    while queue: #initially this queue has (0,1) with len=1, after first for loop iteration, queue len is 3 (includes 0,1 nei)
+                        for _ in range(len(queue)): #initially queue len is 1 with value (0,1); so for loop iterate once, however queue grows into 3 (includes 0,1 nei) during this first iteration
                             cur_i, cur_j = queue.popleft()
                             if matrix[cur_i][cur_j]==1 and dist>0:  #if dist>0 means, we alrdeay seen 1
                                 return dist-1

@@ -4,16 +4,14 @@
 
 def longestIncreasingPath(matrix):
     
-    def dfs(matrix, i, j):
-        m=len(matrix)
-        n=len(matrix[0])
-        ans = 0
+    def dfs(i, j):
+        count = 1
         for d in dirs:
             x = i + d[0]
             y = j + d[1]
             if x>=0 and x<m and y>=0 and y<n and matrix[x][y]>matrix[i][j]:
-                ans=max(ans, dfs(matrix,x,y))
-        return ans+1
+                count=max(count, 1+dfs(x,y))
+        return count
     
     def dfs_cache(i, j):
         if (i,j) in cache:
@@ -35,7 +33,7 @@ def longestIncreasingPath(matrix):
     cache = {}
     for i in range(m):
         for j in range(n):
-            # ans=max(ans, dfs(matrix, i, j))
+            # ans=max(ans, dfs(i, j))
             ans=max(ans, dfs_cache(i, j))
     return ans
     

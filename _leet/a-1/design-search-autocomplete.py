@@ -14,7 +14,7 @@ from collections import defaultdict
 
 class AutocompleteSystem:
 
-    def __init__(self, sentences: List[str], times: List[int]):
+    def __init__(self, sentences, times):
         self.search=''
         self.history=defaultdict(int)
         for i in range(len(sentences)):
@@ -23,7 +23,7 @@ class AutocompleteSystem:
         self.matches=[]
 
 
-    def input(self, c: str) -> List[str]:
+    def input(self, c):
         if c=='#':
             self.history[self.search]+=1
             self.search=''

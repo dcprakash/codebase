@@ -31,6 +31,7 @@ class Solution:
         
         return self.merge(left, right)
     
+    
     def merge(self, list1, list2):
         tail = dummy = ListNode()
         while list1 and list2:
@@ -44,6 +45,7 @@ class Solution:
         if list1:   tail.next=list1
         if list2:   tail.next=list2
         return dummy.next
+    
     
     def getmid(self, head):
         slow = head

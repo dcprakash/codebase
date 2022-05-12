@@ -2,6 +2,8 @@
 https://leetcode.com/problems/lru-cache/
 https://www.youtube.com/watch?v=7v_mUfpg46E
 
+use double linked list
+
 '''
 class Node:
     def __init__(self, k, v):
@@ -28,6 +30,12 @@ class LRUCache:
             return n.val
         return -1
         
+    '''
+    update operation is performed by removing the node from linked list, if key exist in dic (add new k:v node to tail)
+    otherwise, create new node and add to the dic and linked list
+    tail consist of LRU item; because we always add at tail (update removes node from middle of list and adding new node with key, value to tail)
+    if dic reached capacity, then remove item from head
+    '''
     def put(self, key: int, value: int) -> None:
         if key in self.dic:
             self._remove(self.dic[key])
@@ -45,6 +53,7 @@ class LRUCache:
         p.next = n
         n.prev = p
 
+    # insert "node" at end of linked list
     def _add(self, node):
         p = self.tail.prev
         p.next = node

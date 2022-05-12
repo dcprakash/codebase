@@ -2,6 +2,8 @@
 # Use DFS to count max area of an island
 # best DFS
 # find-islands.py finds number of island, this solution finds max area of found islands
+# To ensure we don't count squares in a shape more than once, let's use seen to keep track of squares we haven't visited before. It will also prevent us from counting the same shape more than once.
+
 
 
 # DFS
@@ -9,8 +11,7 @@ class Solution(object):
     def maxAreaOfIsland(self, grid):
         seen = set()
         def area(r, c):
-            if not (0 <= r < len(grid) and 0 <= c < len(grid[0])
-                    and (r, c) not in seen and grid[r][c]):
+            if not (0 <= r < len(grid) and 0 <= c < len(grid[0]) and (r, c) not in seen and grid[r][c]):
                 return 0
             seen.add((r, c))
             return (1 + area(r+1, c) + area(r-1, c) +
